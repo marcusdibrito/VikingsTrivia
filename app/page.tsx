@@ -6,7 +6,7 @@ type Question = {
   id: string;
   eyebrow: string;
   prompt: string;
-  type: "choice" | "text" | "number";
+  type: "choice" | "text" | "team" | "number";
   choices?: string[];
   answer: string | number;
   points: number;
@@ -41,7 +41,7 @@ const questions: Question[] = [
     id: "q3",
     eyebrow: "2000s · Deep cut",
     prompt: "Which team did the Vikings face in Spurgeon Wynn’s only start for Minnesota?",
-    type: "text",
+    type: "team",
     answer: "Baltimore Ravens",
     points: 300,
     explanation: "Wynn started the 2001 finale, a 19–3 road loss to Baltimore.",
@@ -77,12 +77,36 @@ const sampleBoard = [
   { rank: 4, name: "MossMode", score: 700, correct: 3, pin: 18, time: "10:26 AM" },
 ];
 
+const nflTeams = [
+  "Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills",
+  "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns",
+  "Dallas Cowboys", "Denver Broncos", "Detroit Lions", "Green Bay Packers",
+  "Houston Texans", "Indianapolis Colts", "Jacksonville Jaguars", "Kansas City Chiefs",
+  "Las Vegas Raiders", "Los Angeles Chargers", "Los Angeles Rams", "Miami Dolphins",
+  "Minnesota Vikings", "New England Patriots", "New Orleans Saints", "New York Giants",
+  "New York Jets", "Philadelphia Eagles", "Pittsburgh Steelers", "San Francisco 49ers",
+  "Seattle Seahawks", "Tampa Bay Buccaneers", "Tennessee Titans", "Washington Commanders",
+] as const;
+
 function normalize(value: string) {
   const cleaned = value.toLowerCase().replace(/[^a-z0-9]/g, "");
   if (cleaned === "baltimore" || cleaned === "ravens" || cleaned === "baltimoreravens") {
     return "baltimoreravens";
   }
   return cleaned;
+}
+
+function resolveTeam(value: string) {
+  const query = normalize(value);
+  if (!query) return null;
+  const matches = nflTeams.filter((team) => {
+    const full = normalize(team);
+    const words = team.split(" ");
+    const nickname = normalize(words.at(-1) ?? "");
+    const city = normalize(words.slice(0, -1).join(" "));
+    return full === query || nickname === query || city === query || full.startsWith(query);
+  });
+  return matches.length === 1 ? matches[0] : null;
 }
 
 export default function Home() {
@@ -93,8 +117,10 @@ export default function Home() {
   const [answers, setAnswers] = useState<string[]>([]);
   const [seconds, setSeconds] = useState(30);
   const [lockedAnswer, setLockedAnswer] = useState<string | null>(null);
+  const [teamError, setTeamError] = useState("");
   const [ready, setReady] = useState(false);
 
+  /* eslint-disable react-hooks/immutability -- the countdown locks the current answer on expiry */
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- restore a resumable game once on hydration */
     const savedName = localStorage.getItem("norse-player");
@@ -125,6 +151,7 @@ export default function Home() {
     return () => window.clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, index, lockedAnswer]);
+  /* eslint-enable react-hooks/immutability */
 
   const score = useMemo(
     () =>
@@ -155,7 +182,17 @@ export default function Home() {
 
   function submitAnswer(forced?: string) {
     if (lockedAnswer !== null) return;
-    const value = forced ?? answer;
+    let value = forced ?? answer;
+    if (current.type === "team" && value) {
+      const canonicalTeam = resolveTeam(value);
+      if (!canonicalTeam) {
+        setTeamError("Choose one of the 32 validated NFL teams.");
+        return;
+      }
+      value = canonicalTeam;
+      setAnswer(canonicalTeam);
+      setTeamError("");
+    }
     const nextAnswers = [...answers, value];
     setAnswers(nextAnswers);
     setLockedAnswer(value);
@@ -171,6 +208,7 @@ export default function Home() {
     const nextIndex = index + 1;
     setIndex(nextIndex);
     setAnswer("");
+    setTeamError("");
     setLockedAnswer(null);
     setSeconds(30);
     localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: nextIndex, answers }));
@@ -182,6 +220,7 @@ export default function Home() {
     setAnswers([]);
     setAnswer("");
     setLockedAnswer(null);
+    setTeamError("");
     setSeconds(30);
     setView("home");
   }
@@ -282,12 +321,28 @@ export default function Home() {
                   autoFocus
                   inputMode={current.type === "number" ? "numeric" : "text"}
                   type={current.type === "number" ? "number" : "text"}
+                  list={current.type === "team" ? "nfl-team-options" : undefined}
                   value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  placeholder={current.type === "number" ? "Enter exact yards" : "Type your answer"}
+                  onChange={(e) => {
+                    setAnswer(e.target.value);
+                    if (teamError) setTeamError("");
+                  }}
+                  placeholder={current.type === "number" ? "Enter exact yards" : current.type === "team" ? "Start typing a city or team…" : "Type your answer"}
                   onKeyDown={(e) => e.key === "Enter" && answer && submitAnswer()}
+                  aria-invalid={current.type === "team" && !!teamError}
+                  aria-describedby={current.type === "team" ? "team-help" : undefined}
                 />
                 {current.type === "number" && <span>YARDS</span>}
+                {current.type === "team" && (
+                  <>
+                    <datalist id="nfl-team-options">
+                      {nflTeams.map((team) => <option value={team} key={team} />)}
+                    </datalist>
+                    <small id="team-help" className={teamError ? "team-error" : "team-help"}>
+                      {teamError || "Validated against all 32 NFL teams"}
+                    </small>
+                  </>
+                )}
               </div>
             )}
             <button className="primary submit" disabled={lockedAnswer === null && !answer} onClick={() => lockedAnswer !== null ? continueGame() : submitAnswer()}>
