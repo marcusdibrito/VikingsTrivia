@@ -21,10 +21,12 @@ An attempt moves from `in_progress → submitted` (or `abandoned`). A unique dat
 
 1. Install dependencies with `pnpm install`.
 2. Copy `.env.example` to `.env.local`.
-3. Run `pnpm exec vinext dev`.
-4. Open the printed local address.
+3. Run `pnpm dev`.
+4. Open `http://localhost:3000`.
 
-Generate a D1 migration after schema changes with `pnpm exec drizzle-kit generate`. The initial migration is already in `drizzle/`.
+Generate a schema migration after changes with `pnpm db:generate`. The initial
+SQLite migration is preserved in `drizzle/`; a production database adapter has
+not yet been connected.
 
 ## Data model
 
@@ -46,7 +48,12 @@ The deployed UI currently runs as a polished product prototype: identity and in-
 Run:
 
 - `pnpm exec tsc --noEmit`
-- `pnpm exec eslint . --ignore-pattern dist --ignore-pattern .next`
-- `pnpm exec vinext build`
+- `pnpm lint`
+- `pnpm build`
+
+## Deploying
+
+Import the GitHub repository into Vercel. Vercel detects the Next.js framework,
+installs dependencies with pnpm, and runs `pnpm build` without custom settings.
 
 The game is unofficial and does not use NFL or Minnesota Vikings trademarks or logos.
