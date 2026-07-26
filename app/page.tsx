@@ -78,7 +78,11 @@ const sampleBoard = [
 ];
 
 function normalize(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]/g, "").replace("ravens", "baltimoreravens");
+  const cleaned = value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (cleaned === "baltimore" || cleaned === "ravens" || cleaned === "baltimoreravens") {
+    return "baltimoreravens";
+  }
+  return cleaned;
 }
 
 export default function Home() {
@@ -88,6 +92,7 @@ export default function Home() {
   const [answer, setAnswer] = useState("");
   const [answers, setAnswers] = useState<string[]>([]);
   const [seconds, setSeconds] = useState(30);
+  const [lockedAnswer, setLockedAnswer] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -99,13 +104,14 @@ export default function Home() {
       const parsed = JSON.parse(savedGame) as { index: number; answers: string[] };
       setIndex(parsed.index);
       setAnswers(parsed.answers);
+      if (parsed.answers.length > parsed.index) setLockedAnswer(parsed.answers[parsed.index]);
     }
     setReady(true);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   useEffect(() => {
-    if (view !== "game") return;
+    if (view !== "game" || lockedAnswer !== null) return;
     const timer = window.setInterval(() => {
       setSeconds((s) => {
         if (s <= 1) {
@@ -118,7 +124,7 @@ export default function Home() {
     }, 1000);
     return () => window.clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [view, index]);
+  }, [view, index, lockedAnswer]);
 
   const score = useMemo(
     () =>
@@ -148,20 +154,26 @@ export default function Home() {
   }
 
   function submitAnswer(forced?: string) {
+    if (lockedAnswer !== null) return;
     const value = forced ?? answer;
     const nextAnswers = [...answers, value];
+    setAnswers(nextAnswers);
+    setLockedAnswer(value);
+    localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index, answers: nextAnswers }));
+  }
+
+  function continueGame() {
     if (index >= questions.length - 1) {
-      setAnswers(nextAnswers);
-      localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: 5, answers: nextAnswers, complete: true }));
+      localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: 5, answers, complete: true }));
       setView("results");
-    } else {
-      const nextIndex = index + 1;
-      setAnswers(nextAnswers);
-      setIndex(nextIndex);
-      setAnswer("");
-      setSeconds(30);
-      localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: nextIndex, answers: nextAnswers }));
+      return;
     }
+    const nextIndex = index + 1;
+    setIndex(nextIndex);
+    setAnswer("");
+    setLockedAnswer(null);
+    setSeconds(30);
+    localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: nextIndex, answers }));
   }
 
   function resetDemo() {
@@ -169,12 +181,18 @@ export default function Home() {
     setIndex(0);
     setAnswers([]);
     setAnswer("");
+    setLockedAnswer(null);
     setSeconds(30);
     setView("home");
   }
 
   const current = questions[index] ?? questions[4];
   const completed = answers.length === questions.length;
+  const currentCorrect = lockedAnswer !== null && (
+    current.type === "number"
+      ? Number(lockedAnswer) === Number(current.answer)
+      : normalize(lockedAnswer) === normalize(String(current.answer))
+  );
 
   if (!ready) return <main className="loading">Loading today’s huddle…</main>;
 
@@ -233,12 +251,24 @@ export default function Home() {
             <div className="live-score"><small>SCORE</small><b>{score.toLocaleString()}</b></div>
           </div>
           <div className="progress">{questions.map((_, i) => <span key={i} className={i <= index ? "done" : ""} />)}</div>
-          <div className="timer" style={{ "--timer": `${(seconds / 30) * 360}deg` } as React.CSSProperties}><strong>{seconds}</strong><small>SEC</small></div>
+          <div className={`timer ${lockedAnswer !== null ? "timer-locked" : ""}`} style={{ "--timer": `${(seconds / 30) * 360}deg` } as React.CSSProperties}><strong>{lockedAnswer !== null ? "✓" : seconds}</strong><small>{lockedAnswer !== null ? "LOCKED" : "SEC"}</small></div>
           {index === 4 && <div className="yard-lines"><span>20</span><span>30</span><span>40</span><span>50</span><span>40</span><span>30</span><span>20</span></div>}
           <article className="question-card" aria-live="polite">
             <p>{current.eyebrow}</p>
             <h2>{current.prompt}</h2>
-            {current.type === "choice" ? (
+            {lockedAnswer !== null ? (
+              <div className={`instant-feedback ${currentCorrect ? "correct" : "incorrect"}`} role="status">
+                <span>{currentCorrect ? "✓" : "×"}</span>
+                <div>
+                  <small>{currentCorrect ? `Correct · +${current.points} points` : "Not quite"}</small>
+                  <h3>{currentCorrect ? "You got it." : <>The answer is <b>{current.answer}</b>.</>}</h3>
+                  <p>{current.explanation}</p>
+                  {current.type === "number" && !currentCorrect && lockedAnswer && (
+                    <p className="distance-note">Your guess was {Math.abs(Number(lockedAnswer) - Number(current.answer))} yards away.</p>
+                  )}
+                </div>
+              </div>
+            ) : current.type === "choice" ? (
               <div className="choices">
                 {current.choices?.map((choice, i) => (
                   <button key={choice} className={answer === choice ? "selected" : ""} onClick={() => setAnswer(choice)}>
@@ -260,10 +290,10 @@ export default function Home() {
                 {current.type === "number" && <span>YARDS</span>}
               </div>
             )}
-            <button className="primary submit" disabled={!answer} onClick={() => submitAnswer()}>
-              {index === 4 ? "Lock in my guess →" : "Lock in answer →"}
+            <button className="primary submit" disabled={lockedAnswer === null && !answer} onClick={() => lockedAnswer !== null ? continueGame() : submitAnswer()}>
+              {lockedAnswer !== null ? (index === 4 ? "See final results →" : "Next question →") : index === 4 ? "Lock in my guess →" : "Lock in answer →"}
             </button>
-            <small className="locked-note">Once you advance, your answer is locked.</small>
+            <small className="locked-note">{lockedAnswer !== null ? "Answer locked. Everyone sees the same reveal." : "Once you submit, your answer is locked."}</small>
           </article>
         </section>
       )}
