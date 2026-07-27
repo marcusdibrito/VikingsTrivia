@@ -14,6 +14,17 @@ type Question = {
   source: string;
 };
 
+type LeaderRow = {
+  rank: number;
+  name: string;
+  score: number;
+  correct: number;
+  pin: number | null;
+  time: string;
+  winner?: boolean;
+  pinWinner?: boolean;
+};
+
 const questions: Question[] = [
   {
     id: "q1",
@@ -70,13 +81,6 @@ const questions: Question[] = [
   },
 ];
 
-const sampleBoard = [
-  { rank: 1, name: "SkolDad", score: 1230, correct: 4, pin: 2, time: "7:42 AM", winner: true },
-  { rank: 2, name: "PurpleRain", score: 1100, correct: 4, pin: 0, time: "8:11 AM", pinWinner: true },
-  { rank: 3, name: "FranFan10", score: 900, correct: 3, pin: 7, time: "9:03 AM" },
-  { rank: 4, name: "MossMode", score: 700, correct: 3, pin: 18, time: "10:26 AM" },
-];
-
 const nflTeams = [
   "Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills",
   "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns",
@@ -118,6 +122,8 @@ export default function Home() {
   const [seconds, setSeconds] = useState(30);
   const [lockedAnswer, setLockedAnswer] = useState<string | null>(null);
   const [teamError, setTeamError] = useState("");
+  const [leaderboard, setLeaderboard] = useState<LeaderRow[]>([]);
+  const [dailyRank, setDailyRank] = useState<number | null>(null);
   const [ready, setReady] = useState(false);
 
   /* eslint-disable react-hooks/immutability -- the countdown locks the current answer on expiry */
@@ -132,6 +138,10 @@ export default function Home() {
       setAnswers(parsed.answers);
       if (parsed.answers.length > parsed.index) setLockedAnswer(parsed.answers[parsed.index]);
     }
+    fetch("/api/leaderboard")
+      .then((response) => response.json())
+      .then((data: { leaderboard?: LeaderRow[] }) => setLeaderboard(data.leaderboard ?? []))
+      .catch(() => setLeaderboard([]));
     setReady(true);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
@@ -199,10 +209,28 @@ export default function Home() {
     localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index, answers: nextAnswers }));
   }
 
+  async function saveCompletedAttempt() {
+    let deviceId = localStorage.getItem("norse-device-id");
+    if (!deviceId) {
+      deviceId = crypto.randomUUID();
+      localStorage.setItem("norse-device-id", deviceId);
+    }
+    const response = await fetch("/api/leaderboard", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ displayName: name, deviceId, answers }),
+    });
+    if (!response.ok) return;
+    const data = await response.json() as { rank?: number; leaderboard?: LeaderRow[] };
+    setDailyRank(data.rank ?? null);
+    setLeaderboard(data.leaderboard ?? []);
+  }
+
   function continueGame() {
     if (index >= questions.length - 1) {
       localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: 5, answers, complete: true }));
       setView("results");
+      void saveCompletedAttempt();
       return;
     }
     const nextIndex = index + 1;
@@ -212,17 +240,6 @@ export default function Home() {
     setLockedAnswer(null);
     setSeconds(30);
     localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: nextIndex, answers }));
-  }
-
-  function resetDemo() {
-    localStorage.removeItem("norse-game-2026-07-26");
-    setIndex(0);
-    setAnswers([]);
-    setAnswer("");
-    setLockedAnswer(null);
-    setTeamError("");
-    setSeconds(30);
-    setView("home");
   }
 
   const current = questions[index] ?? questions[4];
@@ -277,7 +294,7 @@ export default function Home() {
             <div className="big-five">5</div>
             <p>QUESTIONS</p>
             <div className="difficulty"><span /><span /><span /><span /><span /></div>
-            <div className="board-stats"><div><strong>18</strong><span>played</span></div><div><strong>1,500</strong><span>max pts</span></div><div><strong>2:34</strong><span>avg time</span></div></div>
+            <div className="board-stats"><div><strong>{leaderboard.length}</strong><span>played</span></div><div><strong>1,500</strong><span>max pts</span></div><div><strong>LIVE</strong><span>standings</span></div></div>
             <div className="pin-mini"><span className="target">◎</span><div><small>THE FINALE</small><strong>Closest to the pin</strong></div></div>
           </aside>
         </section>
@@ -360,7 +377,7 @@ export default function Home() {
           <div className="result-hero">
             <div><small>TOTAL SCORE</small><strong>{score.toLocaleString()}</strong><span>of 1,500 points</span></div>
             <div><small>CORRECT</small><strong>{correct}<i>/5</i></strong><span>questions</span></div>
-            <div><small>DAILY RANK</small><strong>#5</strong><span>of 19 players</span></div>
+            <div><small>DAILY RANK</small><strong>{dailyRank ? `#${dailyRank}` : "—"}</strong><span>of {leaderboard.length} players</span></div>
             <div className="pin-result"><small>CLOSEST TO THE PIN</small><strong>{answers[4] || "—"} <i>yds</i></strong><span>{answers[4] ? `${Math.abs(Number(answers[4]) - 296)} yards away` : "No guess"}</span></div>
           </div>
           <div className="review-list">
@@ -372,7 +389,7 @@ export default function Home() {
               </details>;
             })}
           </div>
-          <div className="result-actions"><button className="primary" onClick={() => setView("leaders")}>View full leaderboard →</button><button className="secondary" onClick={resetDemo}>Reset demo</button></div>
+          <div className="result-actions"><button className="primary" onClick={() => setView("leaders")}>View full leaderboard →</button><button className="secondary" onClick={() => setView("home")}>Back to home</button></div>
         </section>
       )}
 
@@ -383,10 +400,11 @@ export default function Home() {
           <p className="lede">Score breaks ties by correct answers, closest-to-the-pin distance, then earliest finish.</p>
           <div className="leader-table">
             <div className="table-head"><span>RANK</span><span>PLAYER</span><span>SCORE</span><span>CORRECT</span><span>PIN</span><span>FINISHED</span></div>
-            {sampleBoard.map((row) => <div className="table-row" key={row.name}>
+            {leaderboard.length === 0 && <div className="table-row empty-row">No completed games yet. Be the first on the board.</div>}
+            {leaderboard.map((row) => <div className="table-row" key={`${row.rank}-${row.name}`}>
               <b className="rank">{row.rank === 1 ? "♛" : `#${row.rank}`}</b>
               <strong>{row.name}{row.winner && <i className="badge">DAILY WINNER</i>}{row.pinWinner && <i className="badge pin-badge">◎ PIN WINNER</i>}</strong>
-              <b>{row.score.toLocaleString()}</b><span>{row.correct}/5</span><span>{row.pin} yds</span><span>{row.time}</span>
+              <b>{row.score.toLocaleString()}</b><span>{row.correct}/5</span><span>{row.pin === null ? "—" : `${row.pin} yds`}</span><span>{row.time}</span>
             </div>)}
           </div>
           <div className="all-time">
