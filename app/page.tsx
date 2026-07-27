@@ -409,7 +409,7 @@ export default function Home() {
           </div>
           <div className="all-time">
             <div><p className="kicker">ALL-TIME</p><h2>The family hall of fame</h2><p>Points, wins, perfect pins, and every bit of hard-earned bragging rights.</p></div>
-            <ol><li><b>1</b><strong>SkolDad</strong><span>14 games · 4 wins</span><em>12,480 pts</em></li><li><b>2</b><strong>PurpleRain</strong><span>13 games · 3 wins</span><em>11,900 pts</em></li><li><b>3</b><strong>FranFan10</strong><span>14 games · 2 wins</span><em>10,750 pts</em></li></ol>
+            <div><p>The hall of fame will open after enough Supabase-backed daily games have been completed.</p></div>
           </div>
         </section>
       )}
