@@ -56,4 +56,9 @@ Run:
 Import the GitHub repository into Vercel. Vercel detects the Next.js framework,
 installs dependencies with pnpm, and runs `pnpm build` without custom settings.
 
+The production Supabase schema and initial daily game are defined in
+`supabase/schema.sql`. Keep `SUPABASE_SECRET_KEY` server-only; it is configured
+as a sensitive Vercel environment variable and must never be exposed to client
+components.
+
 The game is unofficial and does not use NFL or Minnesota Vikings trademarks or logos.
