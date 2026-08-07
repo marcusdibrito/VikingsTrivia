@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
+import { currentGame, supabase } from "@/app/lib/supabase";
 
-type Game = { id: string; game_date: string };
 type GameQuestion = {
   position: number;
   answer_type: "choice" | "text" | "team" | "number";
@@ -9,6 +9,7 @@ type GameQuestion = {
   points: number;
 };
 type Attempt = {
+  id: string;
   display_name: string;
   score: number;
   correct_count: number;
@@ -16,50 +17,20 @@ type Attempt = {
   completed_at: string;
 };
 
-function config() {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key) throw new Error("Supabase is not configured.");
-  return { url, key };
-}
-
-async function supabase<T>(path: string, init?: RequestInit): Promise<T> {
-  const { url, key } = config();
-  const response = await fetch(`${url}/rest/v1/${path}`, {
-    ...init,
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json",
-      ...init?.headers,
-    },
-    cache: "no-store",
-  });
-  if (!response.ok) throw new Error(await response.text());
-  return response.json() as Promise<T>;
-}
-
-async function currentGame() {
-  const games = await supabase<Game[]>(
-    "games?select=id,game_date&status=eq.published&order=game_date.desc&limit=1",
-  );
-  if (!games[0]) throw new Error("No published game is available.");
-  return games[0];
-}
-
 function normalize(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 async function leaderboard(gameId: string) {
   const attempts = await supabase<Attempt[]>(
-    `attempts?select=display_name,score,correct_count,pin_distance,completed_at&game_id=eq.${gameId}&order=score.desc,correct_count.desc,pin_distance.asc.nullslast,completed_at.asc`,
+    `attempts?select=id,display_name,score,correct_count,pin_distance,completed_at&game_id=eq.${gameId}&order=score.desc,correct_count.desc,pin_distance.asc.nullslast,completed_at.asc`,
   );
   const bestPin = attempts.reduce<number | null>(
     (best, row) => row.pin_distance === null ? best : best === null ? row.pin_distance : Math.min(best, row.pin_distance),
     null,
   );
   return attempts.map((row, index) => ({
+    attemptId: row.id,
     rank: index + 1,
     name: row.display_name,
     score: row.score,
@@ -129,10 +100,11 @@ export async function POST(request: Request) {
       }
     });
 
-    const deviceHash = createHash("sha256").update(payload.deviceId).digest("hex");
-    await supabase<Attempt[]>("attempts?on_conflict=game_id,device_hash", {
+    const attemptNonce = crypto.randomUUID();
+    const deviceHash = createHash("sha256").update(`${payload.deviceId}:${attemptNonce}`).digest("hex");
+    const inserted = await supabase<Attempt[]>("attempts", {
       method: "POST",
-      headers: { Prefer: "resolution=merge-duplicates,return=representation" },
+      headers: { Prefer: "return=representation" },
       body: JSON.stringify({
         game_id: game.id,
         device_hash: deviceHash,
@@ -147,7 +119,7 @@ export async function POST(request: Request) {
     });
 
     const rows = await leaderboard(game.id);
-    const rank = rows.find((row) => row.name === displayName && row.score === score)?.rank ?? null;
+    const rank = rows.find((row) => row.attemptId === inserted[0]?.id)?.rank ?? null;
     return NextResponse.json({ score, correctCount, pinDistance, rank, leaderboard: rows });
   } catch (error) {
     return NextResponse.json(

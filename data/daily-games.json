@@ -1,0 +1,2594 @@
+[
+  {
+    "date": "2026-08-06",
+    "status": "published",
+    "host": [
+      "Fran Tarkenton",
+      "10",
+      "Hall of Fame quarterback"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 1996 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice",
+          "Dennis Green"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1996 season.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2003?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "7–9",
+          "9–8",
+          "8–8"
+        ],
+        "answer": "9–7",
+        "points": 200,
+        "explanation": "Minnesota finished the 2003 regular season 9–7.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2009?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2009.",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2015 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (vs. Seahawks) 9–10.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2019?",
+        "type": "number",
+        "choices": null,
+        "answer": "407",
+        "points": 500,
+        "explanation": "Minnesota scored 407 points during the 2019 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "status": "draft",
+    "host": [
+      "Alan Page",
+      "88",
+      "Purple People Eaters legend"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 1997 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1997 season.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2004?",
+        "type": "choice",
+        "choices": [
+          "8–8",
+          "9–7",
+          "13–3",
+          "12–4"
+        ],
+        "answer": "8–8",
+        "points": 200,
+        "explanation": "Minnesota finished the 2004 regular season 8–8.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2010?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "4th NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC North in 2010.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2016 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2020?",
+        "type": "number",
+        "choices": null,
+        "answer": "430",
+        "points": 500,
+        "explanation": "Minnesota scored 430 points during the 2020 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-08",
+    "status": "draft",
+    "host": [
+      "Randy Moss",
+      "84",
+      "Hall of Fame wide receiver"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 1998 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Leslie Frazier",
+          "Kevin O'Connell",
+          "Mike Zimmer"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1998 season.",
+        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2005?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "15–1",
+          "3–13",
+          "8–7–1"
+        ],
+        "answer": "9–7",
+        "points": 200,
+        "explanation": "Minnesota finished the 2005 regular season 9–7.",
+        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2011?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "4th NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC North in 2011.",
+        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2017 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Divisional Playoffs (vs. Saints) 29–24; lost NFC Championship (at Eagles) 7–38.",
+        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2021?",
+        "type": "number",
+        "choices": null,
+        "answer": "425",
+        "points": 500,
+        "explanation": "Minnesota scored 425 points during the 2021 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-09",
+    "status": "draft",
+    "host": [
+      "Cris Carter",
+      "80",
+      "Hall of Fame wide receiver"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 1999 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Dennis Green",
+          "Kevin O'Connell",
+          "Mike Tice"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1999 season.",
+        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2006?",
+        "type": "choice",
+        "choices": [
+          "8–9",
+          "6–10",
+          "10–6",
+          "5–10–1"
+        ],
+        "answer": "6–10",
+        "points": 200,
+        "explanation": "Minnesota finished the 2006 regular season 6–10.",
+        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2012?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2012.",
+        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2018 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2022?",
+        "type": "number",
+        "choices": null,
+        "answer": "424",
+        "points": 500,
+        "explanation": "Minnesota scored 424 points during the 2022 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-10",
+    "status": "draft",
+    "host": [
+      "John Randle",
+      "93",
+      "Hall of Fame defensive tackle"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2000 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Brad Childress",
+          "Kevin O'Connell",
+          "Mike Tice"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 2000 season.",
+        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2007?",
+        "type": "choice",
+        "choices": [
+          "8–8",
+          "7–9",
+          "13–4",
+          "11–5"
+        ],
+        "answer": "8–8",
+        "points": 200,
+        "explanation": "Minnesota finished the 2007 regular season 8–8.",
+        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2013?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "4th NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC North in 2013.",
+        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2019 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (at Saints) 26–20 (OT); lost Divisional Playoffs (at 49ers) 10–27.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2023?",
+        "type": "number",
+        "choices": null,
+        "answer": "344",
+        "points": 500,
+        "explanation": "Minnesota scored 344 points during the 2023 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-11",
+    "status": "draft",
+    "host": [
+      "Adrian Peterson",
+      "28",
+      "MVP running back"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2001 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Tice",
+          "Dennis Green",
+          "Brad Childress",
+          "Leslie Frazier"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 2001 season.",
+        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2008?",
+        "type": "choice",
+        "choices": [
+          "10–6",
+          "7–10",
+          "5–11",
+          "13–3"
+        ],
+        "answer": "10–6",
+        "points": 200,
+        "explanation": "Minnesota finished the 2008 regular season 10–6.",
+        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2014?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2014.",
+        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2020 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs",
+          "Lost in the Wild Card round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2024?",
+        "type": "number",
+        "choices": null,
+        "answer": "432",
+        "points": 500,
+        "explanation": "Minnesota scored 432 points during the 2024 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-12",
+    "status": "draft",
+    "host": [
+      "Harrison Smith",
+      "22",
+      "All-Pro safety"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2002 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Tice",
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier"
+        ],
+        "answer": "Mike Tice",
+        "points": 100,
+        "explanation": "Mike Tice led Minnesota during the 2002 season.",
+        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2009?",
+        "type": "choice",
+        "choices": [
+          "8–7–1",
+          "12–4",
+          "14–3",
+          "6–10"
+        ],
+        "answer": "12–4",
+        "points": 200,
+        "explanation": "Minnesota finished the 2009 regular season 12–4.",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2015?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2015.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2021 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship",
+          "Missed the playoffs"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2025?",
+        "type": "number",
+        "choices": null,
+        "answer": "344",
+        "points": 500,
+        "explanation": "Minnesota scored 344 points during the 2025 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-13",
+    "status": "draft",
+    "host": [
+      "Justin Jefferson",
+      "18",
+      "All-Pro wide receiver"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2003 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice",
+          "Mike Zimmer"
+        ],
+        "answer": "Mike Tice",
+        "points": 100,
+        "explanation": "Mike Tice led Minnesota during the 2003 season.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2010?",
+        "type": "choice",
+        "choices": [
+          "6–10",
+          "9–8",
+          "8–8",
+          "8–9"
+        ],
+        "answer": "6–10",
+        "points": 200,
+        "explanation": "Minnesota finished the 2010 regular season 6–10.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2016?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2016.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2022 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (vs. Giants) 24–31.",
+        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 1996?",
+        "type": "number",
+        "choices": null,
+        "answer": "298",
+        "points": 500,
+        "explanation": "Minnesota scored 298 points during the 1996 regular season.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-14",
+    "status": "draft",
+    "host": [
+      "Jared Allen",
+      "69",
+      "All-Pro pass rusher"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2004 season?",
+        "type": "choice",
+        "choices": [
+          "Leslie Frazier",
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Mike Zimmer"
+        ],
+        "answer": "Mike Tice",
+        "points": 100,
+        "explanation": "Mike Tice led Minnesota during the 2004 season.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2011?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "3–13",
+          "12–4",
+          "13–4"
+        ],
+        "answer": "3–13",
+        "points": 200,
+        "explanation": "Minnesota finished the 2011 regular season 3–13.",
+        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2017?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2017.",
+        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2023 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 1997?",
+        "type": "number",
+        "choices": null,
+        "answer": "354",
+        "points": 500,
+        "explanation": "Minnesota scored 354 points during the 1997 regular season.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-15",
+    "status": "draft",
+    "host": [
+      "Kevin Williams",
+      "93",
+      "All-Pro defensive tackle"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2005 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Mike Zimmer"
+        ],
+        "answer": "Mike Tice",
+        "points": 100,
+        "explanation": "Mike Tice led Minnesota during the 2005 season.",
+        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2012?",
+        "type": "choice",
+        "choices": [
+          "10–6",
+          "15–1",
+          "3–13",
+          "7–10"
+        ],
+        "answer": "10–6",
+        "points": 200,
+        "explanation": "Minnesota finished the 2012 regular season 10–6.",
+        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2018?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2018.",
+        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2024 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (at Rams) 9–27.",
+        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 1998?",
+        "type": "number",
+        "choices": null,
+        "answer": "556",
+        "points": 500,
+        "explanation": "Minnesota scored 556 points during the 1998 regular season.",
+        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-16",
+    "status": "draft",
+    "host": [
+      "Pat Williams",
+      "94",
+      "Williams Wall anchor"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2006 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Brad Childress",
+          "Kevin O'Connell",
+          "Mike Tice"
+        ],
+        "answer": "Brad Childress",
+        "points": 100,
+        "explanation": "Brad Childress led Minnesota during the 2006 season.",
+        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2013?",
+        "type": "choice",
+        "choices": [
+          "10–6",
+          "14–3",
+          "6–10",
+          "5–10–1"
+        ],
+        "answer": "5–10–1",
+        "points": 200,
+        "explanation": "Minnesota finished the 2013 regular season 5–10–1.",
+        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2019?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2019.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Expert",
+        "prompt": "How did Minnesota's 2025 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 1999?",
+        "type": "number",
+        "choices": null,
+        "answer": "399",
+        "points": 500,
+        "explanation": "Minnesota scored 399 points during the 1999 regular season.",
+        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-17",
+    "status": "draft",
+    "host": [
+      "Antoine Winfield",
+      "26",
+      "All-Pro cornerback"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2007 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice"
+        ],
+        "answer": "Brad Childress",
+        "points": 100,
+        "explanation": "Brad Childress led Minnesota during the 2007 season.",
+        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2014?",
+        "type": "choice",
+        "choices": [
+          "7–9",
+          "9–8",
+          "8–8",
+          "11–5"
+        ],
+        "answer": "7–9",
+        "points": 200,
+        "explanation": "Minnesota finished the 2014 regular season 7–9.",
+        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2020?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2020.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Expert",
+        "prompt": "How did Minnesota's 1996 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (at Cowboys) 15–40.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2000?",
+        "type": "number",
+        "choices": null,
+        "answer": "397",
+        "points": 500,
+        "explanation": "Minnesota scored 397 points during the 2000 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "status": "draft",
+    "host": [
+      "Chad Greenway",
+      "52",
+      "Longtime Vikings linebacker"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2008 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Tice",
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier"
+        ],
+        "answer": "Brad Childress",
+        "points": 100,
+        "explanation": "Brad Childress led Minnesota during the 2008 season.",
+        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2015?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "11–5",
+          "5–11",
+          "13–3"
+        ],
+        "answer": "11–5",
+        "points": 200,
+        "explanation": "Minnesota finished the 2015 regular season 11–5.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2021?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2021.",
+        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Expert",
+        "prompt": "How did Minnesota's 1997 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs",
+          "Lost in the Wild Card round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (at Giants) 23–22; lost Divisional Playoffs (at 49ers) 22–38.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2001?",
+        "type": "number",
+        "choices": null,
+        "answer": "290",
+        "points": 500,
+        "explanation": "Minnesota scored 290 points during the 2001 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "status": "draft",
+    "host": [
+      "Matt Birk",
+      "75",
+      "All-Pro center"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2000s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2009 season?",
+        "type": "choice",
+        "choices": [
+          "Kevin O'Connell",
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier"
+        ],
+        "answer": "Brad Childress",
+        "points": 100,
+        "explanation": "Brad Childress led Minnesota during the 2009 season.",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2016?",
+        "type": "choice",
+        "choices": [
+          "8–7–1",
+          "8–8",
+          "6–10",
+          "15–1"
+        ],
+        "answer": "8–8",
+        "points": 200,
+        "explanation": "Minnesota finished the 2016 regular season 8–8.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2022?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2022.",
+        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Expert",
+        "prompt": "How did Minnesota's 1998 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Divisional Playoffs (vs. Cardinals) 41–21; lost NFC Championship (vs. Falcons) 27–30 (OT).",
+        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2002?",
+        "type": "number",
+        "choices": null,
+        "answer": "390",
+        "points": 500,
+        "explanation": "Minnesota scored 390 points during the 2002 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20",
+    "status": "draft",
+    "host": [
+      "Steve Hutchinson",
+      "76",
+      "Hall of Fame guard"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2010 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Kevin O'Connell",
+          "Mike Zimmer"
+        ],
+        "answer": "Brad Childress",
+        "points": 100,
+        "explanation": "Brad Childress led Minnesota during the 2010 season.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2017?",
+        "type": "choice",
+        "choices": [
+          "13–3",
+          "10–6",
+          "8–8",
+          "8–9"
+        ],
+        "answer": "13–3",
+        "points": 200,
+        "explanation": "Minnesota finished the 2017 regular season 13–3.",
+        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2023?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2023.",
+        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Expert",
+        "prompt": "How did Minnesota's 1999 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (vs. Cowboys) 27–10; lost Divisional Playoffs (at Rams) 37–49.",
+        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2003?",
+        "type": "number",
+        "choices": null,
+        "answer": "416",
+        "points": 500,
+        "explanation": "Minnesota scored 416 points during the 2003 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "status": "draft",
+    "host": [
+      "Jim Marshall",
+      "70",
+      "Ironman defensive end"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2011 season?",
+        "type": "choice",
+        "choices": [
+          "Leslie Frazier",
+          "Kevin O'Connell",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Leslie Frazier",
+        "points": 100,
+        "explanation": "Leslie Frazier led Minnesota during the 2011 season.",
+        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2018?",
+        "type": "choice",
+        "choices": [
+          "12–4",
+          "13–4",
+          "11–5",
+          "8–7–1"
+        ],
+        "answer": "8–7–1",
+        "points": 200,
+        "explanation": "Minnesota finished the 2018 regular season 8–7–1.",
+        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2024?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2024.",
+        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2000 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Divisional Playoffs (vs. Saints) 34–16; lost NFC Championship (at Giants) 0–41.",
+        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2004?",
+        "type": "number",
+        "choices": null,
+        "answer": "405",
+        "points": 500,
+        "explanation": "Minnesota scored 405 points during the 2004 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-22",
+    "status": "draft",
+    "host": [
+      "Carl Eller",
+      "81",
+      "Hall of Fame defensive end"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2012 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Leslie Frazier",
+          "Kevin O'Connell",
+          "Mike Tice"
+        ],
+        "answer": "Leslie Frazier",
+        "points": 100,
+        "explanation": "Leslie Frazier led Minnesota during the 2012 season.",
+        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2019?",
+        "type": "choice",
+        "choices": [
+          "10–6",
+          "3–13",
+          "7–10",
+          "5–11"
+        ],
+        "answer": "10–6",
+        "points": 200,
+        "explanation": "Minnesota finished the 2019 regular season 10–6.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2025?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2025.",
+        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2001 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2005?",
+        "type": "number",
+        "choices": null,
+        "answer": "306",
+        "points": 500,
+        "explanation": "Minnesota scored 306 points during the 2005 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-23",
+    "status": "draft",
+    "host": [
+      "Paul Krause",
+      "22",
+      "Hall of Fame safety"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2013 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Leslie Frazier",
+          "Brad Childress",
+          "Mike Tice"
+        ],
+        "answer": "Leslie Frazier",
+        "points": 100,
+        "explanation": "Leslie Frazier led Minnesota during the 2013 season.",
+        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2020?",
+        "type": "choice",
+        "choices": [
+          "7–9",
+          "14–3",
+          "6–10",
+          "5–10–1"
+        ],
+        "answer": "7–9",
+        "points": 200,
+        "explanation": "Minnesota finished the 2020 regular season 7–9.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 1996?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "2nd NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC Central in 1996.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2002 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2006?",
+        "type": "number",
+        "choices": null,
+        "answer": "282",
+        "points": 500,
+        "explanation": "Minnesota scored 282 points during the 2006 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-24",
+    "status": "draft",
+    "host": [
+      "Chuck Foreman",
+      "44",
+      "Vikings Ring of Honor"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2014 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2014 season.",
+        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2021?",
+        "type": "choice",
+        "choices": [
+          "8–9",
+          "7–9",
+          "9–8",
+          "8–8"
+        ],
+        "answer": "8–9",
+        "points": 200,
+        "explanation": "Minnesota finished the 2021 regular season 8–9.",
+        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 1997?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "4th NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC Central in 1997.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2003 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2007?",
+        "type": "number",
+        "choices": null,
+        "answer": "365",
+        "points": 500,
+        "explanation": "Minnesota scored 365 points during the 2007 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-25",
+    "status": "draft",
+    "host": [
+      "Ahmad Rashad",
+      "28",
+      "Vikings Ring of Honor"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2015 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier",
+          "Kevin O'Connell"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2015 season.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2022?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "13–4",
+          "13–3",
+          "12–4"
+        ],
+        "answer": "13–4",
+        "points": 200,
+        "explanation": "Minnesota finished the 2022 regular season 13–4.",
+        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 1998?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "1st NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC Central in 1998.",
+        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2004 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs",
+          "Lost in the Wild Card round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (at Packers) 31–17; lost Divisional Playoffs (at Eagles) 14–27.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2008?",
+        "type": "number",
+        "choices": null,
+        "answer": "379",
+        "points": 500,
+        "explanation": "Minnesota scored 379 points during the 2008 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-26",
+    "status": "draft",
+    "host": [
+      "Robert Smith",
+      "26",
+      "Vikings Ring of Honor"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2016 season?",
+        "type": "choice",
+        "choices": [
+          "Kevin O'Connell",
+          "Mike Zimmer",
+          "Dennis Green",
+          "Leslie Frazier"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2016 season.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2023?",
+        "type": "choice",
+        "choices": [
+          "8–7–1",
+          "7–10",
+          "15–1",
+          "3–13"
+        ],
+        "answer": "7–10",
+        "points": 200,
+        "explanation": "Minnesota finished the 2023 regular season 7–10.",
+        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 1999?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "2nd NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC Central in 1999.",
+        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2005 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2009?",
+        "type": "number",
+        "choices": null,
+        "answer": "470",
+        "points": 500,
+        "explanation": "Minnesota scored 470 points during the 2009 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-27",
+    "status": "draft",
+    "host": [
+      "Daunte Culpepper",
+      "11",
+      "All-Pro quarterback"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2017 season?",
+        "type": "choice",
+        "choices": [
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2017 season.",
+        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2024?",
+        "type": "choice",
+        "choices": [
+          "14–3",
+          "10–6",
+          "5–10–1",
+          "8–9"
+        ],
+        "answer": "14–3",
+        "points": 200,
+        "explanation": "Minnesota finished the 2024 regular season 14–3.",
+        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 2000?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "1st NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC Central in 2000.",
+        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2006 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2010?",
+        "type": "number",
+        "choices": null,
+        "answer": "281",
+        "points": 500,
+        "explanation": "Minnesota scored 281 points during the 2010 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "status": "draft",
+    "host": [
+      "Adam Thielen",
+      "19",
+      "Minnesota fan favorite"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2018 season?",
+        "type": "choice",
+        "choices": [
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2018 season.",
+        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2020s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2025?",
+        "type": "choice",
+        "choices": [
+          "9–8",
+          "7–9",
+          "13–4",
+          "11–5"
+        ],
+        "answer": "9–8",
+        "points": 200,
+        "explanation": "Minnesota finished the 2025 regular season 9–8.",
+        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC Central in 2001?",
+        "type": "choice",
+        "choices": [
+          "1st NFC Central",
+          "2nd NFC Central",
+          "3rd NFC Central",
+          "4th NFC Central"
+        ],
+        "answer": "4th NFC Central",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC Central in 2001.",
+        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2007 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2011?",
+        "type": "number",
+        "choices": null,
+        "answer": "340",
+        "points": 500,
+        "explanation": "Minnesota scored 340 points during the 2011 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-29",
+    "status": "draft",
+    "host": [
+      "Stefon Diggs",
+      "14",
+      "Minneapolis Miracle receiver"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2010s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2019 season?",
+        "type": "choice",
+        "choices": [
+          "Dennis Green",
+          "Brad Childress",
+          "Mike Tice",
+          "Mike Zimmer"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2019 season.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 1996?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "7–10",
+          "5–11",
+          "13–3"
+        ],
+        "answer": "9–7",
+        "points": 200,
+        "explanation": "Minnesota finished the 1996 regular season 9–7.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2002?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2002.",
+        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2008 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (vs. Eagles) 14–26.",
+        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2012?",
+        "type": "number",
+        "choices": null,
+        "answer": "379",
+        "points": 500,
+        "explanation": "Minnesota scored 379 points during the 2012 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-30",
+    "status": "draft",
+    "host": [
+      "Danielle Hunter",
+      "99",
+      "All-Pro pass rusher"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2020 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2020 season.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 1997?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "14–3",
+          "6–10",
+          "8–7–1"
+        ],
+        "answer": "9–7",
+        "points": 200,
+        "explanation": "Minnesota finished the 1997 regular season 9–7.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2003?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2003.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Expert",
+        "prompt": "How did Minnesota's 2009 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Won Divisional Playoffs (vs. Cowboys) 34–3; lost NFC Championship (at Saints) 28–31 (OT).",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2013?",
+        "type": "number",
+        "choices": null,
+        "answer": "391",
+        "points": 500,
+        "explanation": "Minnesota scored 391 points during the 2013 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-31",
+    "status": "draft",
+    "host": [
+      "Brian Robison",
+      "96",
+      "Longtime Vikings defensive end"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2021 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Brad Childress",
+          "Leslie Frazier",
+          "Kevin O'Connell"
+        ],
+        "answer": "Mike Zimmer",
+        "points": 100,
+        "explanation": "Mike Zimmer led Minnesota during the 2021 season.",
+        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 1998?",
+        "type": "choice",
+        "choices": [
+          "9–8",
+          "8–8",
+          "8–9",
+          "15–1"
+        ],
+        "answer": "15–1",
+        "points": 200,
+        "explanation": "Minnesota finished the 1998 regular season 15–1.",
+        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2004?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2004.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2010 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2014?",
+        "type": "number",
+        "choices": null,
+        "answer": "325",
+        "points": 500,
+        "explanation": "Minnesota scored 325 points during the 2014 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "status": "draft",
+    "host": [
+      "Kyle Rudolph",
+      "82",
+      "Pro Bowl tight end"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2022 season?",
+        "type": "choice",
+        "choices": [
+          "Mike Zimmer",
+          "Dennis Green",
+          "Leslie Frazier",
+          "Kevin O'Connell"
+        ],
+        "answer": "Kevin O'Connell",
+        "points": 100,
+        "explanation": "Kevin O'Connell led Minnesota during the 2022 season.",
+        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "1990s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 1999?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "10–6",
+          "12–4",
+          "13–4"
+        ],
+        "answer": "10–6",
+        "points": 200,
+        "explanation": "Minnesota finished the 1999 regular season 10–6.",
+        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2005?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2005.",
+        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2011 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the Divisional round",
+          "Lost in the NFC Championship",
+          "Missed the playoffs",
+          "Lost in the Wild Card round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2015?",
+        "type": "number",
+        "choices": null,
+        "answer": "365",
+        "points": 500,
+        "explanation": "Minnesota scored 365 points during the 2015 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "status": "draft",
+    "host": [
+      "Everson Griffen",
+      "97",
+      "Pro Bowl defensive end"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2023 season?",
+        "type": "choice",
+        "choices": [
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Kevin O'Connell",
+        "points": 100,
+        "explanation": "Kevin O'Connell led Minnesota during the 2023 season.",
+        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2000?",
+        "type": "choice",
+        "choices": [
+          "11–5",
+          "15–1",
+          "3–13",
+          "7–10"
+        ],
+        "answer": "11–5",
+        "points": 200,
+        "explanation": "Minnesota finished the 2000 regular season 11–5.",
+        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2006?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "3rd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 3rd NFC North in 2006.",
+        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2012 season end?",
+        "type": "choice",
+        "choices": [
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round",
+          "Missed the playoffs"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (at Packers) 10–24.",
+        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2016?",
+        "type": "number",
+        "choices": null,
+        "answer": "327",
+        "points": 500,
+        "explanation": "Minnesota scored 327 points during the 2016 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-03",
+    "status": "draft",
+    "host": [
+      "Anthony Barr",
+      "55",
+      "Four-time Pro Bowl linebacker"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2024 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Dennis Green"
+        ],
+        "answer": "Kevin O'Connell",
+        "points": 100,
+        "explanation": "Kevin O'Connell led Minnesota during the 2024 season.",
+        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2001?",
+        "type": "choice",
+        "choices": [
+          "5–11",
+          "10–6",
+          "14–3",
+          "5–10–1"
+        ],
+        "answer": "5–11",
+        "points": 200,
+        "explanation": "Minnesota finished the 2001 regular season 5–11.",
+        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2007?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "2nd NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 2nd NFC North in 2007.",
+        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2013 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2017?",
+        "type": "number",
+        "choices": null,
+        "answer": "382",
+        "points": 500,
+        "explanation": "Minnesota scored 382 points during the 2017 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "status": "draft",
+    "host": [
+      "Eric Kendricks",
+      "54",
+      "All-Pro linebacker"
+    ],
+    "questions": [
+      {
+        "eyebrow": "2020s · Warm-up",
+        "prompt": "Who was Minnesota's head coach for the 2025 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Kevin O'Connell",
+          "Mike Tice",
+          "Dennis Green"
+        ],
+        "answer": "Kevin O'Connell",
+        "points": 100,
+        "explanation": "Kevin O'Connell led Minnesota during the 2025 season.",
+        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "What was the Vikings' regular-season record in 2002?",
+        "type": "choice",
+        "choices": [
+          "7–9",
+          "9–8",
+          "6–10",
+          "11–5"
+        ],
+        "answer": "6–10",
+        "points": 200,
+        "explanation": "Minnesota finished the 2002 regular season 6–10.",
+        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "Where did Minnesota finish in the NFC North in 2008?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2008.",
+        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "How did Minnesota's 2014 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "Exactly how many regular-season points did the Vikings score in 2018?",
+        "type": "number",
+        "choices": null,
+        "answer": "360",
+        "points": 500,
+        "explanation": "Minnesota scored 360 points during the 2018 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2099-12-30",
+    "status": "draft",
+    "host": [
+      "Test Host A",
+      "T1",
+      "Internal sample game"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "TEST A — Who was Minnesota's head coach for the 1996 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Tice",
+          "Dennis Green"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1996 season.",
+        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "TEST A — What was the Vikings' regular-season record in 2003?",
+        "type": "choice",
+        "choices": [
+          "9–7",
+          "7–9",
+          "9–8",
+          "8–8"
+        ],
+        "answer": "9–7",
+        "points": 200,
+        "explanation": "Minnesota finished the 2003 regular season 9–7.",
+        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Deep cut",
+        "prompt": "TEST A — Where did Minnesota finish in the NFC North in 2009?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "1st NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 1st NFC North in 2009.",
+        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "TEST A — How did Minnesota's 2015 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Lost in the Wild Card round",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (vs. Seahawks) 9–10.",
+        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "TEST A — Exactly how many regular-season points did the Vikings score in 2019?",
+        "type": "number",
+        "choices": null,
+        "answer": "407",
+        "points": 500,
+        "explanation": "Minnesota scored 407 points during the 2019 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season"
+      }
+    ]
+  },
+  {
+    "date": "2099-12-31",
+    "status": "draft",
+    "host": [
+      "Test Host B",
+      "T2",
+      "Internal sample game"
+    ],
+    "questions": [
+      {
+        "eyebrow": "1990s · Warm-up",
+        "prompt": "TEST B — Who was Minnesota's head coach for the 1997 season?",
+        "type": "choice",
+        "choices": [
+          "Brad Childress",
+          "Leslie Frazier",
+          "Mike Zimmer",
+          "Dennis Green"
+        ],
+        "answer": "Dennis Green",
+        "points": 100,
+        "explanation": "Dennis Green led Minnesota during the 1997 season.",
+        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2000s · Getting warmer",
+        "prompt": "TEST B — What was the Vikings' regular-season record in 2004?",
+        "type": "choice",
+        "choices": [
+          "8–8",
+          "9–7",
+          "13–3",
+          "12–4"
+        ],
+        "answer": "8–8",
+        "points": 200,
+        "explanation": "Minnesota finished the 2004 regular season 8–8.",
+        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Deep cut",
+        "prompt": "TEST B — Where did Minnesota finish in the NFC North in 2010?",
+        "type": "choice",
+        "choices": [
+          "1st NFC North",
+          "2nd NFC North",
+          "3rd NFC North",
+          "4th NFC North"
+        ],
+        "answer": "4th NFC North",
+        "points": 300,
+        "explanation": "The Vikings placed 4th NFC North in 2010.",
+        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "2010s · Expert",
+        "prompt": "TEST B — How did Minnesota's 2016 season end?",
+        "type": "choice",
+        "choices": [
+          "Missed the playoffs",
+          "Lost in the Wild Card round",
+          "Lost in the NFC Championship",
+          "Lost in the Divisional round"
+        ],
+        "answer": "Missed the playoffs",
+        "points": 400,
+        "explanation": "Minnesota's postseason result: Did not qualify.",
+        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season"
+      },
+      {
+        "eyebrow": "Closest to the pin · 500 pts",
+        "prompt": "TEST B — Exactly how many regular-season points did the Vikings score in 2020?",
+        "type": "number",
+        "choices": null,
+        "answer": "430",
+        "points": 500,
+        "explanation": "Minnesota scored 430 points during the 2020 regular season.",
+        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season"
+      }
+    ]
+  }
+]

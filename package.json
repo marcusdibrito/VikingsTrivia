@@ -11,7 +11,8 @@
     "start": "next start",
     "test": "npm run build",
     "lint": "eslint . --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "seed:generate": "node tools/generate_daily_games.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

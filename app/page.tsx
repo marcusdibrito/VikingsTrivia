@@ -15,6 +15,7 @@ type Question = {
 };
 
 type LeaderRow = {
+  attemptId?: string;
   rank: number;
   name: string;
   score: number;
@@ -25,61 +26,17 @@ type LeaderRow = {
   pinWinner?: boolean;
 };
 
-const questions: Question[] = [
-  {
-    id: "q1",
-    eyebrow: "2010s · Warm-up",
-    prompt: "Who was the Vikings’ primary punter during the 2010 season?",
-    type: "choice",
-    choices: ["Chris Kluwe", "Mitch Berger", "Matt Wile", "Britton Colquitt"],
-    answer: "Chris Kluwe",
-    points: 100,
-    explanation: "Chris Kluwe handled all 73 Minnesota punts in 2010.",
-    source: "https://www.pro-football-reference.com/teams/min/2010.htm",
-  },
-  {
-    id: "q2",
-    eyebrow: "2020s · Getting warmer",
-    prompt: "What record did the Vikings finish with in the 2022 regular season?",
-    type: "choice",
-    choices: ["11–6", "12–5", "13–4", "14–3"],
-    answer: "13–4",
-    points: 200,
-    explanation: "Minnesota went 13–4 and won the NFC North in Kevin O’Connell’s first season.",
-    source: "https://www.pro-football-reference.com/teams/min/2022.htm",
-  },
-  {
-    id: "q3",
-    eyebrow: "2000s · Deep cut",
-    prompt: "Which team did the Vikings face in Spurgeon Wynn’s only start for Minnesota?",
-    type: "team",
-    answer: "Baltimore Ravens",
-    points: 300,
-    explanation: "Wynn started the 2001 finale, a 19–3 road loss to Baltimore.",
-    source: "https://www.pro-football-reference.com/boxscores/200201070rav.htm",
-  },
-  {
-    id: "q4",
-    eyebrow: "2020s · Expert",
-    prompt: "How many receiving yards did Justin Jefferson record as a rookie in 2020?",
-    type: "choice",
-    choices: ["1,200", "1,300", "1,400", "1,500"],
-    answer: "1,400",
-    points: 400,
-    explanation: "Jefferson’s 1,400 receiving yards set the Super Bowl-era rookie record at the time.",
-    source: "https://www.pro-football-reference.com/players/J/JeffJu00.htm",
-  },
-  {
-    id: "q5",
-    eyebrow: "Closest to the pin · 500 pts",
-    prompt: "Adrian Peterson set the NFL single-game rushing record in 2007. Exactly how many yards did he rush for?",
-    type: "number",
-    answer: 296,
-    points: 500,
-    explanation: "Peterson rushed for 296 yards against the Chargers on November 4, 2007.",
-    source: "https://www.pro-football-reference.com/boxscores/200711040min.htm",
-  },
-];
+type DailyGame = {
+  gameDate: string;
+  host: {
+    name: string;
+    number: string | null;
+    caption: string;
+  };
+  questions: Question[];
+};
+
+const emptyQuestions: Question[] = [];
 
 const nflTeams = [
   "Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills",
@@ -113,7 +70,24 @@ function resolveTeam(value: string) {
   return matches.length === 1 ? matches[0] : null;
 }
 
+function formatGameDate(value: string, compact = false) {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    month: compact ? "short" : "long",
+    day: "numeric",
+    ...(compact ? {} : { weekday: "long" as const }),
+  }).format(new Date(`${value}T12:00:00Z`));
+}
+
+function numericUnit(question?: Question) {
+  const points = question?.prompt.toLowerCase().includes("points");
+  return points
+    ? { label: "points", short: "pts" }
+    : { label: "yards", short: "yds" };
+}
+
 export default function Home() {
+  const [dailyGame, setDailyGame] = useState<DailyGame | null>(null);
   const [view, setView] = useState<"home" | "game" | "results" | "leaders" | "archive">("home");
   const [name, setName] = useState("");
   const [index, setIndex] = useState(0);
@@ -125,25 +99,40 @@ export default function Home() {
   const [leaderboard, setLeaderboard] = useState<LeaderRow[]>([]);
   const [dailyRank, setDailyRank] = useState<number | null>(null);
   const [ready, setReady] = useState(false);
+  const [loadError, setLoadError] = useState("");
+  const questions = dailyGame?.questions ?? emptyQuestions;
+  const finalUnit = numericUnit(questions[4]);
 
-  /* eslint-disable react-hooks/immutability -- the countdown locks the current answer on expiry */
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- restore a resumable game once on hydration */
-    const savedName = localStorage.getItem("norse-player");
-    const savedGame = localStorage.getItem("norse-game-2026-07-26");
-    if (savedName) setName(savedName);
-    if (savedGame) {
-      const parsed = JSON.parse(savedGame) as { index: number; answers: string[] };
-      setIndex(parsed.index);
-      setAnswers(parsed.answers);
-      if (parsed.answers.length > parsed.index) setLockedAnswer(parsed.answers[parsed.index]);
+    async function loadGame() {
+      const savedName = localStorage.getItem("norse-player");
+      if (savedName) setName(savedName);
+      Object.keys(localStorage)
+        .filter((key) => key.startsWith("norse-game-"))
+        .forEach((key) => localStorage.removeItem(key));
+
+      try {
+        const response = await fetch("/api/daily-game");
+        const payload = await response.json() as DailyGame | { error?: string };
+        if (!response.ok || !("questions" in payload)) {
+          throw new Error("error" in payload ? payload.error : "Today’s game is unavailable.");
+        }
+        const game = payload;
+        setDailyGame(game);
+        try {
+          const leaderboardResponse = await fetch("/api/leaderboard");
+          const data = await leaderboardResponse.json() as { leaderboard?: LeaderRow[] };
+          setLeaderboard(data.leaderboard ?? []);
+        } catch {
+          setLeaderboard([]);
+        }
+      } catch (error) {
+        setLoadError(error instanceof Error ? error.message : "Today’s game is unavailable.");
+      } finally {
+        setReady(true);
+      }
     }
-    fetch("/api/leaderboard")
-      .then((response) => response.json())
-      .then((data: { leaderboard?: LeaderRow[] }) => setLeaderboard(data.leaderboard ?? []))
-      .catch(() => setLeaderboard([]));
-    setReady(true);
-    /* eslint-enable react-hooks/set-state-in-effect */
+    void loadGame();
   }, []);
 
   useEffect(() => {
@@ -161,7 +150,6 @@ export default function Home() {
     return () => window.clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, index, lockedAnswer]);
-  /* eslint-enable react-hooks/immutability */
 
   const score = useMemo(
     () =>
@@ -174,7 +162,7 @@ export default function Home() {
         }
         return total + (normalize(entry) === normalize(String(q.answer)) ? q.points : 0);
       }, 0),
-    [answers],
+    [answers, questions],
   );
 
   const correct = answers.filter((entry, i) => {
@@ -187,7 +175,18 @@ export default function Home() {
     const safeName = name.trim() || "Anonymous Viking";
     setName(safeName);
     localStorage.setItem("norse-player", safeName);
-    setView(index > 0 ? "game" : "game");
+    resetRun();
+    setView("game");
+  }
+
+  function resetRun() {
+    setIndex(0);
+    setAnswer("");
+    setAnswers([]);
+    setSeconds(30);
+    setLockedAnswer(null);
+    setTeamError("");
+    setDailyRank(null);
   }
 
   function submitAnswer(forced?: string) {
@@ -206,7 +205,6 @@ export default function Home() {
     const nextAnswers = [...answers, value];
     setAnswers(nextAnswers);
     setLockedAnswer(value);
-    localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index, answers: nextAnswers }));
   }
 
   async function saveCompletedAttempt() {
@@ -228,7 +226,6 @@ export default function Home() {
 
   function continueGame() {
     if (index >= questions.length - 1) {
-      localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: 5, answers, complete: true }));
       setView("results");
       void saveCompletedAttempt();
       return;
@@ -239,11 +236,9 @@ export default function Home() {
     setTeamError("");
     setLockedAnswer(null);
     setSeconds(30);
-    localStorage.setItem("norse-game-2026-07-26", JSON.stringify({ index: nextIndex, answers }));
   }
 
   const current = questions[index] ?? questions[4];
-  const completed = answers.length === questions.length;
   const currentCorrect = lockedAnswer !== null && (
     current.type === "number"
       ? Number(lockedAnswer) === Number(current.answer)
@@ -251,6 +246,16 @@ export default function Home() {
   );
 
   if (!ready) return <main className="loading">Loading today’s huddle…</main>;
+  if (loadError || !dailyGame) {
+    return (
+      <main className="unavailable">
+        <span>OFF THE FIELD</span>
+        <h1>Today’s game isn’t ready yet.</h1>
+        <p>{loadError || "We couldn’t find a published five-question game for today."}</p>
+        <button className="primary" onClick={() => window.location.reload()}>Try again →</button>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -271,26 +276,26 @@ export default function Home() {
           <div className="ambient one" />
           <div className="ambient two" />
           <div className="hero-copy">
-            <p className="kicker"><span>LIVE</span> SUNDAY, JULY 26</p>
+            <p className="kicker"><span>LIVE</span> {formatGameDate(dailyGame.gameDate).toUpperCase()}</p>
             <h1>Five questions.<br /><em>One daily champion.</em></h1>
             <p className="lede">A fresh Minnesota football quiz every day. Same questions for everyone. Bragging rights last forever.</p>
 
             <div className="host-card">
-              <div className="host-avatar">40</div>
-              <div><small>TODAY’S HOST</small><strong>“I’m your host, Jim Kleinsasser.”</strong><span>Fan favorite · 1999–2011</span></div>
+              <div className="host-avatar">{dailyGame.host.number ?? "SK"}</div>
+              <div><small>TODAY’S HOST</small><strong>“I’m your host, {dailyGame.host.name}.”</strong><span>{dailyGame.host.caption}</span></div>
             </div>
 
             <form className="play-card" onSubmit={begin}>
               <label htmlFor="display-name">Your display name</label>
               <div className="play-row">
                 <input id="display-name" value={name} onChange={(e) => setName(e.target.value)} maxLength={24} placeholder="e.g. SkolDad" />
-                <button className="primary" type="submit">{index > 0 && !completed ? "Resume game →" : completed ? "See results →" : "Play today →"}</button>
+                <button className="primary" type="submit">Play today →</button>
               </div>
-              <p><span className="status-dot" /> {completed ? "Completed today" : index > 0 ? `In progress · Question ${index + 1} of 5` : "Not started"} <b>•</b> No password needed</p>
+              <p><span className="status-dot" /> A fresh run starts every time <b>•</b> No password needed</p>
             </form>
           </div>
           <aside className="scoreboard">
-            <div className="board-top"><span>TODAY’S GAME</span><strong>JUL 26</strong></div>
+            <div className="board-top"><span>TODAY’S GAME</span><strong>{formatGameDate(dailyGame.gameDate, true).toUpperCase()}</strong></div>
             <div className="big-five">5</div>
             <p>QUESTIONS</p>
             <div className="difficulty"><span /><span /><span /><span /><span /></div>
@@ -320,7 +325,7 @@ export default function Home() {
                   <h3>{currentCorrect ? "You got it." : <>The answer is <b>{current.answer}</b>.</>}</h3>
                   <p>{current.explanation}</p>
                   {current.type === "number" && !currentCorrect && lockedAnswer && (
-                    <p className="distance-note">Your guess was {Math.abs(Number(lockedAnswer) - Number(current.answer))} yards away.</p>
+                    <p className="distance-note">Your guess was {Math.abs(Number(lockedAnswer) - Number(current.answer))} {numericUnit(current).label} away.</p>
                   )}
                 </div>
               </div>
@@ -344,12 +349,12 @@ export default function Home() {
                     setAnswer(e.target.value);
                     if (teamError) setTeamError("");
                   }}
-                  placeholder={current.type === "number" ? "Enter exact yards" : current.type === "team" ? "Start typing a city or team…" : "Type your answer"}
+                  placeholder={current.type === "number" ? `Enter exact ${numericUnit(current).label}` : current.type === "team" ? "Start typing a city or team…" : "Type your answer"}
                   onKeyDown={(e) => e.key === "Enter" && answer && submitAnswer()}
                   aria-invalid={current.type === "team" && !!teamError}
                   aria-describedby={current.type === "team" ? "team-help" : undefined}
                 />
-                {current.type === "number" && <span>YARDS</span>}
+                {current.type === "number" && <span>{numericUnit(current).label.toUpperCase()}</span>}
                 {current.type === "team" && (
                   <>
                     <datalist id="nfl-team-options">
@@ -372,13 +377,13 @@ export default function Home() {
 
       {view === "results" && (
         <section className="results page">
-          <p className="kicker"><span>FINAL</span> JULY 26 RESULTS</p>
+          <p className="kicker"><span>FINAL</span> {formatGameDate(dailyGame.gameDate).toUpperCase()} RESULTS</p>
           <h1>Nice work, {name}.</h1>
           <div className="result-hero">
             <div><small>TOTAL SCORE</small><strong>{score.toLocaleString()}</strong><span>of 1,500 points</span></div>
             <div><small>CORRECT</small><strong>{correct}<i>/5</i></strong><span>questions</span></div>
             <div><small>DAILY RANK</small><strong>{dailyRank ? `#${dailyRank}` : "—"}</strong><span>of {leaderboard.length} players</span></div>
-            <div className="pin-result"><small>CLOSEST TO THE PIN</small><strong>{answers[4] || "—"} <i>yds</i></strong><span>{answers[4] ? `${Math.abs(Number(answers[4]) - 296)} yards away` : "No guess"}</span></div>
+            <div className="pin-result"><small>CLOSEST TO THE PIN</small><strong>{answers[4] || "—"} <i>{finalUnit.short}</i></strong><span>{answers[4] ? `${Math.abs(Number(answers[4]) - Number(questions[4]?.answer))} ${finalUnit.label} away` : "No guess"}</span></div>
           </div>
           <div className="review-list">
             {questions.map((q, i) => {
@@ -389,7 +394,7 @@ export default function Home() {
               </details>;
             })}
           </div>
-          <div className="result-actions"><button className="primary" onClick={() => setView("leaders")}>View full leaderboard →</button><button className="secondary" onClick={() => setView("home")}>Back to home</button></div>
+          <div className="result-actions"><button className="primary" onClick={() => setView("leaders")}>View full leaderboard →</button><button className="secondary" onClick={() => { resetRun(); setView("home"); }}>Play again</button></div>
         </section>
       )}
 
@@ -404,7 +409,7 @@ export default function Home() {
             {leaderboard.map((row) => <div className="table-row" key={`${row.rank}-${row.name}`}>
               <b className="rank">{row.rank === 1 ? "♛" : `#${row.rank}`}</b>
               <strong>{row.name}{row.winner && <i className="badge">DAILY WINNER</i>}{row.pinWinner && <i className="badge pin-badge">◎ PIN WINNER</i>}</strong>
-              <b>{row.score.toLocaleString()}</b><span>{row.correct}/5</span><span>{row.pin === null ? "—" : `${row.pin} yds`}</span><span>{row.time}</span>
+              <b>{row.score.toLocaleString()}</b><span>{row.correct}/5</span><span>{row.pin === null ? "—" : `${row.pin} ${finalUnit.short}`}</span><span>{row.time}</span>
             </div>)}
           </div>
           <div className="all-time">

@@ -1,0 +1,1 @@
+DROP INDEX `one_attempt_per_player_game`;
