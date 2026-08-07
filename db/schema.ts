@@ -49,7 +49,7 @@ export const attempts = sqliteTable("attempts", {
   correctCount: integer("correct_count"),
   pinGuess: integer("pin_guess"),
   pinDistance: integer("pin_distance"),
-}, (t) => [uniqueIndex("one_attempt_per_player_game").on(t.playerId, t.dailyGameId)]);
+});
 
 export const answers = sqliteTable("answers", {
   id: text("id").primaryKey(),

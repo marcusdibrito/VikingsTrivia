@@ -37,12 +37,13 @@ create table if not exists public.attempts (
   correct_count integer not null,
   pin_guess integer,
   pin_distance integer,
-  completed_at timestamptz not null default now(),
-  unique (game_id, device_hash)
+  completed_at timestamptz not null default now()
 );
 
 create index if not exists attempts_leaderboard_idx
   on public.attempts (game_id, score desc, correct_count desc, pin_distance asc, completed_at asc);
+create index if not exists attempts_game_device_idx
+  on public.attempts (game_id, device_hash);
 
 alter table public.games enable row level security;
 alter table public.game_questions enable row level security;

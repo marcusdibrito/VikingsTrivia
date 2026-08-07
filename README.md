@@ -1,6 +1,6 @@
 # Norse Know-It-All
 
-A lively, unofficial Minnesota football daily trivia game built for family competition. The current product includes a complete five-question play flow, refresh-safe local progress, escalating difficulty, a numeric closest-to-the-pin finale, answer review with source links, daily standings, all-time highlights, an archive, keyboard support, and responsive layouts.
+A lively, unofficial Minnesota football daily trivia game built for family competition. The current product includes a complete five-question play flow, a clean new run on every page load, escalating difficulty, a numeric closest-to-the-pin finale, answer review with source links, daily standings, all-time highlights, an archive, keyboard support, and responsive layouts.
 
 ## Daily-game rules
 
@@ -15,7 +15,7 @@ A lively, unofficial Minnesota football daily trivia game built for family compe
 
 `draft → published → locked → expired`
 
-An attempt moves from `in_progress → submitted` (or `abandoned`). A unique database index prevents more than one attempt for the same player and game. Every daily-game question stores an immutable JSON snapshot so later question edits cannot rewrite history.
+Each completed run creates a new attempt. Repeat attempts from the same device are currently allowed so the game can be replayed; this can be tightened later if the competition rules change. Every daily-game question is stored as a dated snapshot so later question-bank edits cannot rewrite history.
 
 ## Local setup
 
@@ -60,5 +60,25 @@ The production Supabase schema and initial daily game are defined in
 `supabase/schema.sql`. Keep `SUPABASE_SECRET_KEY` server-only; it is configured
 as a sensitive Vercel environment variable and must never be exposed to client
 components.
+
+## Automatic daily publishing
+
+Prepare future rows in `games` with `status = 'draft'` and exactly five related
+`game_questions`. Vercel calls `/api/cron/publish-daily` daily at 05:00 UTC; the
+route uses the `America/New_York` calendar date, publishes today's prepared
+game, and expires older published games. Repeated calls are safe. The daily
+schedule is compatible with Vercel's Hobby-plan cron limits.
+
+Set `CRON_SECRET` in Vercel in addition to the Supabase variables. Vercel sends
+that value as the cron request's bearer token. If today's draft is missing or
+does not contain exactly five questions, publishing fails safely with HTTP 409
+instead of exposing an incomplete quiz.
+
+The bundled schedule automatically preloads when today's game is first requested
+or when the publishing job runs. It contains 30 dated games beginning August 6,
+2026: the first is published immediately and the remaining 29 are drafts for the
+daily job. Two additional sample games are isolated on far-future test dates so
+they cannot enter the live rotation. `supabase/seed_daily_games.sql` is the manual
+SQL-editor fallback for a fresh or existing Supabase project.
 
 The game is unofficial and does not use NFL or Minnesota Vikings trademarks or logos.
