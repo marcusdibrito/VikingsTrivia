@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { currentGame, supabase } from "@/app/lib/supabase";
-import { ensureScheduledGames } from "@/app/lib/seed-games";
+import { publishDailyGame } from "@/app/lib/publish-daily";
 
 type GameQuestion = {
   id: string;
@@ -21,7 +21,9 @@ export async function GET() {
     try {
       game = await currentGame();
     } catch {
-      await ensureScheduledGames();
+      // Keep the game available if the scheduled request is delayed or missed.
+      // Publishing is idempotent, so simultaneous first requests are safe.
+      await publishDailyGame();
       game = await currentGame();
     }
     const rows = await supabase<GameQuestion[]>(
