@@ -35,8 +35,9 @@ export async function supabase<T>(path: string, init?: RequestInit): Promise<T> 
     cache: "no-store",
   });
   if (!response.ok) throw new Error(await response.text());
-  if (response.status === 204) return undefined as T;
-  return response.json() as Promise<T>;
+  const body = await response.text();
+  if (!body) return undefined as T;
+  return JSON.parse(body) as T;
 }
 
 export async function currentGame() {
