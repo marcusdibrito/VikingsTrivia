@@ -40,6 +40,28 @@ type DailyGame = {
 
 const emptyQuestions: Question[] = [];
 
+type Difficulty = "easier" | "medium" | "harder";
+type PerformanceCell = { attempted: number; correct: number };
+type PerformanceBucket = { choice: PerformanceCell; free: PerformanceCell };
+type LifetimePerformance = Record<Difficulty, PerformanceBucket>;
+
+const emptyPerformance = (): LifetimePerformance => ({
+  easier: { choice: { attempted: 0, correct: 0 }, free: { attempted: 0, correct: 0 } },
+  medium: { choice: { attempted: 0, correct: 0 }, free: { attempted: 0, correct: 0 } },
+  harder: { choice: { attempted: 0, correct: 0 }, free: { attempted: 0, correct: 0 } },
+});
+
+function combineCells(...cells: PerformanceCell[]) {
+  return cells.reduce((total, cell) => ({
+    attempted: total.attempted + cell.attempted,
+    correct: total.correct + cell.correct,
+  }), { attempted: 0, correct: 0 });
+}
+
+function accuracy(cell: PerformanceCell) {
+  return cell.attempted ? `${Math.round((cell.correct / cell.attempted) * 100)}% (${cell.correct}/${cell.attempted})` : "—";
+}
+
 const nflTeams = [
   "Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills",
   "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns",
@@ -57,6 +79,14 @@ function normalize(value: string) {
     return "baltimoreravens";
   }
   return cleaned;
+}
+
+function answerMatches(value: string, question: Question) {
+  const expected = String(question.answer);
+  if (normalize(value) === normalize(expected)) return true;
+  if (question.type !== "text") return false;
+  const lastName = expected.trim().split(/\s+/).at(-1) ?? "";
+  return normalize(lastName).length >= 4 && normalize(value) === normalize(lastName);
 }
 
 function resolveTeam(value: string) {
@@ -104,6 +134,7 @@ export default function Home() {
   const [dailyRank, setDailyRank] = useState<number | null>(null);
   const [ready, setReady] = useState(false);
   const [loadError, setLoadError] = useState("");
+  const [lifetimePerformance, setLifetimePerformance] = useState<LifetimePerformance>(emptyPerformance);
   const questionStartedAt = useRef(0);
   const footballQuestions = dailyGame?.questions ?? emptyQuestions;
   const questions = useMemo(
@@ -122,6 +153,14 @@ export default function Home() {
     async function loadGame() {
       const savedName = localStorage.getItem("norse-player");
       if (savedName) setName(savedName);
+      const savedPerformance = localStorage.getItem("norse-lifetime-performance");
+      if (savedPerformance) {
+        try {
+          setLifetimePerformance(JSON.parse(savedPerformance) as LifetimePerformance);
+        } catch {
+          localStorage.removeItem("norse-lifetime-performance");
+        }
+      }
       Object.keys(localStorage)
         .filter((key) => key.startsWith("norse-game-"))
         .forEach((key) => localStorage.removeItem(key));
@@ -175,18 +214,18 @@ export default function Home() {
           const distance = Math.abs(Number(entry) - Number(q.answer));
           return total + Math.max(0, q.points - distance * 10);
         }
-        return total + (normalize(entry) === normalize(String(q.answer)) ? q.points : 0);
+        return total + (answerMatches(entry, q) ? q.points : 0);
       }, 0),
     [answers, questions],
   );
 
   const correct = answers.filter((entry, i) => {
     const q = questions[i];
-    return q && (q.type === "number" ? Number(entry) === Number(q.answer) : normalize(entry) === normalize(String(q.answer)));
+    return q && (q.type === "number" ? Number(entry) === Number(q.answer) : answerMatches(entry, q));
   }).length;
   const footballCorrect = answers.slice(0, paRoundStart).filter((entry, i) => {
     const q = footballQuestions[i];
-    return q && (q.type === "number" ? Number(entry) === Number(q.answer) : normalize(entry) === normalize(String(q.answer)));
+    return q && (q.type === "number" ? Number(entry) === Number(q.answer) : answerMatches(entry, q));
   }).length;
   const paPoints = answers.slice(paRoundStart).reduce((total, entry, i) => {
     const q = questions[paRoundStart + i];
@@ -251,8 +290,27 @@ export default function Home() {
     setLeaderboard(data.leaderboard ?? []);
   }
 
+  function recordLifetimePerformance() {
+    setLifetimePerformance((currentStats) => {
+      const next = structuredClone(currentStats);
+      footballQuestions.forEach((question, questionIndex) => {
+        const difficulty: Difficulty = questionIndex === 0 ? "easier" : questionIndex <= 2 ? "medium" : "harder";
+        const format = question.type === "choice" ? "choice" : "free";
+        const response = answers[questionIndex] ?? "";
+        const isCorrect = question.type === "number"
+          ? Number(response) === Number(question.answer)
+          : answerMatches(response, question);
+        next[difficulty][format].attempted += 1;
+        if (isCorrect) next[difficulty][format].correct += 1;
+      });
+      localStorage.setItem("norse-lifetime-performance", JSON.stringify(next));
+      return next;
+    });
+  }
+
   function continueGame() {
     if (index >= questions.length - 1) {
+      recordLifetimePerformance();
       setView("results");
       void saveCompletedAttempt();
       return;
@@ -270,7 +328,7 @@ export default function Home() {
   const currentCorrect = lockedAnswer !== null && (
     current.type === "number"
       ? Number(lockedAnswer) === Number(current.answer)
-      : normalize(lockedAnswer) === normalize(String(current.answer))
+      : answerMatches(lockedAnswer, current)
   );
 
   if (!ready) return <main className="loading">Loading today’s huddle…</main>;
@@ -416,13 +474,24 @@ export default function Home() {
           </div>
           <div className="review-list">
             {questions.map((q, i) => {
-              const isCorrect = q.type === "number" ? Number(answers[i]) === Number(q.answer) : normalize(answers[i] || "") === normalize(String(q.answer));
+              const isCorrect = q.type === "number" ? Number(answers[i]) === Number(q.answer) : answerMatches(answers[i] || "", q);
               return <details key={q.id} open={i === 0}>
                 <summary><span className={isCorrect ? "check" : "miss"}>{isCorrect ? "✓" : "×"}</span><b>Q{i + 1}</b><strong>{q.prompt}</strong><em>+{isCorrect ? q.points : 0}</em></summary>
                 <div><p>Your answer: <b>{answers[i] || "No answer"}</b> · Answered in <b>{((answerTimes[i] ?? 0) / 1000).toFixed(1)}s</b></p><p>Correct answer: <b>{q.answer}</b></p><p>{q.explanation}</p><a href={q.source} target="_blank" rel="noreferrer">Check the source ↗</a></div>
               </details>;
             })}
           </div>
+          <section className="performance-card">
+            <div><p className="kicker">YOUR CAREER</p><h2>Lifetime Vikings accuracy</h2><p>Saved on this device after every completed five-question game.</p></div>
+            <div className="performance-table">
+              <div className="performance-head"><span>DIFFICULTY</span><span>AGGREGATE</span><span>MULTIPLE CHOICE</span><span>FREE RESPONSE</span></div>
+              {(["easier", "medium", "harder"] as Difficulty[]).map((difficulty) => {
+                const bucket = lifetimePerformance[difficulty];
+                return <div className="performance-row" key={difficulty}><strong>{difficulty}</strong><span>{accuracy(combineCells(bucket.choice, bucket.free))}</span><span>{accuracy(bucket.choice)}</span><span>{accuracy(bucket.free)}</span></div>;
+              })}
+              <div className="performance-row performance-overall"><strong>Overall</strong><span>{accuracy(combineCells(...Object.values(lifetimePerformance).flatMap((bucket) => [bucket.choice, bucket.free])))}</span><span>{accuracy(combineCells(...Object.values(lifetimePerformance).map((bucket) => bucket.choice)))}</span><span>{accuracy(combineCells(...Object.values(lifetimePerformance).map((bucket) => bucket.free)))}</span></div>
+            </div>
+          </section>
           <div className="result-actions"><button className="primary" onClick={() => setView("leaders")}>View full leaderboard →</button><button className="secondary" onClick={() => { resetRun(); setView("home"); }}>Play again</button></div>
         </section>
       )}

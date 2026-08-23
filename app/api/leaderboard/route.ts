@@ -34,6 +34,13 @@ function normalize(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
+function answerMatches(value: string, expected: string, type: GameQuestion["answer_type"]) {
+  if (normalize(value) === normalize(expected)) return true;
+  if (type !== "text") return false;
+  const lastName = expected.trim().split(/\s+/).at(-1) ?? "";
+  return normalize(lastName).length >= 4 && normalize(value) === normalize(lastName);
+}
+
 function attemptExtras(answers: unknown) {
   if (!answers || Array.isArray(answers) || typeof answers !== "object") {
     return { paPoints: 0, totalTimeMs: null };
@@ -164,7 +171,7 @@ export async function POST(request: Request) {
           score += Math.max(0, question.points - pinDistance * 10);
           if (pinDistance === 0) correctCount += 1;
         }
-      } else if (normalize(answer) === normalize(question.canonical_answer)) {
+      } else if (answerMatches(answer, question.canonical_answer, question.answer_type)) {
         score += question.points;
         correctCount += 1;
       }

@@ -22,7 +22,17 @@ const TODAY_REFRESH_DATE = "2026-08-23";
 async function refreshTodayOnce(gameId: string, gameDate: string, rows: GameQuestion[]) {
   if (gameDate !== TODAY_REFRESH_DATE) return rows;
   const scheduled = scheduledGames.find((game) => game.date === gameDate);
-  if (!scheduled || scheduled.questions.every((question, index) => question.prompt === rows[index]?.prompt)) {
+  if (!scheduled) return rows;
+  await supabase<unknown>(`games?id=eq.${gameId}`, {
+    method: "PATCH",
+    headers: { Prefer: "return=minimal" },
+    body: JSON.stringify({
+      host_name: scheduled.host[0],
+      host_number: scheduled.host[1],
+      host_caption: scheduled.host[2],
+    }),
+  });
+  if (scheduled.questions.every((question, index) => question.prompt === rows[index]?.prompt)) {
     return rows;
   }
 
@@ -69,6 +79,7 @@ export async function GET() {
       `game_questions?select=id,position,eyebrow,prompt,answer_type,choices,canonical_answer,points,explanation,source_url&game_id=eq.${game.id}&order=position.asc`,
     );
     rows = await refreshTodayOnce(game.id, game.game_date, rows);
+    game = await currentGame();
     if (rows.length !== 5) throw new Error("Today's published game is incomplete.");
 
     return NextResponse.json({

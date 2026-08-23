@@ -39,32 +39,52 @@ const seasons = [
   division,
   playoffs,
   pointsFor,
-  source: `https://en.wikipedia.org/wiki/${year}_Minnesota_Vikings_season`,
+  source: `https://www.pro-football-reference.com/teams/min/${year}.htm`,
+}));
+
+// Team leaders and quarterback starts from Pro Football Reference's regular-
+// season Minnesota tables. Keeping first and second place together lets the
+// generator ask about either rank without falling back to the same prompt.
+const leaderSeasons = [
+  [2014, ["Matt Asiata", "Jerick McKinnon"], ["Greg Jennings", "Jarius Wright"], [["Teddy Bridgewater", 12], ["Matt Cassel", 3], ["Christian Ponder", 1]]],
+  [2015, ["Adrian Peterson", "Jerick McKinnon"], ["Stefon Diggs", "Kyle Rudolph"], [["Teddy Bridgewater", 16]]],
+  [2016, ["Jerick McKinnon", "Matt Asiata"], ["Adam Thielen", "Stefon Diggs"], [["Sam Bradford", 15], ["Shaun Hill", 1]]],
+  [2017, ["Latavius Murray", "Jerick McKinnon"], ["Adam Thielen", "Stefon Diggs"], [["Case Keenum", 14], ["Sam Bradford", 2]]],
+  [2018, ["Dalvin Cook", "Latavius Murray"], ["Adam Thielen", "Stefon Diggs"], [["Kirk Cousins", 16]]],
+  [2019, ["Dalvin Cook", "Alexander Mattison"], ["Stefon Diggs", "Dalvin Cook"], [["Kirk Cousins", 15], ["Sean Mannion", 1]]],
+  [2020, ["Dalvin Cook", "Alexander Mattison"], ["Justin Jefferson", "Adam Thielen"], [["Kirk Cousins", 16]]],
+  [2021, ["Dalvin Cook", "Alexander Mattison"], ["Justin Jefferson", "Adam Thielen"], [["Kirk Cousins", 16], ["Sean Mannion", 1]]],
+  [2022, ["Dalvin Cook", "Alexander Mattison"], ["Justin Jefferson", "Adam Thielen"], [["Kirk Cousins", 17]]],
+  [2023, ["Alexander Mattison", "Ty Chandler"], ["Justin Jefferson", "T.J. Hockenson"], [["Kirk Cousins", 8], ["Joshua Dobbs", 4], ["Nick Mullens", 3], ["Jaren Hall", 2]]],
+  [2024, ["Aaron Jones", "Cam Akers"], ["Justin Jefferson", "Jordan Addison"], [["Sam Darnold", 17]]],
+].map(([year, rushing, receiving, qbStarts]) => ({
+  year,
+  rushing,
+  receiving,
+  qbStarts,
+  source: `https://www.pro-football-reference.com/teams/min/${year}.htm`,
 }));
 
 const hosts = [
-  ["Fran Tarkenton", "10", "Hall of Fame quarterback"],
-  ["Alan Page", "88", "Purple People Eaters legend"],
+  ["Daunte Culpepper", "11", "All-Pro quarterback"],
+  ["Jim Kleinsasser", "40", "Beloved Vikings utility man"],
   ["Randy Moss", "84", "Hall of Fame wide receiver"],
-  ["Cris Carter", "80", "Hall of Fame wide receiver"],
-  ["John Randle", "93", "Hall of Fame defensive tackle"],
+  ["Matt Birk", "75", "All-Pro center"],
   ["Adrian Peterson", "28", "MVP running back"],
-  ["Harrison Smith", "22", "All-Pro safety"],
-  ["Justin Jefferson", "18", "All-Pro wide receiver"],
-  ["Jared Allen", "69", "All-Pro pass rusher"],
   ["Kevin Williams", "93", "All-Pro defensive tackle"],
   ["Pat Williams", "94", "Williams Wall anchor"],
   ["Antoine Winfield", "26", "All-Pro cornerback"],
   ["Chad Greenway", "52", "Longtime Vikings linebacker"],
-  ["Matt Birk", "75", "All-Pro center"],
   ["Steve Hutchinson", "76", "Hall of Fame guard"],
-  ["Jim Marshall", "70", "Ironman defensive end"],
-  ["Carl Eller", "81", "Hall of Fame defensive end"],
-  ["Paul Krause", "22", "Hall of Fame safety"],
-  ["Chuck Foreman", "44", "Vikings Ring of Honor"],
-  ["Ahmad Rashad", "28", "Vikings Ring of Honor"],
-  ["Robert Smith", "26", "Vikings Ring of Honor"],
-  ["Daunte Culpepper", "11", "All-Pro quarterback"],
+  ["Jared Allen", "69", "All-Pro pass rusher"],
+  ["Mewelde Moore", "30", "Versatile Vikings running back"],
+  ["Percy Harvin", "12", "Electric all-purpose threat"],
+  ["Sidney Rice", "18", "Pro Bowl wide receiver"],
+  ["Bernard Berrian", "87", "Vikings deep threat"],
+  ["Visanthe Shiancoe", "81", "Vikings red-zone target"],
+  ["Chester Taylor", "29", "Versatile Vikings running back"],
+  ["Tarvaris Jackson", "7", "Vikings quarterback"],
+  ["Harrison Smith", "22", "All-Pro safety"],
   ["Adam Thielen", "19", "Minnesota fan favorite"],
   ["Stefon Diggs", "14", "Minneapolis Miracle receiver"],
   ["Danielle Hunter", "99", "All-Pro pass rusher"],
@@ -73,6 +93,25 @@ const hosts = [
   ["Everson Griffen", "97", "Pro Bowl defensive end"],
   ["Anthony Barr", "55", "Four-time Pro Bowl linebacker"],
   ["Eric Kendricks", "54", "All-Pro linebacker"],
+  ["Christian Ponder", "7", "Vikings quarterback"],
+  ["Blair Walsh", "3", "All-Pro kicker"],
+  ["Chris Kluwe", "5", "Longtime Vikings punter"],
+  ["Marcus Sherels", "35", "Vikings return specialist"],
+];
+
+const deepCuts = [
+  { prompts: ["Who did Spergon Wynn face in his first Vikings start?", "Name the opponent in Spergon Wynn's first start for Minnesota.", "Spergon Wynn made his first Vikings start against which team?"], answer: "Green Bay Packers", explanation: "Wynn's first Minnesota start was a 24–13 loss at Green Bay on December 30, 2001.", source: "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001" },
+  { prompts: ["Who did Spergon Wynn face in his second and final Vikings start?", "Name Minnesota's opponent in Spergon Wynn's final start.", "Spergon Wynn's second Vikings start came against which team?"], answer: "Baltimore Ravens", explanation: "Wynn started the 2001 finale at Baltimore, a 19–3 Vikings loss played January 7, 2002.", source: "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001" },
+  { prompts: ["Which team did Josh Freeman face in his only Vikings start?", "Josh Freeman's lone start for Minnesota came against which opponent?", "Name the opponent in Josh Freeman's one Vikings start."], answer: "New York Giants", explanation: "Freeman started Minnesota's 23–7 Monday-night loss at the Giants on October 21, 2013.", source: "https://www.pro-football-reference.com/boxscores/201310210nyg.htm" },
+  { prompts: ["Who did Christian Ponder face in his only start of the 2014 season?", "Christian Ponder's lone 2014 start came against which team?", "Name the opponent in Christian Ponder's only 2014 start."], answer: "Green Bay Packers", explanation: "Ponder started the October 2 game at Green Bay, a 42–10 loss.", source: "https://www.pro-football-reference.com/boxscores/201410020gnb.htm" },
+  { prompts: ["Which team did Shaun Hill face in his lone 2016 Vikings start?", "Shaun Hill started the 2016 opener against which opponent?", "Name Minnesota's opponent when Shaun Hill started in 2016."], answer: "Tennessee Titans", explanation: "Hill started the opener at Tennessee; Minnesota won 25–16.", source: "https://www.pro-football-reference.com/boxscores/201609110oti.htm" },
+  { prompts: ["Who did Joe Webb face in his first NFL start?", "Joe Webb's first Vikings start came against which opponent?", "Name the opponent in Joe Webb's first career start."], answer: "Philadelphia Eagles", explanation: "Webb started Minnesota's 24–14 win at Philadelphia on December 28, 2010.", source: "https://www.pro-football-reference.com/boxscores/201012280phi.htm" },
+  { prompts: ["Who handled the Vikings' primary placekicking duties in 2005?", "Name Minnesota's regular kicker for the 2005 season.", "Which kicker made 25 field goals for the 2005 Vikings?"], answer: "Paul Edinger", explanation: "Edinger went 25-for-34 on field goals for Minnesota in 2005.", source: "https://www.pro-football-reference.com/players/E/edingpau01.htm" },
+  { prompts: ["Who was the Vikings' punter throughout the 2013 season?", "Name Minnesota's 2013 punter.", "Which punter recorded 75 punts for the 2013 Vikings?"], answer: "Jeff Locke", explanation: "Locke punted 75 times for Minnesota as a rookie in 2013.", source: "https://www.pro-football-reference.com/players/L/LockJe00.htm" },
+  { prompts: ["Who handled the Vikings' placekicking duties in 2013?", "Name Minnesota's kicker for the 2013 season.", "Which kicker made 26 field goals for the 2013 Vikings?"], answer: "Blair Walsh", explanation: "Walsh made 26 of 30 field-goal attempts in 2013.", source: "https://www.pro-football-reference.com/players/W/WalsBl00.htm" },
+  { prompts: ["Who was Minnesota's primary punter in 2022?", "Name the Vikings punter who debuted in 2022.", "Which punter recorded 73 regular-season punts for Minnesota in 2022?"], answer: "Ryan Wright", explanation: "Wright punted 73 times in his 2022 rookie regular season.", source: "https://www.pro-football-reference.com/players/W/WrigRy00.htm" },
+  { prompts: ["What jersey number did Mewelde Moore wear for the Vikings?", "Mewelde Moore wore which number in Minnesota?", "Which Vikings jersey number belonged to Mewelde Moore?"], answer: "30", explanation: "Moore wore No. 30 for Minnesota from 2004 through 2007.", source: "https://www.pro-football-reference.com/players/uniform.cgi?number=30" },
+  { prompts: ["What jersey number did Erasmus James wear for Minnesota?", "Erasmus James wore which Vikings number?", "Which jersey number belonged to Vikings defensive end Erasmus James?"], answer: "99", explanation: "James wore No. 99 for the Vikings from 2005 through 2007.", source: "https://www.pro-football-reference.com/players/uniform.cgi?number=99&team=min" },
 ];
 
 const sqlString = (value) => `'${String(value).replaceAll("'", "''")}'`;
@@ -110,6 +149,59 @@ function choiceQuestion({ eyebrow, prompt, answer, choices, explanation, source 
   return { eyebrow, prompt, type: "choice", choices, answer: String(answer), explanation, source };
 }
 
+function textQuestion({ eyebrow, prompt, answer, explanation, source }) {
+  return { eyebrow, prompt, type: "text", choices: null, answer: String(answer), explanation, source };
+}
+
+const leaderNames = [...new Set(leaderSeasons.flatMap((season) => [
+  ...season.rushing,
+  ...season.receiving,
+  ...season.qbStarts.map(([name]) => name),
+]))];
+
+function pfrQuestions(dayIndex, prefix) {
+  const season = leaderSeasons[dayIndex % leaderSeasons.length];
+  const multiQbSeasons = leaderSeasons.filter(({ qbStarts }) => qbStarts.length > 1);
+  const multiQbSeason = multiQbSeasons[dayIndex % multiQbSeasons.length];
+  const receivingPair = `${season.receiving[0]}, then ${season.receiving[1]}`;
+  const rushingPair = `${season.rushing[0]}, then ${season.rushing[1]}`;
+  const pairPool = leaderSeasons.flatMap((entry) => [
+    `${entry.receiving[0]}, then ${entry.receiving[1]}`,
+    `${entry.rushing[0]}, then ${entry.rushing[1]}`,
+  ]);
+
+  const typed = [
+    () => textQuestion({ eyebrow: `${season.year} · PFR leader`, prompt: `${prefix}Type the player who led the ${season.year} Vikings in receiving yards.`, answer: season.receiving[0], explanation: `${season.receiving[0]} ranked first on Minnesota in receiving yards; ${season.receiving[1]} ranked second.`, source: season.source }),
+    () => textQuestion({ eyebrow: `${season.year} · PFR runner-up`, prompt: `${prefix}Who finished second on the ${season.year} Vikings in rushing yards?`, answer: season.rushing[1], explanation: `${season.rushing[0]} led the team, followed by ${season.rushing[1]}.`, source: season.source }),
+    () => textQuestion({ eyebrow: `${season.year} · PFR runner-up`, prompt: `${prefix}Type the player who ranked second on Minnesota in receiving yards in ${season.year}.`, answer: season.receiving[1], explanation: `${season.receiving[0]} finished first and ${season.receiving[1]} finished second.`, source: season.source }),
+    () => textQuestion({ eyebrow: `${season.year} · PFR leader`, prompt: `${prefix}Who led the ${season.year} Vikings in rushing yards?`, answer: season.rushing[0], explanation: `${season.rushing[0]} led Minnesota, with ${season.rushing[1]} second.`, source: season.source }),
+    () => textQuestion({ eyebrow: `${multiQbSeason.year} · QB starts`, prompt: `${prefix}Besides ${multiQbSeason.qbStarts[0][0]}, which quarterback made the second-most starts for Minnesota in ${multiQbSeason.year}?`, answer: multiQbSeason.qbStarts[1][0], explanation: `${multiQbSeason.qbStarts.map(([name, starts]) => `${name} started ${starts}`).join("; ")} game${multiQbSeason.qbStarts.length === 1 ? "" : "s"}.`, source: multiQbSeason.source }),
+  ];
+  const selectedQb = season.qbStarts[dayIndex % season.qbStarts.length];
+  const multipleChoice = [
+    () => choiceQuestion({ eyebrow: `${season.year} · One-two punch`, prompt: `${prefix}Which pair finished first and second, in order, in Vikings receiving yards in ${season.year}?`, answer: receivingPair, choices: rotateChoices(receivingPair, pairPool, dayIndex), explanation: `${season.receiving[0]} led Minnesota, followed by ${season.receiving[1]}.`, source: season.source }),
+    () => choiceQuestion({ eyebrow: `${season.year} · Ground leaders`, prompt: `${prefix}Which pair ranked first and second, in order, in Vikings rushing yards in ${season.year}?`, answer: rushingPair, choices: rotateChoices(rushingPair, pairPool, dayIndex + 2), explanation: `${season.rushing[0]} finished first and ${season.rushing[1]} finished second.`, source: season.source }),
+    () => choiceQuestion({ eyebrow: `${season.year} · QB room`, prompt: `${prefix}How many different quarterbacks started at least one game for Minnesota in ${season.year}?`, answer: season.qbStarts.length, choices: ["1", "2", "3", "4"], explanation: season.qbStarts.map(([name, starts]) => `${name} (${starts})`).join(", "), source: season.source }),
+    () => choiceQuestion({ eyebrow: `${season.year} · QB starts`, prompt: `${prefix}Which quarterback started ${selectedQb[1]} game${selectedQb[1] === 1 ? "" : "s"} for the ${season.year} Vikings?`, answer: selectedQb[0], choices: rotateChoices(selectedQb[0], leaderNames, dayIndex + 4), explanation: `${selectedQb[0]} made ${selectedQb[1]} start${selectedQb[1] === 1 ? "" : "s"} that season.`, source: season.source }),
+  ];
+  return {
+    typed: typed[dayIndex % typed.length](),
+    choice: multipleChoice[dayIndex % multipleChoice.length](),
+  };
+}
+
+function deepCutQuestion(dayIndex, prefix) {
+  const fact = deepCuts[dayIndex % deepCuts.length];
+  const wording = fact.prompts[Math.floor(dayIndex / deepCuts.length) % fact.prompts.length];
+  return textQuestion({
+    eyebrow: "Deep cut · PFR verified",
+    prompt: `${prefix}${wording}`,
+    answer: fact.answer,
+    explanation: fact.explanation,
+    source: fact.source,
+  });
+}
+
 function buildQuestions(dayIndex, testLabel = "") {
   const prefix = testLabel ? `${testLabel} — ` : "";
   const at = (step) => seasons[(dayIndex + step) % seasons.length];
@@ -138,6 +230,10 @@ function buildQuestions(dayIndex, testLabel = "") {
     ],
   ];
   const questions = rounds.map((variants, slot) => variants[(dayIndex + slot) % variants.length]());
+  const pfr = pfrQuestions(dayIndex, prefix);
+  questions[1] = pfr.choice;
+  questions[2] = pfr.typed;
+  questions[3] = deepCutQuestion(dayIndex, prefix);
   const pinVariants = [
     { prompt: `Exactly how many regular-season points did the Vikings score in ${e.year}?`, answer: e.pointsFor, explanation: `Minnesota scored ${e.pointsFor} points in ${e.year}.`, source: e.source },
     { prompt: `What was the difference in regular-season points between the ${e.year} and ${f.year} Vikings?`, answer: Math.abs(e.pointsFor - f.pointsFor), explanation: `The difference between ${e.pointsFor} and ${f.pointsFor} is ${Math.abs(e.pointsFor - f.pointsFor)} points.`, source: e.source },

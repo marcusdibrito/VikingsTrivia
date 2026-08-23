@@ -3,9 +3,9 @@
     "date": "2026-08-06",
     "status": "published",
     "host": [
-      "Fran Tarkenton",
-      "10",
-      "Hall of Fame quarterback"
+      "Daunte Culpepper",
+      "11",
+      "All-Pro quarterback"
     ],
     "questions": [
       {
@@ -20,50 +20,42 @@
         ],
         "answer": "Dennis Green",
         "explanation": "Dennis Green led Minnesota during the 1996 season.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1996.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Pick the season",
-        "prompt": "In which season did Minnesota go 9–7 and finish 2nd NFC North?",
+        "eyebrow": "2014 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2014?",
         "type": "choice",
         "choices": [
-          "2003",
-          "2006",
-          "2013",
-          "2020"
+          "Justin Jefferson, then Adam Thielen",
+          "Latavius Murray, then Jerick McKinnon",
+          "Greg Jennings, then Jarius Wright",
+          "Aaron Jones, then Cam Akers"
         ],
-        "answer": "2003",
-        "explanation": "Both clues point to the 2003 season.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "answer": "Greg Jennings, then Jarius Wright",
+        "explanation": "Greg Jennings led Minnesota, followed by Jarius Wright.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2009",
-          "2015"
-        ],
-        "answer": "2009",
-        "explanation": "2009: 470 points; 2015: 365 points.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "eyebrow": "2014 · PFR leader",
+        "prompt": "Type the player who led the 2014 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Greg Jennings",
+        "explanation": "Greg Jennings ranked first on Minnesota in receiving yards; Jarius Wright ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Who was in charge?",
-        "prompt": "Minnesota finished 1st NFC North in 2015. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Dennis Green",
-          "Kevin O'Connell",
-          "Mike Tice",
-          "Mike Zimmer"
-        ],
-        "answer": "Mike Zimmer",
-        "explanation": "Mike Zimmer coached the 2015 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who did Spergon Wynn face in his first Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Wynn's first Minnesota start was a 24–13 loss at Green Bay on December 30, 2001.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -73,7 +65,7 @@
         "choices": null,
         "answer": "407",
         "explanation": "Minnesota scored 407 points in 2019.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 500
       }
     ]
@@ -82,9 +74,9 @@
     "date": "2026-08-07",
     "status": "draft",
     "host": [
-      "Alan Page",
-      "88",
-      "Purple People Eaters legend"
+      "Jim Kleinsasser",
+      "40",
+      "Beloved Vikings utility man"
     ],
     "questions": [
       {
@@ -99,52 +91,42 @@
         ],
         "answer": "1997",
         "explanation": "That combination belongs to the 1997 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1997.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Coach & club",
-        "prompt": "What was Minnesota's record in 2004, with Mike Tice as head coach?",
+        "eyebrow": "2015 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2015?",
         "type": "choice",
         "choices": [
-          "8–8",
-          "9–7",
-          "13–3",
-          "12–4"
+          "Dalvin Cook, then Alexander Mattison",
+          "Adrian Peterson, then Jerick McKinnon",
+          "Stefon Diggs, then Dalvin Cook",
+          "Stefon Diggs, then Kyle Rudolph"
         ],
-        "answer": "8–8",
-        "explanation": "Mike Tice's 2004 Vikings finished 8–8.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "answer": "Adrian Peterson, then Jerick McKinnon",
+        "explanation": "Adrian Peterson finished first and Jerick McKinnon finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Postseason path",
-        "prompt": "How did Minnesota's 2010 season end?",
-        "type": "choice",
-        "choices": [
-          "Lost in the Divisional round",
-          "Lost in the NFC Championship",
-          "Missed the playoffs",
-          "Lost in the Wild Card round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "eyebrow": "2015 · PFR runner-up",
+        "prompt": "Who finished second on the 2015 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Jerick McKinnon",
+        "explanation": "Adrian Peterson led the team, followed by Jerick McKinnon.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Stat line",
-        "prompt": "Which season produced 327 Vikings points and a 8–8 record?",
-        "type": "choice",
-        "choices": [
-          "2016",
-          "2013",
-          "2020",
-          "1997"
-        ],
-        "answer": "2016",
-        "explanation": "That stat line came from the 2016 team.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who did Spergon Wynn face in his second and final Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Baltimore Ravens",
+        "explanation": "Wynn started the 2001 finale at Baltimore, a 19–3 Vikings loss played January 7, 2002.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -154,7 +136,7 @@
         "choices": null,
         "answer": "2",
         "explanation": "The difference between 430 and 432 is 2 points.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 500
       }
     ]
@@ -180,52 +162,42 @@
         ],
         "answer": "15–1",
         "explanation": "Minnesota went 15–1 in 1998.",
-        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1998.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · The standings",
-        "prompt": "Where did the 2005 Vikings finish in the NFC North?",
+        "eyebrow": "2016 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2016?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "2nd NFC North",
-        "explanation": "Minnesota placed 2nd NFC North in 2005.",
-        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season",
+        "answer": "2",
+        "explanation": "Sam Bradford (15), Shaun Hill (1)",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Connect the clues",
-        "prompt": "Which season paired a 3–13 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2011",
-          "2018",
-          "2025",
-          "2002"
-        ],
-        "answer": "2011",
-        "explanation": "Those clues describe Minnesota's 2011 season.",
-        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season",
+        "eyebrow": "2016 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2016.",
+        "type": "text",
+        "choices": null,
+        "answer": "Stefon Diggs",
+        "explanation": "Adam Thielen finished first and Stefon Diggs finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Division race",
-        "prompt": "Which finish completed Minnesota's 2017 season at 13–3?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "1st NFC North",
-        "explanation": "The Vikings finished 1st NFC North in 2017.",
-        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Which team did Josh Freeman face in his only Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "New York Giants",
+        "explanation": "Freeman started Minnesota's 23–7 Monday-night loss at the Giants on October 21, 2013.",
+        "source": "https://www.pro-football-reference.com/boxscores/201310210nyg.htm",
         "points": 400
       },
       {
@@ -235,7 +207,7 @@
         "choices": null,
         "answer": "769",
         "explanation": "425 plus 344 equals 769 points.",
-        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 500
       }
     ]
@@ -244,9 +216,9 @@
     "date": "2026-08-09",
     "status": "draft",
     "host": [
-      "Cris Carter",
-      "80",
-      "Hall of Fame wide receiver"
+      "Matt Birk",
+      "75",
+      "All-Pro center"
     ],
     "questions": [
       {
@@ -261,50 +233,42 @@
         ],
         "answer": "Dennis Green",
         "explanation": "Dennis Green led Minnesota during the 1999 season.",
-        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1999.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Pick the season",
-        "prompt": "In which season did Minnesota go 6–10 and finish 3rd NFC North?",
+        "eyebrow": "2017 · QB starts",
+        "prompt": "Which quarterback started 2 games for the 2017 Vikings?",
         "type": "choice",
         "choices": [
-          "2006",
-          "2009",
-          "2016",
-          "2023"
+          "T.J. Hockenson",
+          "Case Keenum",
+          "Sam Darnold",
+          "Sam Bradford"
         ],
-        "answer": "2006",
-        "explanation": "Both clues point to the 2006 season.",
-        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season",
+        "answer": "Sam Bradford",
+        "explanation": "Sam Bradford made 2 starts that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2012",
-          "2018"
-        ],
-        "answer": "2012",
-        "explanation": "2012: 379 points; 2018: 360 points.",
-        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season",
+        "eyebrow": "2017 · PFR leader",
+        "prompt": "Who led the 2017 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Latavius Murray",
+        "explanation": "Latavius Murray led Minnesota, with Jerick McKinnon second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Who was in charge?",
-        "prompt": "Minnesota finished 2nd NFC North in 2018. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Mike Tice",
-          "Mike Zimmer",
-          "Brad Childress",
-          "Leslie Frazier"
-        ],
-        "answer": "Mike Zimmer",
-        "explanation": "Mike Zimmer coached the 2018 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who did Christian Ponder face in his only start of the 2014 season?",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Ponder started the October 2 game at Green Bay, a 42–10 loss.",
+        "source": "https://www.pro-football-reference.com/boxscores/201410020gnb.htm",
         "points": 400
       },
       {
@@ -314,7 +278,7 @@
         "choices": null,
         "answer": "424",
         "explanation": "Minnesota scored 424 points in 2022.",
-        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2022.htm",
         "points": 500
       }
     ]
@@ -323,9 +287,9 @@
     "date": "2026-08-10",
     "status": "draft",
     "host": [
-      "John Randle",
-      "93",
-      "Hall of Fame defensive tackle"
+      "Adrian Peterson",
+      "28",
+      "MVP running back"
     ],
     "questions": [
       {
@@ -340,52 +304,42 @@
         ],
         "answer": "2000",
         "explanation": "That combination belongs to the 2000 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2000.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Coach & club",
-        "prompt": "What was Minnesota's record in 2007, with Brad Childress as head coach?",
+        "eyebrow": "2018 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2018?",
         "type": "choice",
         "choices": [
-          "8–8",
-          "7–9",
-          "13–4",
-          "11–5"
+          "Adam Thielen, then Stefon Diggs",
+          "Dalvin Cook, then Alexander Mattison",
+          "Justin Jefferson, then T.J. Hockenson",
+          "Adrian Peterson, then Jerick McKinnon"
         ],
-        "answer": "8–8",
-        "explanation": "Brad Childress's 2007 Vikings finished 8–8.",
-        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season",
+        "answer": "Adam Thielen, then Stefon Diggs",
+        "explanation": "Adam Thielen led Minnesota, followed by Stefon Diggs.",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Postseason path",
-        "prompt": "How did Minnesota's 2013 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season",
+        "eyebrow": "2021 · QB starts",
+        "prompt": "Besides Kirk Cousins, which quarterback made the second-most starts for Minnesota in 2021?",
+        "type": "text",
+        "choices": null,
+        "answer": "Sean Mannion",
+        "explanation": "Kirk Cousins started 16; Sean Mannion started 1 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Stat line",
-        "prompt": "Which season produced 407 Vikings points and a 10–6 record?",
-        "type": "choice",
-        "choices": [
-          "2019",
-          "2016",
-          "2023",
-          "2000"
-        ],
-        "answer": "2019",
-        "explanation": "That stat line came from the 2019 team.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Which team did Shaun Hill face in his lone 2016 Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Tennessee Titans",
+        "explanation": "Hill started the opener at Tennessee; Minnesota won 25–16.",
+        "source": "https://www.pro-football-reference.com/boxscores/201609110oti.htm",
         "points": 400
       },
       {
@@ -395,7 +349,7 @@
         "choices": null,
         "answer": "10",
         "explanation": "The difference between 344 and 354 is 10 points.",
-        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 500
       }
     ]
@@ -404,9 +358,9 @@
     "date": "2026-08-11",
     "status": "draft",
     "host": [
-      "Adrian Peterson",
-      "28",
-      "MVP running back"
+      "Kevin Williams",
+      "93",
+      "All-Pro defensive tackle"
     ],
     "questions": [
       {
@@ -421,52 +375,42 @@
         ],
         "answer": "5–11",
         "explanation": "Minnesota went 5–11 in 2001.",
-        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2001.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · The standings",
-        "prompt": "Where did the 2008 Vikings finish in the NFC North?",
+        "eyebrow": "2019 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2019?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Justin Jefferson, then Adam Thielen",
+          "Dalvin Cook, then Alexander Mattison",
+          "Adam Thielen, then Stefon Diggs",
+          "Aaron Jones, then Cam Akers"
         ],
-        "answer": "1st NFC North",
-        "explanation": "Minnesota placed 1st NFC North in 2008.",
-        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season",
+        "answer": "Dalvin Cook, then Alexander Mattison",
+        "explanation": "Dalvin Cook finished first and Alexander Mattison finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Connect the clues",
-        "prompt": "Which season paired a 7–9 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2014",
-          "2021",
-          "1998",
-          "2005"
-        ],
-        "answer": "2014",
-        "explanation": "Those clues describe Minnesota's 2014 season.",
-        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season",
+        "eyebrow": "2019 · PFR leader",
+        "prompt": "Type the player who led the 2019 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Stefon Diggs",
+        "explanation": "Stefon Diggs ranked first on Minnesota in receiving yards; Dalvin Cook ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Division race",
-        "prompt": "Which finish completed Minnesota's 2020 season at 7–9?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "3rd NFC North",
-        "explanation": "The Vikings finished 3rd NFC North in 2020.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who did Joe Webb face in his first NFL start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Philadelphia Eagles",
+        "explanation": "Webb started Minnesota's 24–14 win at Philadelphia on December 28, 2010.",
+        "source": "https://www.pro-football-reference.com/boxscores/201012280phi.htm",
         "points": 400
       },
       {
@@ -476,7 +420,7 @@
         "choices": null,
         "answer": "988",
         "explanation": "432 plus 556 equals 988 points.",
-        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 500
       }
     ]
@@ -485,9 +429,9 @@
     "date": "2026-08-12",
     "status": "draft",
     "host": [
-      "Harrison Smith",
-      "22",
-      "All-Pro safety"
+      "Pat Williams",
+      "94",
+      "Williams Wall anchor"
     ],
     "questions": [
       {
@@ -502,50 +446,42 @@
         ],
         "answer": "Mike Tice",
         "explanation": "Mike Tice led Minnesota during the 2002 season.",
-        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2002.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Pick the season",
-        "prompt": "In which season did Minnesota go 12–4 and finish 1st NFC North?",
+        "eyebrow": "2020 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2020?",
         "type": "choice",
         "choices": [
-          "2009",
-          "2012",
-          "2019",
-          "1996"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "2009",
-        "explanation": "Both clues point to the 2009 season.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "answer": "1",
+        "explanation": "Kirk Cousins (16)",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2015",
-          "2021"
-        ],
-        "answer": "2021",
-        "explanation": "2015: 365 points; 2021: 425 points.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "eyebrow": "2020 · PFR runner-up",
+        "prompt": "Who finished second on the 2020 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Alexander Mattison",
+        "explanation": "Dalvin Cook led the team, followed by Alexander Mattison.",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Who was in charge?",
-        "prompt": "Minnesota finished 2nd NFC North in 2021. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Kevin O'Connell",
-          "Mike Tice",
-          "Mike Zimmer",
-          "Dennis Green"
-        ],
-        "answer": "Mike Zimmer",
-        "explanation": "Mike Zimmer coached the 2021 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who handled the Vikings' primary placekicking duties in 2005?",
+        "type": "text",
+        "choices": null,
+        "answer": "Paul Edinger",
+        "explanation": "Edinger went 25-for-34 on field goals for Minnesota in 2005.",
+        "source": "https://www.pro-football-reference.com/players/E/edingpau01.htm",
         "points": 400
       },
       {
@@ -555,7 +491,7 @@
         "choices": null,
         "answer": "344",
         "explanation": "Minnesota scored 344 points in 2025.",
-        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2025.htm",
         "points": 500
       }
     ]
@@ -564,9 +500,9 @@
     "date": "2026-08-13",
     "status": "draft",
     "host": [
-      "Justin Jefferson",
-      "18",
-      "All-Pro wide receiver"
+      "Antoine Winfield",
+      "26",
+      "All-Pro cornerback"
     ],
     "questions": [
       {
@@ -581,52 +517,42 @@
         ],
         "answer": "2003",
         "explanation": "That combination belongs to the 2003 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2003.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Coach & club",
-        "prompt": "What was Minnesota's record in 2010, with Brad Childress as head coach?",
+        "eyebrow": "2021 · QB starts",
+        "prompt": "Which quarterback started 1 game for the 2021 Vikings?",
         "type": "choice",
         "choices": [
-          "6–10",
-          "9–8",
-          "8–8",
-          "8–9"
+          "Aaron Jones",
+          "Sean Mannion",
+          "Adam Thielen",
+          "Jarius Wright"
         ],
-        "answer": "6–10",
-        "explanation": "Brad Childress's 2010 Vikings finished 6–10.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "answer": "Sean Mannion",
+        "explanation": "Sean Mannion made 1 start that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Postseason path",
-        "prompt": "How did Minnesota's 2016 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "eyebrow": "2021 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2021.",
+        "type": "text",
+        "choices": null,
+        "answer": "Adam Thielen",
+        "explanation": "Justin Jefferson finished first and Adam Thielen finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Stat line",
-        "prompt": "Which season produced 424 Vikings points and a 13–4 record?",
-        "type": "choice",
-        "choices": [
-          "2022",
-          "2019",
-          "1996",
-          "2003"
-        ],
-        "answer": "2022",
-        "explanation": "That stat line came from the 2022 team.",
-        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who was the Vikings' punter throughout the 2013 season?",
+        "type": "text",
+        "choices": null,
+        "answer": "Jeff Locke",
+        "explanation": "Locke punted 75 times for Minnesota as a rookie in 2013.",
+        "source": "https://www.pro-football-reference.com/players/L/LockJe00.htm",
         "points": 400
       },
       {
@@ -636,7 +562,7 @@
         "choices": null,
         "answer": "99",
         "explanation": "The difference between 298 and 397 is 99 points.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1996.htm",
         "points": 500
       }
     ]
@@ -645,9 +571,9 @@
     "date": "2026-08-14",
     "status": "draft",
     "host": [
-      "Jared Allen",
-      "69",
-      "All-Pro pass rusher"
+      "Chad Greenway",
+      "52",
+      "Longtime Vikings linebacker"
     ],
     "questions": [
       {
@@ -662,52 +588,42 @@
         ],
         "answer": "8–8",
         "explanation": "Minnesota went 8–8 in 2004.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2004.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · The standings",
-        "prompt": "Where did the 2011 Vikings finish in the NFC North?",
+        "eyebrow": "2022 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2022?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Justin Jefferson, then Adam Thielen",
+          "Dalvin Cook, then Alexander Mattison",
+          "Latavius Murray, then Jerick McKinnon",
+          "Greg Jennings, then Jarius Wright"
         ],
-        "answer": "4th NFC North",
-        "explanation": "Minnesota placed 4th NFC North in 2011.",
-        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season",
+        "answer": "Justin Jefferson, then Adam Thielen",
+        "explanation": "Justin Jefferson led Minnesota, followed by Adam Thielen.",
+        "source": "https://www.pro-football-reference.com/teams/min/2022.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Connect the clues",
-        "prompt": "Which season paired a 13–3 record with this finish: lost in the wild card round?",
-        "type": "choice",
-        "choices": [
-          "2017",
-          "2024",
-          "2001",
-          "2008"
-        ],
-        "answer": "2017",
-        "explanation": "Those clues describe Minnesota's 2017 season.",
-        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season",
+        "eyebrow": "2022 · PFR leader",
+        "prompt": "Who led the 2022 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Dalvin Cook",
+        "explanation": "Dalvin Cook led Minnesota, with Alexander Mattison second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2022.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Division race",
-        "prompt": "Which finish completed Minnesota's 2023 season at 7–10?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "3rd NFC North",
-        "explanation": "The Vikings finished 3rd NFC North in 2023.",
-        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who handled the Vikings' placekicking duties in 2013?",
+        "type": "text",
+        "choices": null,
+        "answer": "Blair Walsh",
+        "explanation": "Walsh made 26 of 30 field-goal attempts in 2013.",
+        "source": "https://www.pro-football-reference.com/players/W/WalsBl00.htm",
         "points": 400
       },
       {
@@ -717,7 +633,7 @@
         "choices": null,
         "answer": "644",
         "explanation": "354 plus 290 equals 644 points.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1997.htm",
         "points": 500
       }
     ]
@@ -726,9 +642,9 @@
     "date": "2026-08-15",
     "status": "draft",
     "host": [
-      "Kevin Williams",
-      "93",
-      "All-Pro defensive tackle"
+      "Steve Hutchinson",
+      "76",
+      "Hall of Fame guard"
     ],
     "questions": [
       {
@@ -743,50 +659,42 @@
         ],
         "answer": "Mike Tice",
         "explanation": "Mike Tice led Minnesota during the 2005 season.",
-        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2005.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Pick the season",
-        "prompt": "In which season did Minnesota go 10–6 and finish 2nd NFC North?",
+        "eyebrow": "2023 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2023?",
         "type": "choice",
         "choices": [
-          "2012",
-          "2015",
-          "2022",
-          "1999"
+          "Alexander Mattison, then Ty Chandler",
+          "Justin Jefferson, then T.J. Hockenson",
+          "Adrian Peterson, then Jerick McKinnon",
+          "Stefon Diggs, then Dalvin Cook"
         ],
-        "answer": "2012",
-        "explanation": "Both clues point to the 2012 season.",
-        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season",
+        "answer": "Alexander Mattison, then Ty Chandler",
+        "explanation": "Alexander Mattison finished first and Ty Chandler finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2018",
-          "2024"
-        ],
-        "answer": "2024",
-        "explanation": "2018: 360 points; 2024: 432 points.",
-        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season",
+        "eyebrow": "2019 · QB starts",
+        "prompt": "Besides Kirk Cousins, which quarterback made the second-most starts for Minnesota in 2019?",
+        "type": "text",
+        "choices": null,
+        "answer": "Sean Mannion",
+        "explanation": "Kirk Cousins started 15; Sean Mannion started 1 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Who was in charge?",
-        "prompt": "Minnesota finished 2nd NFC North in 2024. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Brad Childress",
-          "Leslie Frazier",
-          "Kevin O'Connell",
-          "Mike Tice"
-        ],
-        "answer": "Kevin O'Connell",
-        "explanation": "Kevin O'Connell coached the 2024 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Who was Minnesota's primary punter in 2022?",
+        "type": "text",
+        "choices": null,
+        "answer": "Ryan Wright",
+        "explanation": "Wright punted 73 times in his 2022 rookie regular season.",
+        "source": "https://www.pro-football-reference.com/players/W/WrigRy00.htm",
         "points": 400
       },
       {
@@ -796,7 +704,7 @@
         "choices": null,
         "answer": "556",
         "explanation": "Minnesota scored 556 points in 1998.",
-        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1998.htm",
         "points": 500
       }
     ]
@@ -805,9 +713,9 @@
     "date": "2026-08-16",
     "status": "draft",
     "host": [
-      "Pat Williams",
-      "94",
-      "Williams Wall anchor"
+      "Jared Allen",
+      "69",
+      "All-Pro pass rusher"
     ],
     "questions": [
       {
@@ -822,52 +730,42 @@
         ],
         "answer": "2006",
         "explanation": "That combination belongs to the 2006 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2006.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Coach & club",
-        "prompt": "What was Minnesota's record in 2013, with Leslie Frazier as head coach?",
+        "eyebrow": "2024 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2024?",
         "type": "choice",
         "choices": [
-          "10–6",
-          "14–3",
-          "6–10",
-          "5–10–1"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "5–10–1",
-        "explanation": "Leslie Frazier's 2013 Vikings finished 5–10–1.",
-        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season",
+        "answer": "1",
+        "explanation": "Sam Darnold (17)",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Postseason path",
-        "prompt": "How did Minnesota's 2019 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round"
-        ],
-        "answer": "Lost in the Wild Card round",
-        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (at Saints) 26–20 (OT); lost Divisional Playoffs (at 49ers) 10–27.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "eyebrow": "2024 · PFR leader",
+        "prompt": "Type the player who led the 2024 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Justin Jefferson",
+        "explanation": "Justin Jefferson ranked first on Minnesota in receiving yards; Jordan Addison ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 300
       },
       {
-        "eyebrow": "2020s · Stat line",
-        "prompt": "Which season produced 344 Vikings points and a 9–8 record?",
-        "type": "choice",
-        "choices": [
-          "2025",
-          "2022",
-          "1999",
-          "2006"
-        ],
-        "answer": "2025",
-        "explanation": "That stat line came from the 2025 team.",
-        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "What jersey number did Mewelde Moore wear for the Vikings?",
+        "type": "text",
+        "choices": null,
+        "answer": "30",
+        "explanation": "Moore wore No. 30 for Minnesota from 2004 through 2007.",
+        "source": "https://www.pro-football-reference.com/players/uniform.cgi?number=30",
         "points": 400
       },
       {
@@ -877,7 +775,7 @@
         "choices": null,
         "answer": "17",
         "explanation": "The difference between 399 and 416 is 17 points.",
-        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1999.htm",
         "points": 500
       }
     ]
@@ -886,9 +784,9 @@
     "date": "2026-08-17",
     "status": "draft",
     "host": [
-      "Antoine Winfield",
-      "26",
-      "All-Pro cornerback"
+      "Mewelde Moore",
+      "30",
+      "Versatile Vikings running back"
     ],
     "questions": [
       {
@@ -903,52 +801,42 @@
         ],
         "answer": "8–8",
         "explanation": "Minnesota went 8–8 in 2007.",
-        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2007.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · The standings",
-        "prompt": "Where did the 2014 Vikings finish in the NFC North?",
+        "eyebrow": "2014 · QB starts",
+        "prompt": "Which quarterback started 1 game for the 2014 Vikings?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Adrian Peterson",
+          "Christian Ponder",
+          "Matt Asiata",
+          "Joshua Dobbs"
         ],
-        "answer": "3rd NFC North",
-        "explanation": "Minnesota placed 3rd NFC North in 2014.",
-        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season",
+        "answer": "Christian Ponder",
+        "explanation": "Christian Ponder made 1 start that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Connect the clues",
-        "prompt": "Which season paired a 7–9 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2020",
-          "1997",
-          "2004",
-          "2011"
-        ],
-        "answer": "2020",
-        "explanation": "Those clues describe Minnesota's 2020 season.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "eyebrow": "2014 · PFR runner-up",
+        "prompt": "Who finished second on the 2014 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Jerick McKinnon",
+        "explanation": "Matt Asiata led the team, followed by Jerick McKinnon.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 300
       },
       {
-        "eyebrow": "1990s · Division race",
-        "prompt": "Which finish completed Minnesota's 1996 season at 9–7?",
-        "type": "choice",
-        "choices": [
-          "1st NFC Central",
-          "2nd NFC Central",
-          "3rd NFC Central",
-          "4th NFC Central"
-        ],
-        "answer": "2nd NFC Central",
-        "explanation": "The Vikings finished 2nd NFC Central in 1996.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "What jersey number did Erasmus James wear for Minnesota?",
+        "type": "text",
+        "choices": null,
+        "answer": "99",
+        "explanation": "James wore No. 99 for the Vikings from 2005 through 2007.",
+        "source": "https://www.pro-football-reference.com/players/uniform.cgi?number=99&team=min",
         "points": 400
       },
       {
@@ -958,7 +846,7 @@
         "choices": null,
         "answer": "802",
         "explanation": "397 plus 405 equals 802 points.",
-        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2000.htm",
         "points": 500
       }
     ]
@@ -967,9 +855,9 @@
     "date": "2026-08-18",
     "status": "draft",
     "host": [
-      "Chad Greenway",
-      "52",
-      "Longtime Vikings linebacker"
+      "Percy Harvin",
+      "12",
+      "Electric all-purpose threat"
     ],
     "questions": [
       {
@@ -984,50 +872,42 @@
         ],
         "answer": "Brad Childress",
         "explanation": "Brad Childress led Minnesota during the 2008 season.",
-        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2008.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Pick the season",
-        "prompt": "In which season did Minnesota go 11–5 and finish 1st NFC North?",
+        "eyebrow": "2015 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2015?",
         "type": "choice",
         "choices": [
-          "2015",
-          "2018",
-          "2025",
-          "2002"
+          "Stefon Diggs, then Kyle Rudolph",
+          "Adam Thielen, then Stefon Diggs",
+          "Alexander Mattison, then Ty Chandler",
+          "Dalvin Cook, then Alexander Mattison"
         ],
-        "answer": "2015",
-        "explanation": "Both clues point to the 2015 season.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "answer": "Stefon Diggs, then Kyle Rudolph",
+        "explanation": "Stefon Diggs led Minnesota, followed by Kyle Rudolph.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2021",
-          "1997"
-        ],
-        "answer": "2021",
-        "explanation": "2021: 425 points; 1997: 354 points.",
-        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season",
+        "eyebrow": "2015 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2015.",
+        "type": "text",
+        "choices": null,
+        "answer": "Kyle Rudolph",
+        "explanation": "Stefon Diggs finished first and Kyle Rudolph finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 300
       },
       {
-        "eyebrow": "1990s · Who was in charge?",
-        "prompt": "Minnesota finished 4th NFC Central in 1997. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Kevin O'Connell",
-          "Mike Tice",
-          "Mike Zimmer",
-          "Dennis Green"
-        ],
-        "answer": "Dennis Green",
-        "explanation": "Dennis Green coached the 1997 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name the opponent in Spergon Wynn's first start for Minnesota.",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Wynn's first Minnesota start was a 24–13 loss at Green Bay on December 30, 2001.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -1037,7 +917,7 @@
         "choices": null,
         "answer": "290",
         "explanation": "Minnesota scored 290 points in 2001.",
-        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2001.htm",
         "points": 500
       }
     ]
@@ -1046,9 +926,9 @@
     "date": "2026-08-19",
     "status": "draft",
     "host": [
-      "Matt Birk",
-      "75",
-      "All-Pro center"
+      "Sidney Rice",
+      "18",
+      "Pro Bowl wide receiver"
     ],
     "questions": [
       {
@@ -1063,52 +943,42 @@
         ],
         "answer": "2009",
         "explanation": "That combination belongs to the 2009 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2009.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Coach & club",
-        "prompt": "What was Minnesota's record in 2016, with Mike Zimmer as head coach?",
+        "eyebrow": "2016 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2016?",
         "type": "choice",
         "choices": [
-          "8–7–1",
-          "8–8",
-          "6–10",
-          "15–1"
+          "Justin Jefferson, then Adam Thielen",
+          "Latavius Murray, then Jerick McKinnon",
+          "Jerick McKinnon, then Matt Asiata",
+          "Greg Jennings, then Jarius Wright"
         ],
-        "answer": "8–8",
-        "explanation": "Mike Zimmer's 2016 Vikings finished 8–8.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "answer": "Jerick McKinnon, then Matt Asiata",
+        "explanation": "Jerick McKinnon finished first and Matt Asiata finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Postseason path",
-        "prompt": "How did Minnesota's 2022 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the Divisional round",
-          "Lost in the NFC Championship"
-        ],
-        "answer": "Lost in the Wild Card round",
-        "explanation": "Minnesota's postseason result: Lost Wild Card Playoffs (vs. Giants) 24–31.",
-        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season",
+        "eyebrow": "2016 · PFR leader",
+        "prompt": "Who led the 2016 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Jerick McKinnon",
+        "explanation": "Jerick McKinnon led Minnesota, with Matt Asiata second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 300
       },
       {
-        "eyebrow": "1990s · Stat line",
-        "prompt": "Which season produced 556 Vikings points and a 15–1 record?",
-        "type": "choice",
-        "choices": [
-          "1998",
-          "2025",
-          "2002",
-          "2009"
-        ],
-        "answer": "1998",
-        "explanation": "That stat line came from the 1998 team.",
-        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name Minnesota's opponent in Spergon Wynn's final start.",
+        "type": "text",
+        "choices": null,
+        "answer": "Baltimore Ravens",
+        "explanation": "Wynn started the 2001 finale at Baltimore, a 19–3 Vikings loss played January 7, 2002.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -1118,7 +988,7 @@
         "choices": null,
         "answer": "108",
         "explanation": "The difference between 390 and 282 is 108 points.",
-        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2002.htm",
         "points": 500
       }
     ]
@@ -1127,9 +997,9 @@
     "date": "2026-08-20",
     "status": "draft",
     "host": [
-      "Steve Hutchinson",
-      "76",
-      "Hall of Fame guard"
+      "Bernard Berrian",
+      "87",
+      "Vikings deep threat"
     ],
     "questions": [
       {
@@ -1144,52 +1014,42 @@
         ],
         "answer": "6–10",
         "explanation": "Minnesota went 6–10 in 2010.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2010.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · The standings",
-        "prompt": "Where did the 2017 Vikings finish in the NFC North?",
+        "eyebrow": "2017 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2017?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "1st NFC North",
-        "explanation": "Minnesota placed 1st NFC North in 2017.",
-        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season",
+        "answer": "2",
+        "explanation": "Case Keenum (14), Sam Bradford (2)",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Connect the clues",
-        "prompt": "Which season paired a 7–10 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2023",
-          "2000",
-          "2007",
-          "2014"
-        ],
-        "answer": "2023",
-        "explanation": "Those clues describe Minnesota's 2023 season.",
-        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season",
+        "eyebrow": "2017 · QB starts",
+        "prompt": "Besides Case Keenum, which quarterback made the second-most starts for Minnesota in 2017?",
+        "type": "text",
+        "choices": null,
+        "answer": "Sam Bradford",
+        "explanation": "Case Keenum started 14; Sam Bradford started 2 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 300
       },
       {
-        "eyebrow": "1990s · Division race",
-        "prompt": "Which finish completed Minnesota's 1999 season at 10–6?",
-        "type": "choice",
-        "choices": [
-          "1st NFC Central",
-          "2nd NFC Central",
-          "3rd NFC Central",
-          "4th NFC Central"
-        ],
-        "answer": "2nd NFC Central",
-        "explanation": "The Vikings finished 2nd NFC Central in 1999.",
-        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Josh Freeman's lone start for Minnesota came against which opponent?",
+        "type": "text",
+        "choices": null,
+        "answer": "New York Giants",
+        "explanation": "Freeman started Minnesota's 23–7 Monday-night loss at the Giants on October 21, 2013.",
+        "source": "https://www.pro-football-reference.com/boxscores/201310210nyg.htm",
         "points": 400
       },
       {
@@ -1199,7 +1059,7 @@
         "choices": null,
         "answer": "781",
         "explanation": "416 plus 365 equals 781 points.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2003.htm",
         "points": 500
       }
     ]
@@ -1208,9 +1068,9 @@
     "date": "2026-08-21",
     "status": "draft",
     "host": [
-      "Jim Marshall",
-      "70",
-      "Ironman defensive end"
+      "Visanthe Shiancoe",
+      "81",
+      "Vikings red-zone target"
     ],
     "questions": [
       {
@@ -1225,50 +1085,42 @@
         ],
         "answer": "Leslie Frazier",
         "explanation": "Leslie Frazier led Minnesota during the 2011 season.",
-        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2011.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Pick the season",
-        "prompt": "In which season did Minnesota go 8–7–1 and finish 2nd NFC North?",
+        "eyebrow": "2018 · QB starts",
+        "prompt": "Which quarterback started 16 games for the 2018 Vikings?",
         "type": "choice",
         "choices": [
-          "2018",
-          "2021",
-          "1998",
-          "2005"
+          "Cam Akers",
+          "Teddy Bridgewater",
+          "Kirk Cousins",
+          "Sam Bradford"
         ],
-        "answer": "2018",
-        "explanation": "Both clues point to the 2018 season.",
-        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season",
+        "answer": "Kirk Cousins",
+        "explanation": "Kirk Cousins made 16 starts that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2024",
-          "2000"
-        ],
-        "answer": "2024",
-        "explanation": "2024: 432 points; 2000: 397 points.",
-        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season",
+        "eyebrow": "2018 · PFR leader",
+        "prompt": "Type the player who led the 2018 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Adam Thielen",
+        "explanation": "Adam Thielen ranked first on Minnesota in receiving yards; Stefon Diggs ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Who was in charge?",
-        "prompt": "Minnesota finished 1st NFC Central in 2000. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Dennis Green",
-          "Brad Childress",
-          "Leslie Frazier",
-          "Mike Tice"
-        ],
-        "answer": "Dennis Green",
-        "explanation": "Dennis Green coached the 2000 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Christian Ponder's lone 2014 start came against which team?",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Ponder started the October 2 game at Green Bay, a 42–10 loss.",
+        "source": "https://www.pro-football-reference.com/boxscores/201410020gnb.htm",
         "points": 400
       },
       {
@@ -1278,7 +1130,7 @@
         "choices": null,
         "answer": "405",
         "explanation": "Minnesota scored 405 points in 2004.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2004.htm",
         "points": 500
       }
     ]
@@ -1287,9 +1139,9 @@
     "date": "2026-08-22",
     "status": "draft",
     "host": [
-      "Carl Eller",
-      "81",
-      "Hall of Fame defensive end"
+      "Chester Taylor",
+      "29",
+      "Versatile Vikings running back"
     ],
     "questions": [
       {
@@ -1304,52 +1156,42 @@
         ],
         "answer": "2012",
         "explanation": "That combination belongs to the 2012 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2012.htm",
         "points": 100
       },
       {
-        "eyebrow": "2010s · Coach & club",
-        "prompt": "What was Minnesota's record in 2019, with Mike Zimmer as head coach?",
+        "eyebrow": "2019 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2019?",
         "type": "choice",
         "choices": [
-          "10–6",
-          "3–13",
-          "7–10",
-          "5–11"
+          "Matt Asiata, then Jerick McKinnon",
+          "Dalvin Cook, then Alexander Mattison",
+          "Stefon Diggs, then Dalvin Cook",
+          "Adam Thielen, then Stefon Diggs"
         ],
-        "answer": "10–6",
-        "explanation": "Mike Zimmer's 2019 Vikings finished 10–6.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "answer": "Stefon Diggs, then Dalvin Cook",
+        "explanation": "Stefon Diggs led Minnesota, followed by Dalvin Cook.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 200
       },
       {
-        "eyebrow": "2020s · Postseason path",
-        "prompt": "How did Minnesota's 2025 season end?",
-        "type": "choice",
-        "choices": [
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round",
-          "Missed the playoffs"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season",
+        "eyebrow": "2019 · PFR runner-up",
+        "prompt": "Who finished second on the 2019 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Alexander Mattison",
+        "explanation": "Dalvin Cook led the team, followed by Alexander Mattison.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Stat line",
-        "prompt": "Which season produced 290 Vikings points and a 5–11 record?",
-        "type": "choice",
-        "choices": [
-          "2001",
-          "1998",
-          "2005",
-          "2012"
-        ],
-        "answer": "2001",
-        "explanation": "That stat line came from the 2001 team.",
-        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Shaun Hill started the 2016 opener against which opponent?",
+        "type": "text",
+        "choices": null,
+        "answer": "Tennessee Titans",
+        "explanation": "Hill started the opener at Tennessee; Minnesota won 25–16.",
+        "source": "https://www.pro-football-reference.com/boxscores/201609110oti.htm",
         "points": 400
       },
       {
@@ -1359,7 +1201,7 @@
         "choices": null,
         "answer": "164",
         "explanation": "The difference between 306 and 470 is 164 points.",
-        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2005.htm",
         "points": 500
       }
     ]
@@ -1368,9 +1210,9 @@
     "date": "2026-08-23",
     "status": "draft",
     "host": [
-      "Paul Krause",
-      "22",
-      "Hall of Fame safety"
+      "Tarvaris Jackson",
+      "7",
+      "Vikings quarterback"
     ],
     "questions": [
       {
@@ -1385,52 +1227,42 @@
         ],
         "answer": "5–10–1",
         "explanation": "Minnesota went 5–10–1 in 2013.",
-        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2013.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · The standings",
-        "prompt": "Where did the 2020 Vikings finish in the NFC North?",
+        "eyebrow": "2020 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2020?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Justin Jefferson, then T.J. Hockenson",
+          "Adrian Peterson, then Jerick McKinnon",
+          "Adam Thielen, then Stefon Diggs",
+          "Dalvin Cook, then Alexander Mattison"
         ],
-        "answer": "3rd NFC North",
-        "explanation": "Minnesota placed 3rd NFC North in 2020.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "answer": "Dalvin Cook, then Alexander Mattison",
+        "explanation": "Dalvin Cook finished first and Alexander Mattison finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 200
       },
       {
-        "eyebrow": "1990s · Connect the clues",
-        "prompt": "Which season paired a 9–7 record with this finish: lost in the wild card round?",
-        "type": "choice",
-        "choices": [
-          "1996",
-          "2003",
-          "2010",
-          "2017"
-        ],
-        "answer": "1996",
-        "explanation": "Those clues describe Minnesota's 1996 season.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "eyebrow": "2020 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2020.",
+        "type": "text",
+        "choices": null,
+        "answer": "Adam Thielen",
+        "explanation": "Justin Jefferson finished first and Adam Thielen finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Division race",
-        "prompt": "Which finish completed Minnesota's 2002 season at 6–10?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "2nd NFC North",
-        "explanation": "The Vikings finished 2nd NFC North in 2002.",
-        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Joe Webb's first Vikings start came against which opponent?",
+        "type": "text",
+        "choices": null,
+        "answer": "Philadelphia Eagles",
+        "explanation": "Webb started Minnesota's 24–14 win at Philadelphia on December 28, 2010.",
+        "source": "https://www.pro-football-reference.com/boxscores/201012280phi.htm",
         "points": 400
       },
       {
@@ -1440,7 +1272,7 @@
         "choices": null,
         "answer": "563",
         "explanation": "282 plus 281 equals 563 points.",
-        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2006.htm",
         "points": 500
       }
     ]
@@ -1449,9 +1281,9 @@
     "date": "2026-08-24",
     "status": "draft",
     "host": [
-      "Chuck Foreman",
-      "44",
-      "Vikings Ring of Honor"
+      "Harrison Smith",
+      "22",
+      "All-Pro safety"
     ],
     "questions": [
       {
@@ -1466,50 +1298,42 @@
         ],
         "answer": "Mike Zimmer",
         "explanation": "Mike Zimmer led Minnesota during the 2014 season.",
-        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · Pick the season",
-        "prompt": "In which season did Minnesota go 8–9 and finish 2nd NFC North?",
+        "eyebrow": "2021 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2021?",
         "type": "choice",
         "choices": [
-          "2021",
-          "2024",
-          "2001",
-          "2008"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "2021",
-        "explanation": "Both clues point to the 2021 season.",
-        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season",
+        "answer": "2",
+        "explanation": "Kirk Cousins (16), Sean Mannion (1)",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 200
       },
       {
-        "eyebrow": "1990s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "1997",
-          "2003"
-        ],
-        "answer": "2003",
-        "explanation": "1997: 354 points; 2003: 416 points.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "eyebrow": "2021 · PFR leader",
+        "prompt": "Who led the 2021 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Dalvin Cook",
+        "explanation": "Dalvin Cook led Minnesota, with Alexander Mattison second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Who was in charge?",
-        "prompt": "Minnesota finished 2nd NFC North in 2003. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Kevin O'Connell",
-          "Mike Tice",
-          "Mike Zimmer",
-          "Dennis Green"
-        ],
-        "answer": "Mike Tice",
-        "explanation": "Mike Tice coached the 2003 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name Minnesota's regular kicker for the 2005 season.",
+        "type": "text",
+        "choices": null,
+        "answer": "Paul Edinger",
+        "explanation": "Edinger went 25-for-34 on field goals for Minnesota in 2005.",
+        "source": "https://www.pro-football-reference.com/players/E/edingpau01.htm",
         "points": 400
       },
       {
@@ -1519,7 +1343,7 @@
         "choices": null,
         "answer": "365",
         "explanation": "Minnesota scored 365 points in 2007.",
-        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2007.htm",
         "points": 500
       }
     ]
@@ -1528,9 +1352,9 @@
     "date": "2026-08-25",
     "status": "draft",
     "host": [
-      "Ahmad Rashad",
-      "28",
-      "Vikings Ring of Honor"
+      "Adam Thielen",
+      "19",
+      "Minnesota fan favorite"
     ],
     "questions": [
       {
@@ -1545,52 +1369,42 @@
         ],
         "answer": "2015",
         "explanation": "That combination belongs to the 2015 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · Coach & club",
-        "prompt": "What was Minnesota's record in 2022, with Kevin O'Connell as head coach?",
+        "eyebrow": "2022 · QB starts",
+        "prompt": "Which quarterback started 17 games for the 2022 Vikings?",
         "type": "choice",
         "choices": [
-          "9–7",
-          "13–4",
-          "13–3",
-          "12–4"
+          "Kirk Cousins",
+          "Stefon Diggs",
+          "Jerick McKinnon",
+          "Dalvin Cook"
         ],
-        "answer": "13–4",
-        "explanation": "Kevin O'Connell's 2022 Vikings finished 13–4.",
-        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season",
+        "answer": "Kirk Cousins",
+        "explanation": "Kirk Cousins made 17 starts that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2022.htm",
         "points": 200
       },
       {
-        "eyebrow": "1990s · Postseason path",
-        "prompt": "How did Minnesota's 1998 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round"
-        ],
-        "answer": "Lost in the Wild Card round",
-        "explanation": "Minnesota's postseason result: Won Divisional Playoffs (vs. Cardinals) 41–21; lost NFC Championship (vs. Falcons) 27–30 (OT).",
-        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season",
+        "eyebrow": "2016 · QB starts",
+        "prompt": "Besides Sam Bradford, which quarterback made the second-most starts for Minnesota in 2016?",
+        "type": "text",
+        "choices": null,
+        "answer": "Shaun Hill",
+        "explanation": "Sam Bradford started 15; Shaun Hill started 1 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Stat line",
-        "prompt": "Which season produced 405 Vikings points and a 8–8 record?",
-        "type": "choice",
-        "choices": [
-          "2004",
-          "2001",
-          "2008",
-          "2015"
-        ],
-        "answer": "2004",
-        "explanation": "That stat line came from the 2004 team.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name Minnesota's 2013 punter.",
+        "type": "text",
+        "choices": null,
+        "answer": "Jeff Locke",
+        "explanation": "Locke punted 75 times for Minnesota as a rookie in 2013.",
+        "source": "https://www.pro-football-reference.com/players/L/LockJe00.htm",
         "points": 400
       },
       {
@@ -1600,7 +1414,7 @@
         "choices": null,
         "answer": "0",
         "explanation": "The difference between 379 and 379 is 0 points.",
-        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2008.htm",
         "points": 500
       }
     ]
@@ -1609,9 +1423,9 @@
     "date": "2026-08-26",
     "status": "draft",
     "host": [
-      "Robert Smith",
-      "26",
-      "Vikings Ring of Honor"
+      "Stefon Diggs",
+      "14",
+      "Minneapolis Miracle receiver"
     ],
     "questions": [
       {
@@ -1626,52 +1440,42 @@
         ],
         "answer": "8–8",
         "explanation": "Minnesota went 8–8 in 2016.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · The standings",
-        "prompt": "Where did the 2023 Vikings finish in the NFC North?",
+        "eyebrow": "2023 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2023?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Alexander Mattison, then Ty Chandler",
+          "Justin Jefferson, then T.J. Hockenson",
+          "Jerick McKinnon, then Matt Asiata",
+          "Justin Jefferson, then Adam Thielen"
         ],
-        "answer": "3rd NFC North",
-        "explanation": "Minnesota placed 3rd NFC North in 2023.",
-        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season",
+        "answer": "Justin Jefferson, then T.J. Hockenson",
+        "explanation": "Justin Jefferson led Minnesota, followed by T.J. Hockenson.",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 200
       },
       {
-        "eyebrow": "1990s · Connect the clues",
-        "prompt": "Which season paired a 10–6 record with this finish: lost in the wild card round?",
-        "type": "choice",
-        "choices": [
-          "1999",
-          "2006",
-          "2013",
-          "2020"
-        ],
-        "answer": "1999",
-        "explanation": "Those clues describe Minnesota's 1999 season.",
-        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season",
+        "eyebrow": "2023 · PFR leader",
+        "prompt": "Type the player who led the 2023 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Justin Jefferson",
+        "explanation": "Justin Jefferson ranked first on Minnesota in receiving yards; T.J. Hockenson ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Division race",
-        "prompt": "Which finish completed Minnesota's 2005 season at 9–7?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "2nd NFC North",
-        "explanation": "The Vikings finished 2nd NFC North in 2005.",
-        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name Minnesota's kicker for the 2013 season.",
+        "type": "text",
+        "choices": null,
+        "answer": "Blair Walsh",
+        "explanation": "Walsh made 26 of 30 field-goal attempts in 2013.",
+        "source": "https://www.pro-football-reference.com/players/W/WalsBl00.htm",
         "points": 400
       },
       {
@@ -1681,7 +1485,7 @@
         "choices": null,
         "answer": "861",
         "explanation": "470 plus 391 equals 861 points.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2009.htm",
         "points": 500
       }
     ]
@@ -1690,9 +1494,9 @@
     "date": "2026-08-27",
     "status": "draft",
     "host": [
-      "Daunte Culpepper",
-      "11",
-      "All-Pro quarterback"
+      "Danielle Hunter",
+      "99",
+      "All-Pro pass rusher"
     ],
     "questions": [
       {
@@ -1707,50 +1511,42 @@
         ],
         "answer": "Mike Zimmer",
         "explanation": "Mike Zimmer led Minnesota during the 2017 season.",
-        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · Pick the season",
-        "prompt": "In which season did Minnesota go 14–3 and finish 2nd NFC North?",
+        "eyebrow": "2024 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2024?",
         "type": "choice",
         "choices": [
-          "2024",
-          "1997",
-          "2004",
-          "2011"
+          "Greg Jennings, then Jarius Wright",
+          "Aaron Jones, then Cam Akers",
+          "Dalvin Cook, then Alexander Mattison",
+          "Adam Thielen, then Stefon Diggs"
         ],
-        "answer": "2024",
-        "explanation": "Both clues point to the 2024 season.",
-        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season",
+        "answer": "Aaron Jones, then Cam Akers",
+        "explanation": "Aaron Jones finished first and Cam Akers finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2000",
-          "2006"
-        ],
-        "answer": "2000",
-        "explanation": "2000: 397 points; 2006: 282 points.",
-        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season",
+        "eyebrow": "2024 · PFR runner-up",
+        "prompt": "Who finished second on the 2024 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Cam Akers",
+        "explanation": "Aaron Jones led the team, followed by Cam Akers.",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Who was in charge?",
-        "prompt": "Minnesota finished 3rd NFC North in 2006. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Brad Childress",
-          "Leslie Frazier",
-          "Mike Tice",
-          "Mike Zimmer"
-        ],
-        "answer": "Brad Childress",
-        "explanation": "Brad Childress coached the 2006 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name the Vikings punter who debuted in 2022.",
+        "type": "text",
+        "choices": null,
+        "answer": "Ryan Wright",
+        "explanation": "Wright punted 73 times in his 2022 rookie regular season.",
+        "source": "https://www.pro-football-reference.com/players/W/WrigRy00.htm",
         "points": 400
       },
       {
@@ -1760,7 +1556,7 @@
         "choices": null,
         "answer": "281",
         "explanation": "Minnesota scored 281 points in 2010.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2010.htm",
         "points": 500
       }
     ]
@@ -1769,9 +1565,9 @@
     "date": "2026-08-28",
     "status": "draft",
     "host": [
-      "Adam Thielen",
-      "19",
-      "Minnesota fan favorite"
+      "Brian Robison",
+      "96",
+      "Longtime Vikings defensive end"
     ],
     "questions": [
       {
@@ -1786,52 +1582,42 @@
         ],
         "answer": "2018",
         "explanation": "That combination belongs to the 2018 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 100
       },
       {
-        "eyebrow": "2020s · Coach & club",
-        "prompt": "What was Minnesota's record in 2025, with Kevin O'Connell as head coach?",
+        "eyebrow": "2014 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2014?",
         "type": "choice",
         "choices": [
-          "9–8",
-          "7–9",
-          "13–4",
-          "11–5"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "9–8",
-        "explanation": "Kevin O'Connell's 2025 Vikings finished 9–8.",
-        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season",
+        "answer": "3",
+        "explanation": "Teddy Bridgewater (12), Matt Cassel (3), Christian Ponder (1)",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Postseason path",
-        "prompt": "How did Minnesota's 2001 season end?",
-        "type": "choice",
-        "choices": [
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round",
-          "Missed the playoffs",
-          "Lost in the Wild Card round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season",
+        "eyebrow": "2014 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2014.",
+        "type": "text",
+        "choices": null,
+        "answer": "Jarius Wright",
+        "explanation": "Greg Jennings finished first and Jarius Wright finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Stat line",
-        "prompt": "Which season produced 365 Vikings points and a 8–8 record?",
-        "type": "choice",
-        "choices": [
-          "2007",
-          "2004",
-          "2011",
-          "2018"
-        ],
-        "answer": "2007",
-        "explanation": "That stat line came from the 2007 team.",
-        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Mewelde Moore wore which number in Minnesota?",
+        "type": "text",
+        "choices": null,
+        "answer": "30",
+        "explanation": "Moore wore No. 30 for Minnesota from 2004 through 2007.",
+        "source": "https://www.pro-football-reference.com/players/uniform.cgi?number=30",
         "points": 400
       },
       {
@@ -1841,7 +1627,7 @@
         "choices": null,
         "answer": "25",
         "explanation": "The difference between 340 and 365 is 25 points.",
-        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2011.htm",
         "points": 500
       }
     ]
@@ -1850,9 +1636,9 @@
     "date": "2026-08-29",
     "status": "draft",
     "host": [
-      "Stefon Diggs",
-      "14",
-      "Minneapolis Miracle receiver"
+      "Kyle Rudolph",
+      "82",
+      "Pro Bowl tight end"
     ],
     "questions": [
       {
@@ -1867,52 +1653,42 @@
         ],
         "answer": "10–6",
         "explanation": "Minnesota went 10–6 in 2019.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 100
       },
       {
-        "eyebrow": "1990s · The standings",
-        "prompt": "Where did the 1996 Vikings finish in the NFC Central?",
+        "eyebrow": "2015 · QB starts",
+        "prompt": "Which quarterback started 16 games for the 2015 Vikings?",
         "type": "choice",
         "choices": [
-          "1st NFC Central",
-          "2nd NFC Central",
-          "3rd NFC Central",
-          "4th NFC Central"
+          "Justin Jefferson",
+          "Teddy Bridgewater",
+          "Shaun Hill",
+          "Matt Cassel"
         ],
-        "answer": "2nd NFC Central",
-        "explanation": "Minnesota placed 2nd NFC Central in 1996.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "answer": "Teddy Bridgewater",
+        "explanation": "Teddy Bridgewater made 16 starts that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Connect the clues",
-        "prompt": "Which season paired a 6–10 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2002",
-          "2009",
-          "2016",
-          "2023"
-        ],
-        "answer": "2002",
-        "explanation": "Those clues describe Minnesota's 2002 season.",
-        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season",
+        "eyebrow": "2015 · PFR leader",
+        "prompt": "Who led the 2015 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Adrian Peterson",
+        "explanation": "Adrian Peterson led Minnesota, with Jerick McKinnon second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Division race",
-        "prompt": "Which finish completed Minnesota's 2008 season at 10–6?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "1st NFC North",
-        "explanation": "The Vikings finished 1st NFC North in 2008.",
-        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Erasmus James wore which Vikings number?",
+        "type": "text",
+        "choices": null,
+        "answer": "99",
+        "explanation": "James wore No. 99 for the Vikings from 2005 through 2007.",
+        "source": "https://www.pro-football-reference.com/players/uniform.cgi?number=99&team=min",
         "points": 400
       },
       {
@@ -1922,7 +1698,7 @@
         "choices": null,
         "answer": "706",
         "explanation": "379 plus 327 equals 706 points.",
-        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2012.htm",
         "points": 500
       }
     ]
@@ -1931,9 +1707,9 @@
     "date": "2026-08-30",
     "status": "draft",
     "host": [
-      "Danielle Hunter",
-      "99",
-      "All-Pro pass rusher"
+      "Everson Griffen",
+      "97",
+      "Pro Bowl defensive end"
     ],
     "questions": [
       {
@@ -1948,50 +1724,42 @@
         ],
         "answer": "Mike Zimmer",
         "explanation": "Mike Zimmer led Minnesota during the 2020 season.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 100
       },
       {
-        "eyebrow": "1990s · Pick the season",
-        "prompt": "In which season did Minnesota go 9–7 and finish 4th NFC Central?",
+        "eyebrow": "2016 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2016?",
         "type": "choice",
         "choices": [
-          "1997",
-          "2000",
-          "2007",
-          "2014"
+          "Dalvin Cook, then Latavius Murray",
+          "Matt Asiata, then Jerick McKinnon",
+          "Justin Jefferson, then Adam Thielen",
+          "Adam Thielen, then Stefon Diggs"
         ],
-        "answer": "1997",
-        "explanation": "Both clues point to the 1997 season.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "answer": "Adam Thielen, then Stefon Diggs",
+        "explanation": "Adam Thielen led Minnesota, followed by Stefon Diggs.",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2003",
-          "2009"
-        ],
-        "answer": "2009",
-        "explanation": "2003: 416 points; 2009: 470 points.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "eyebrow": "2014 · QB starts",
+        "prompt": "Besides Teddy Bridgewater, which quarterback made the second-most starts for Minnesota in 2014?",
+        "type": "text",
+        "choices": null,
+        "answer": "Matt Cassel",
+        "explanation": "Teddy Bridgewater started 12; Matt Cassel started 3; Christian Ponder started 1 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 300
       },
       {
-        "eyebrow": "2000s · Who was in charge?",
-        "prompt": "Minnesota finished 1st NFC North in 2009. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Mike Zimmer",
-          "Dennis Green",
-          "Brad Childress",
-          "Kevin O'Connell"
-        ],
-        "answer": "Brad Childress",
-        "explanation": "Brad Childress coached the 2009 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Spergon Wynn made his first Vikings start against which team?",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Wynn's first Minnesota start was a 24–13 loss at Green Bay on December 30, 2001.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -2001,7 +1769,7 @@
         "choices": null,
         "answer": "391",
         "explanation": "Minnesota scored 391 points in 2013.",
-        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2013.htm",
         "points": 500
       }
     ]
@@ -2010,9 +1778,9 @@
     "date": "2026-08-31",
     "status": "draft",
     "host": [
-      "Brian Robison",
-      "96",
-      "Longtime Vikings defensive end"
+      "Anthony Barr",
+      "55",
+      "Four-time Pro Bowl linebacker"
     ],
     "questions": [
       {
@@ -2027,52 +1795,42 @@
         ],
         "answer": "2021",
         "explanation": "That combination belongs to the 2021 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2021_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 100
       },
       {
-        "eyebrow": "1990s · Coach & club",
-        "prompt": "What was Minnesota's record in 1998, with Dennis Green as head coach?",
+        "eyebrow": "2017 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2017?",
         "type": "choice",
         "choices": [
-          "9–8",
-          "8–8",
-          "8–9",
-          "15–1"
+          "Alexander Mattison, then Ty Chandler",
+          "Latavius Murray, then Jerick McKinnon",
+          "Adam Thielen, then Stefon Diggs",
+          "Justin Jefferson, then Adam Thielen"
         ],
-        "answer": "15–1",
-        "explanation": "Dennis Green's 1998 Vikings finished 15–1.",
-        "source": "https://en.wikipedia.org/wiki/1998_Minnesota_Vikings_season",
+        "answer": "Latavius Murray, then Jerick McKinnon",
+        "explanation": "Latavius Murray finished first and Jerick McKinnon finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Postseason path",
-        "prompt": "How did Minnesota's 2004 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the Divisional round",
-          "Lost in the NFC Championship"
-        ],
-        "answer": "Lost in the Wild Card round",
-        "explanation": "Minnesota's postseason result: Won Wild Card Playoffs (at Packers) 31–17; lost Divisional Playoffs (at Eagles) 14–27.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "eyebrow": "2017 · PFR leader",
+        "prompt": "Type the player who led the 2017 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Adam Thielen",
+        "explanation": "Adam Thielen ranked first on Minnesota in receiving yards; Stefon Diggs ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Stat line",
-        "prompt": "Which season produced 281 Vikings points and a 6–10 record?",
-        "type": "choice",
-        "choices": [
-          "2010",
-          "2007",
-          "2014",
-          "2021"
-        ],
-        "answer": "2010",
-        "explanation": "That stat line came from the 2010 team.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Spergon Wynn's second Vikings start came against which team?",
+        "type": "text",
+        "choices": null,
+        "answer": "Baltimore Ravens",
+        "explanation": "Wynn started the 2001 finale at Baltimore, a 19–3 Vikings loss played January 7, 2002.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -2082,7 +1840,7 @@
         "choices": null,
         "answer": "35",
         "explanation": "The difference between 325 and 360 is 35 points.",
-        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 500
       }
     ]
@@ -2091,9 +1849,9 @@
     "date": "2026-09-01",
     "status": "draft",
     "host": [
-      "Kyle Rudolph",
-      "82",
-      "Pro Bowl tight end"
+      "Eric Kendricks",
+      "54",
+      "All-Pro linebacker"
     ],
     "questions": [
       {
@@ -2108,52 +1866,42 @@
         ],
         "answer": "13–4",
         "explanation": "Minnesota went 13–4 in 2022.",
-        "source": "https://en.wikipedia.org/wiki/2022_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2022.htm",
         "points": 100
       },
       {
-        "eyebrow": "1990s · The standings",
-        "prompt": "Where did the 1999 Vikings finish in the NFC Central?",
+        "eyebrow": "2018 · QB room",
+        "prompt": "How many different quarterbacks started at least one game for Minnesota in 2018?",
         "type": "choice",
         "choices": [
-          "1st NFC Central",
-          "2nd NFC Central",
-          "3rd NFC Central",
-          "4th NFC Central"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
-        "answer": "2nd NFC Central",
-        "explanation": "Minnesota placed 2nd NFC Central in 1999.",
-        "source": "https://en.wikipedia.org/wiki/1999_Minnesota_Vikings_season",
+        "answer": "1",
+        "explanation": "Kirk Cousins (16)",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Connect the clues",
-        "prompt": "Which season paired a 9–7 record with this finish: missed the playoffs?",
-        "type": "choice",
-        "choices": [
-          "2005",
-          "2012",
-          "2019",
-          "1996"
-        ],
-        "answer": "2005",
-        "explanation": "Those clues describe Minnesota's 2005 season.",
-        "source": "https://en.wikipedia.org/wiki/2005_Minnesota_Vikings_season",
+        "eyebrow": "2018 · PFR runner-up",
+        "prompt": "Who finished second on the 2018 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Latavius Murray",
+        "explanation": "Dalvin Cook led the team, followed by Latavius Murray.",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Division race",
-        "prompt": "Which finish completed Minnesota's 2011 season at 3–13?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "4th NFC North",
-        "explanation": "The Vikings finished 4th NFC North in 2011.",
-        "source": "https://en.wikipedia.org/wiki/2011_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name the opponent in Josh Freeman's one Vikings start.",
+        "type": "text",
+        "choices": null,
+        "answer": "New York Giants",
+        "explanation": "Freeman started Minnesota's 23–7 Monday-night loss at the Giants on October 21, 2013.",
+        "source": "https://www.pro-football-reference.com/boxscores/201310210nyg.htm",
         "points": 400
       },
       {
@@ -2163,7 +1911,7 @@
         "choices": null,
         "answer": "772",
         "explanation": "365 plus 407 equals 772 points.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 500
       }
     ]
@@ -2172,9 +1920,9 @@
     "date": "2026-09-02",
     "status": "draft",
     "host": [
-      "Everson Griffen",
-      "97",
-      "Pro Bowl defensive end"
+      "Christian Ponder",
+      "7",
+      "Vikings quarterback"
     ],
     "questions": [
       {
@@ -2189,50 +1937,42 @@
         ],
         "answer": "Kevin O'Connell",
         "explanation": "Kevin O'Connell led Minnesota during the 2023 season.",
-        "source": "https://en.wikipedia.org/wiki/2023_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Pick the season",
-        "prompt": "In which season did Minnesota go 11–5 and finish 1st NFC Central?",
+        "eyebrow": "2019 · QB starts",
+        "prompt": "Which quarterback started 1 game for the 2019 Vikings?",
         "type": "choice",
         "choices": [
-          "2000",
-          "2003",
-          "2010",
-          "2017"
+          "Sean Mannion",
+          "Kyle Rudolph",
+          "Kirk Cousins",
+          "Nick Mullens"
         ],
-        "answer": "2000",
-        "explanation": "Both clues point to the 2000 season.",
-        "source": "https://en.wikipedia.org/wiki/2000_Minnesota_Vikings_season",
+        "answer": "Sean Mannion",
+        "explanation": "Sean Mannion made 1 start that season.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Higher or lower",
-        "prompt": "Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2006",
-          "2012"
-        ],
-        "answer": "2012",
-        "explanation": "2006: 282 points; 2012: 379 points.",
-        "source": "https://en.wikipedia.org/wiki/2006_Minnesota_Vikings_season",
+        "eyebrow": "2019 · PFR runner-up",
+        "prompt": "Type the player who ranked second on Minnesota in receiving yards in 2019.",
+        "type": "text",
+        "choices": null,
+        "answer": "Dalvin Cook",
+        "explanation": "Stefon Diggs finished first and Dalvin Cook finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Who was in charge?",
-        "prompt": "Minnesota finished 2nd NFC North in 2012. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Leslie Frazier",
-          "Brad Childress",
-          "Mike Tice",
-          "Mike Zimmer"
-        ],
-        "answer": "Leslie Frazier",
-        "explanation": "Leslie Frazier coached the 2012 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2012_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name the opponent in Christian Ponder's only 2014 start.",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Ponder started the October 2 game at Green Bay, a 42–10 loss.",
+        "source": "https://www.pro-football-reference.com/boxscores/201410020gnb.htm",
         "points": 400
       },
       {
@@ -2242,7 +1982,7 @@
         "choices": null,
         "answer": "327",
         "explanation": "Minnesota scored 327 points in 2016.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2016.htm",
         "points": 500
       }
     ]
@@ -2251,9 +1991,9 @@
     "date": "2026-09-03",
     "status": "draft",
     "host": [
-      "Anthony Barr",
-      "55",
-      "Four-time Pro Bowl linebacker"
+      "Blair Walsh",
+      "3",
+      "All-Pro kicker"
     ],
     "questions": [
       {
@@ -2268,52 +2008,42 @@
         ],
         "answer": "2024",
         "explanation": "That combination belongs to the 2024 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2024_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2024.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Coach & club",
-        "prompt": "What was Minnesota's record in 2001, with Dennis Green as head coach?",
+        "eyebrow": "2020 · One-two punch",
+        "prompt": "Which pair finished first and second, in order, in Vikings receiving yards in 2020?",
         "type": "choice",
         "choices": [
-          "5–11",
-          "10–6",
-          "14–3",
-          "5–10–1"
+          "Justin Jefferson, then Adam Thielen",
+          "Dalvin Cook, then Alexander Mattison",
+          "Justin Jefferson, then Jordan Addison",
+          "Jerick McKinnon, then Matt Asiata"
         ],
-        "answer": "5–11",
-        "explanation": "Dennis Green's 2001 Vikings finished 5–11.",
-        "source": "https://en.wikipedia.org/wiki/2001_Minnesota_Vikings_season",
+        "answer": "Justin Jefferson, then Adam Thielen",
+        "explanation": "Justin Jefferson led Minnesota, followed by Adam Thielen.",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Postseason path",
-        "prompt": "How did Minnesota's 2007 season end?",
-        "type": "choice",
-        "choices": [
-          "Missed the playoffs",
-          "Lost in the Wild Card round",
-          "Lost in the NFC Championship",
-          "Lost in the Divisional round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2007_Minnesota_Vikings_season",
+        "eyebrow": "2020 · PFR leader",
+        "prompt": "Who led the 2020 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Dalvin Cook",
+        "explanation": "Dalvin Cook led Minnesota, with Alexander Mattison second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Stat line",
-        "prompt": "Which season produced 391 Vikings points and a 5–10–1 record?",
-        "type": "choice",
-        "choices": [
-          "2013",
-          "2010",
-          "2017",
-          "2024"
-        ],
-        "answer": "2013",
-        "explanation": "That stat line came from the 2013 team.",
-        "source": "https://en.wikipedia.org/wiki/2013_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name Minnesota's opponent when Shaun Hill started in 2016.",
+        "type": "text",
+        "choices": null,
+        "answer": "Tennessee Titans",
+        "explanation": "Hill started the opener at Tennessee; Minnesota won 25–16.",
+        "source": "https://www.pro-football-reference.com/boxscores/201609110oti.htm",
         "points": 400
       },
       {
@@ -2323,7 +2053,7 @@
         "choices": null,
         "answer": "43",
         "explanation": "The difference between 382 and 425 is 43 points.",
-        "source": "https://en.wikipedia.org/wiki/2017_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2017.htm",
         "points": 500
       }
     ]
@@ -2332,9 +2062,9 @@
     "date": "2026-09-04",
     "status": "draft",
     "host": [
-      "Eric Kendricks",
-      "54",
-      "All-Pro linebacker"
+      "Chris Kluwe",
+      "5",
+      "Longtime Vikings punter"
     ],
     "questions": [
       {
@@ -2349,52 +2079,42 @@
         ],
         "answer": "9–8",
         "explanation": "Minnesota went 9–8 in 2025.",
-        "source": "https://en.wikipedia.org/wiki/2025_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2025.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · The standings",
-        "prompt": "Where did the 2002 Vikings finish in the NFC North?",
+        "eyebrow": "2021 · Ground leaders",
+        "prompt": "Which pair ranked first and second, in order, in Vikings rushing yards in 2021?",
         "type": "choice",
         "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
+          "Matt Asiata, then Jerick McKinnon",
+          "Justin Jefferson, then Adam Thielen",
+          "Dalvin Cook, then Alexander Mattison",
+          "Adam Thielen, then Stefon Diggs"
         ],
-        "answer": "2nd NFC North",
-        "explanation": "Minnesota placed 2nd NFC North in 2002.",
-        "source": "https://en.wikipedia.org/wiki/2002_Minnesota_Vikings_season",
+        "answer": "Dalvin Cook, then Alexander Mattison",
+        "explanation": "Dalvin Cook finished first and Alexander Mattison finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2021.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Connect the clues",
-        "prompt": "Which season paired a 10–6 record with this finish: lost in the wild card round?",
-        "type": "choice",
-        "choices": [
-          "2008",
-          "2015",
-          "2022",
-          "1999"
-        ],
-        "answer": "2008",
-        "explanation": "Those clues describe Minnesota's 2008 season.",
-        "source": "https://en.wikipedia.org/wiki/2008_Minnesota_Vikings_season",
+        "eyebrow": "2023 · QB starts",
+        "prompt": "Besides Kirk Cousins, which quarterback made the second-most starts for Minnesota in 2023?",
+        "type": "text",
+        "choices": null,
+        "answer": "Joshua Dobbs",
+        "explanation": "Kirk Cousins started 8; Joshua Dobbs started 4; Nick Mullens started 3; Jaren Hall started 2 games.",
+        "source": "https://www.pro-football-reference.com/teams/min/2023.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Division race",
-        "prompt": "Which finish completed Minnesota's 2014 season at 7–9?",
-        "type": "choice",
-        "choices": [
-          "1st NFC North",
-          "2nd NFC North",
-          "3rd NFC North",
-          "4th NFC North"
-        ],
-        "answer": "3rd NFC North",
-        "explanation": "The Vikings finished 3rd NFC North in 2014.",
-        "source": "https://en.wikipedia.org/wiki/2014_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "Name the opponent in Joe Webb's first career start.",
+        "type": "text",
+        "choices": null,
+        "answer": "Philadelphia Eagles",
+        "explanation": "Webb started Minnesota's 24–14 win at Philadelphia on December 28, 2010.",
+        "source": "https://www.pro-football-reference.com/boxscores/201012280phi.htm",
         "points": 400
       },
       {
@@ -2404,7 +2124,7 @@
         "choices": null,
         "answer": "784",
         "explanation": "360 plus 424 equals 784 points.",
-        "source": "https://en.wikipedia.org/wiki/2018_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2018.htm",
         "points": 500
       }
     ]
@@ -2430,50 +2150,42 @@
         ],
         "answer": "Dennis Green",
         "explanation": "Dennis Green led Minnesota during the 1996 season.",
-        "source": "https://en.wikipedia.org/wiki/1996_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1996.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Pick the season",
-        "prompt": "TEST A — In which season did Minnesota go 9–7 and finish 2nd NFC North?",
+        "eyebrow": "2014 · One-two punch",
+        "prompt": "TEST A — Which pair finished first and second, in order, in Vikings receiving yards in 2014?",
         "type": "choice",
         "choices": [
-          "2003",
-          "2006",
-          "2013",
-          "2020"
+          "Justin Jefferson, then Adam Thielen",
+          "Latavius Murray, then Jerick McKinnon",
+          "Greg Jennings, then Jarius Wright",
+          "Aaron Jones, then Cam Akers"
         ],
-        "answer": "2003",
-        "explanation": "Both clues point to the 2003 season.",
-        "source": "https://en.wikipedia.org/wiki/2003_Minnesota_Vikings_season",
+        "answer": "Greg Jennings, then Jarius Wright",
+        "explanation": "Greg Jennings led Minnesota, followed by Jarius Wright.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 200
       },
       {
-        "eyebrow": "2000s · Higher or lower",
-        "prompt": "TEST A — Which Vikings season scored more regular-season points?",
-        "type": "choice",
-        "choices": [
-          "2009",
-          "2015"
-        ],
-        "answer": "2009",
-        "explanation": "2009: 470 points; 2015: 365 points.",
-        "source": "https://en.wikipedia.org/wiki/2009_Minnesota_Vikings_season",
+        "eyebrow": "2014 · PFR leader",
+        "prompt": "TEST A — Type the player who led the 2014 Vikings in receiving yards.",
+        "type": "text",
+        "choices": null,
+        "answer": "Greg Jennings",
+        "explanation": "Greg Jennings ranked first on Minnesota in receiving yards; Jarius Wright ranked second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2014.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Who was in charge?",
-        "prompt": "TEST A — Minnesota finished 1st NFC North in 2015. Who was the head coach?",
-        "type": "choice",
-        "choices": [
-          "Dennis Green",
-          "Kevin O'Connell",
-          "Mike Tice",
-          "Mike Zimmer"
-        ],
-        "answer": "Mike Zimmer",
-        "explanation": "Mike Zimmer coached the 2015 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/2015_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "TEST A — Who did Spergon Wynn face in his first Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Green Bay Packers",
+        "explanation": "Wynn's first Minnesota start was a 24–13 loss at Green Bay on December 30, 2001.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -2483,7 +2195,7 @@
         "choices": null,
         "answer": "407",
         "explanation": "Minnesota scored 407 points in 2019.",
-        "source": "https://en.wikipedia.org/wiki/2019_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2019.htm",
         "points": 500
       }
     ]
@@ -2509,52 +2221,42 @@
         ],
         "answer": "1997",
         "explanation": "That combination belongs to the 1997 Vikings.",
-        "source": "https://en.wikipedia.org/wiki/1997_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/1997.htm",
         "points": 100
       },
       {
-        "eyebrow": "2000s · Coach & club",
-        "prompt": "TEST B — What was Minnesota's record in 2004, with Mike Tice as head coach?",
+        "eyebrow": "2015 · Ground leaders",
+        "prompt": "TEST B — Which pair ranked first and second, in order, in Vikings rushing yards in 2015?",
         "type": "choice",
         "choices": [
-          "8–8",
-          "9–7",
-          "13–3",
-          "12–4"
+          "Dalvin Cook, then Alexander Mattison",
+          "Adrian Peterson, then Jerick McKinnon",
+          "Stefon Diggs, then Dalvin Cook",
+          "Stefon Diggs, then Kyle Rudolph"
         ],
-        "answer": "8–8",
-        "explanation": "Mike Tice's 2004 Vikings finished 8–8.",
-        "source": "https://en.wikipedia.org/wiki/2004_Minnesota_Vikings_season",
+        "answer": "Adrian Peterson, then Jerick McKinnon",
+        "explanation": "Adrian Peterson finished first and Jerick McKinnon finished second.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 200
       },
       {
-        "eyebrow": "2010s · Postseason path",
-        "prompt": "TEST B — How did Minnesota's 2010 season end?",
-        "type": "choice",
-        "choices": [
-          "Lost in the Divisional round",
-          "Lost in the NFC Championship",
-          "Missed the playoffs",
-          "Lost in the Wild Card round"
-        ],
-        "answer": "Missed the playoffs",
-        "explanation": "Minnesota's postseason result: Did not qualify.",
-        "source": "https://en.wikipedia.org/wiki/2010_Minnesota_Vikings_season",
+        "eyebrow": "2015 · PFR runner-up",
+        "prompt": "TEST B — Who finished second on the 2015 Vikings in rushing yards?",
+        "type": "text",
+        "choices": null,
+        "answer": "Jerick McKinnon",
+        "explanation": "Adrian Peterson led the team, followed by Jerick McKinnon.",
+        "source": "https://www.pro-football-reference.com/teams/min/2015.htm",
         "points": 300
       },
       {
-        "eyebrow": "2010s · Stat line",
-        "prompt": "TEST B — Which season produced 327 Vikings points and a 8–8 record?",
-        "type": "choice",
-        "choices": [
-          "2016",
-          "2013",
-          "2020",
-          "1997"
-        ],
-        "answer": "2016",
-        "explanation": "That stat line came from the 2016 team.",
-        "source": "https://en.wikipedia.org/wiki/2016_Minnesota_Vikings_season",
+        "eyebrow": "Deep cut · PFR verified",
+        "prompt": "TEST B — Who did Spergon Wynn face in his second and final Vikings start?",
+        "type": "text",
+        "choices": null,
+        "answer": "Baltimore Ravens",
+        "explanation": "Wynn started the 2001 finale at Baltimore, a 19–3 Vikings loss played January 7, 2002.",
+        "source": "https://www.pro-football-reference.com/boxscores/game_query.cgi?qb=WynnSp00&yr=2001",
         "points": 400
       },
       {
@@ -2564,7 +2266,7 @@
         "choices": null,
         "answer": "2",
         "explanation": "The difference between 430 and 432 is 2 points.",
-        "source": "https://en.wikipedia.org/wiki/2020_Minnesota_Vikings_season",
+        "source": "https://www.pro-football-reference.com/teams/min/2020.htm",
         "points": 500
       }
     ]
