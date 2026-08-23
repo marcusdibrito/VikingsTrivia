@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 type Question = {
   id: string;
@@ -19,6 +19,7 @@ type LeaderRow = {
   rank: number;
   name: string;
   score: number;
+  paPoints: number;
   correct: number;
   pin: number | null;
   time: string;
@@ -34,6 +35,7 @@ type DailyGame = {
     caption: string;
   };
   questions: Question[];
+  paBonusQuestions: Question[];
 };
 
 const emptyQuestions: Question[] = [];
@@ -93,15 +95,28 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [answers, setAnswers] = useState<string[]>([]);
+  const [answerTimes, setAnswerTimes] = useState<number[]>([]);
   const [seconds, setSeconds] = useState(30);
   const [lockedAnswer, setLockedAnswer] = useState<string | null>(null);
   const [teamError, setTeamError] = useState("");
   const [leaderboard, setLeaderboard] = useState<LeaderRow[]>([]);
+  const [leaderSort, setLeaderSort] = useState<"rank" | "paPoints">("rank");
   const [dailyRank, setDailyRank] = useState<number | null>(null);
   const [ready, setReady] = useState(false);
   const [loadError, setLoadError] = useState("");
-  const questions = dailyGame?.questions ?? emptyQuestions;
+  const questionStartedAt = useRef(0);
+  const footballQuestions = dailyGame?.questions ?? emptyQuestions;
+  const questions = useMemo(
+    () => dailyGame ? [...dailyGame.questions, ...dailyGame.paBonusQuestions] : emptyQuestions,
+    [dailyGame],
+  );
+  const paRoundStart = footballQuestions.length;
+  const isPaRound = index >= paRoundStart;
   const finalUnit = numericUnit(questions[4]);
+  const sortedLeaderboard = useMemo(
+    () => leaderSort === "rank" ? leaderboard : [...leaderboard].sort((a, b) => b.paPoints - a.paPoints || a.rank - b.rank),
+    [leaderboard, leaderSort],
+  );
 
   useEffect(() => {
     async function loadGame() {
@@ -153,7 +168,7 @@ export default function Home() {
 
   const score = useMemo(
     () =>
-      answers.reduce((total, entry, i) => {
+      answers.slice(0, 5).reduce((total, entry, i) => {
         const q = questions[i];
         if (!q) return total;
         if (q.type === "number") {
@@ -169,6 +184,14 @@ export default function Home() {
     const q = questions[i];
     return q && (q.type === "number" ? Number(entry) === Number(q.answer) : normalize(entry) === normalize(String(q.answer)));
   }).length;
+  const footballCorrect = answers.slice(0, paRoundStart).filter((entry, i) => {
+    const q = footballQuestions[i];
+    return q && (q.type === "number" ? Number(entry) === Number(q.answer) : normalize(entry) === normalize(String(q.answer)));
+  }).length;
+  const paPoints = answers.slice(paRoundStart).reduce((total, entry, i) => {
+    const q = questions[paRoundStart + i];
+    return total + (q && normalize(entry) === normalize(String(q.answer)) ? q.points : 0);
+  }, 0);
 
   function begin(event?: FormEvent) {
     event?.preventDefault();
@@ -176,6 +199,7 @@ export default function Home() {
     setName(safeName);
     localStorage.setItem("norse-player", safeName);
     resetRun();
+    questionStartedAt.current = performance.now();
     setView("game");
   }
 
@@ -183,6 +207,7 @@ export default function Home() {
     setIndex(0);
     setAnswer("");
     setAnswers([]);
+    setAnswerTimes([]);
     setSeconds(30);
     setLockedAnswer(null);
     setTeamError("");
@@ -203,7 +228,9 @@ export default function Home() {
       setTeamError("");
     }
     const nextAnswers = [...answers, value];
+    const elapsedMs = Math.min(30_000, Math.max(0, Math.round(performance.now() - questionStartedAt.current)));
     setAnswers(nextAnswers);
+    setAnswerTimes((times) => [...times, elapsedMs]);
     setLockedAnswer(value);
   }
 
@@ -216,7 +243,7 @@ export default function Home() {
     const response = await fetch("/api/leaderboard", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ displayName: name, deviceId, answers }),
+      body: JSON.stringify({ displayName: name, deviceId, answers, answerTimes }),
     });
     if (!response.ok) return;
     const data = await response.json() as { rank?: number; leaderboard?: LeaderRow[] };
@@ -236,6 +263,7 @@ export default function Home() {
     setTeamError("");
     setLockedAnswer(null);
     setSeconds(30);
+    questionStartedAt.current = performance.now();
   }
 
   const current = questions[index] ?? questions[4];
@@ -277,8 +305,8 @@ export default function Home() {
           <div className="ambient two" />
           <div className="hero-copy">
             <p className="kicker"><span>LIVE</span> {formatGameDate(dailyGame.gameDate).toUpperCase()}</p>
-            <h1>Five questions.<br /><em>One daily champion.</em></h1>
-            <p className="lede">A fresh Minnesota football quiz every day. Same questions for everyone. Bragging rights last forever.</p>
+            <h1>Five questions.<br /><em>Plus the PA Bonus.</em></h1>
+            <p className="lede">A fresh Minnesota football quiz every day, followed by two PANCE-style multiple-choice questions for separate PA Points.</p>
 
             <div className="host-card">
               <div className="host-avatar">{dailyGame.host.number ?? "SK"}</div>
@@ -296,8 +324,8 @@ export default function Home() {
           </div>
           <aside className="scoreboard">
             <div className="board-top"><span>TODAY’S GAME</span><strong>{formatGameDate(dailyGame.gameDate, true).toUpperCase()}</strong></div>
-            <div className="big-five">5</div>
-            <p>QUESTIONS</p>
+            <div className="big-five">5+2</div>
+            <p>QUESTIONS + PA BONUS</p>
             <div className="difficulty"><span /><span /><span /><span /><span /></div>
             <div className="board-stats"><div><strong>{leaderboard.length}</strong><span>played</span></div><div><strong>1,500</strong><span>max pts</span></div><div><strong>LIVE</strong><span>standings</span></div></div>
             <div className="pin-mini"><span className="target">◎</span><div><small>THE FINALE</small><strong>Closest to the pin</strong></div></div>
@@ -308,8 +336,8 @@ export default function Home() {
       {view === "game" && (
         <section className={`game-shell ${index === 4 ? "pin-mode" : ""}`}>
           <div className="game-head">
-            <div><span>QUESTION {index + 1} OF 5</span><strong>{current.eyebrow}</strong></div>
-            <div className="live-score"><small>SCORE</small><b>{score.toLocaleString()}</b></div>
+            <div><span>{isPaRound ? `PA BONUS ${index - paRoundStart + 1} OF 2` : `QUESTION ${index + 1} OF 5`}</span><strong>{current.eyebrow}</strong></div>
+            <div className="live-score"><small>{isPaRound ? "PA POINTS" : "SCORE"}</small><b>{isPaRound ? paPoints : score.toLocaleString()}</b></div>
           </div>
           <div className="progress">{questions.map((_, i) => <span key={i} className={i <= index ? "done" : ""} />)}</div>
           <div className={`timer ${lockedAnswer !== null ? "timer-locked" : ""}`} style={{ "--timer": `${(seconds / 30) * 360}deg` } as React.CSSProperties}><strong>{lockedAnswer !== null ? "✓" : seconds}</strong><small>{lockedAnswer !== null ? "LOCKED" : "SEC"}</small></div>
@@ -368,7 +396,7 @@ export default function Home() {
               </div>
             )}
             <button className="primary submit" disabled={lockedAnswer === null && !answer} onClick={() => lockedAnswer !== null ? continueGame() : submitAnswer()}>
-              {lockedAnswer !== null ? (index === 4 ? "See final results →" : "Next question →") : index === 4 ? "Lock in my guess →" : "Lock in answer →"}
+              {lockedAnswer !== null ? (index === questions.length - 1 ? "See final results →" : isPaRound || index === 4 ? "Continue →" : "Next question →") : index === 4 ? "Lock in my guess →" : "Lock in answer →"}
             </button>
             <small className="locked-note">{lockedAnswer !== null ? "Answer locked. Everyone sees the same reveal." : "Once you submit, your answer is locked."}</small>
           </article>
@@ -379,9 +407,10 @@ export default function Home() {
         <section className="results page">
           <p className="kicker"><span>FINAL</span> {formatGameDate(dailyGame.gameDate).toUpperCase()} RESULTS</p>
           <h1>Nice work, {name}.</h1>
-          <div className="result-hero">
+          <div className="result-hero result-hero-pa">
             <div><small>TOTAL SCORE</small><strong>{score.toLocaleString()}</strong><span>of 1,500 points</span></div>
-            <div><small>CORRECT</small><strong>{correct}<i>/5</i></strong><span>questions</span></div>
+            <div><small>VIKINGS CORRECT</small><strong>{footballCorrect}<i>/5</i></strong><span>questions</span></div>
+            <div className="pa-result"><small>PA POINTS</small><strong>{paPoints}<i>/200</i></strong><span>{correct - footballCorrect}/2 correct</span></div>
             <div><small>DAILY RANK</small><strong>{dailyRank ? `#${dailyRank}` : "—"}</strong><span>of {leaderboard.length} players</span></div>
             <div className="pin-result"><small>CLOSEST TO THE PIN</small><strong>{answers[4] || "—"} <i>{finalUnit.short}</i></strong><span>{answers[4] ? `${Math.abs(Number(answers[4]) - Number(questions[4]?.answer))} ${finalUnit.label} away` : "No guess"}</span></div>
           </div>
@@ -390,7 +419,7 @@ export default function Home() {
               const isCorrect = q.type === "number" ? Number(answers[i]) === Number(q.answer) : normalize(answers[i] || "") === normalize(String(q.answer));
               return <details key={q.id} open={i === 0}>
                 <summary><span className={isCorrect ? "check" : "miss"}>{isCorrect ? "✓" : "×"}</span><b>Q{i + 1}</b><strong>{q.prompt}</strong><em>+{isCorrect ? q.points : 0}</em></summary>
-                <div><p>Your answer: <b>{answers[i] || "No answer"}</b></p><p>Correct answer: <b>{q.answer}</b></p><p>{q.explanation}</p><a href={q.source} target="_blank" rel="noreferrer">Check the source ↗</a></div>
+                <div><p>Your answer: <b>{answers[i] || "No answer"}</b> · Answered in <b>{((answerTimes[i] ?? 0) / 1000).toFixed(1)}s</b></p><p>Correct answer: <b>{q.answer}</b></p><p>{q.explanation}</p><a href={q.source} target="_blank" rel="noreferrer">Check the source ↗</a></div>
               </details>;
             })}
           </div>
@@ -402,14 +431,15 @@ export default function Home() {
         <section className="page leader-page">
           <p className="kicker"><span>LIVE</span> TODAY’S STANDINGS</p>
           <h1>Daily leaderboard</h1>
-          <p className="lede">Score breaks ties by correct answers, closest-to-the-pin distance, then earliest finish.</p>
+          <p className="lede">Overall rank uses the Vikings score. Select PA Points to sort the table by bonus-round performance.</p>
+          <div className="leader-sort" aria-label="Sort leaderboard"><button className={leaderSort === "rank" ? "active" : ""} onClick={() => setLeaderSort("rank")}>Overall rank</button><button className={leaderSort === "paPoints" ? "active" : ""} onClick={() => setLeaderSort("paPoints")}>PA Points</button></div>
           <div className="leader-table">
-            <div className="table-head"><span>RANK</span><span>PLAYER</span><span>SCORE</span><span>CORRECT</span><span>PIN</span><span>FINISHED</span></div>
+            <div className="table-head"><span>RANK</span><span>PLAYER</span><span>SCORE</span><button onClick={() => setLeaderSort("paPoints")}>PA POINTS {leaderSort === "paPoints" ? "↓" : "↕"}</button><span>CORRECT</span><span>PIN</span><span>ANSWER TIME</span></div>
             {leaderboard.length === 0 && <div className="table-row empty-row">No completed games yet. Be the first on the board.</div>}
-            {leaderboard.map((row) => <div className="table-row" key={`${row.rank}-${row.name}`}>
+            {sortedLeaderboard.map((row) => <div className="table-row" key={`${row.rank}-${row.name}`}>
               <b className="rank">{row.rank === 1 ? "♛" : `#${row.rank}`}</b>
               <strong>{row.name}{row.winner && <i className="badge">DAILY WINNER</i>}{row.pinWinner && <i className="badge pin-badge">◎ PIN WINNER</i>}</strong>
-              <b>{row.score.toLocaleString()}</b><span>{row.correct}/5</span><span>{row.pin === null ? "—" : `${row.pin} ${finalUnit.short}`}</span><span>{row.time}</span>
+              <b>{row.score.toLocaleString()}</b><b className="pa-points">{row.paPoints}</b><span>{row.correct}/5</span><span>{row.pin === null ? "—" : `${row.pin} ${finalUnit.short}`}</span><span>{row.time}</span>
             </div>)}
           </div>
           <div className="all-time">

@@ -1,0 +1,3 @@
+-- No database migration is required. PA points and per-question timings are
+-- stored alongside responses in the existing attempts.answers JSONB column so
+-- the feature can deploy safely without a coordinated schema change.

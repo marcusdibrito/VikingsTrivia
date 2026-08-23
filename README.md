@@ -8,7 +8,7 @@ A lively, unofficial Minnesota football daily trivia game built for family compe
 - Questions are presented in order and become immutable after the player advances.
 - Questions 1–4 are worth 100, 200, 300, and 400 points.
 - Question 5 is worth up to 500 points. Its score is `max(0, 500 - distance × 10)`.
-- Daily standings sort by total score, correct answers, smallest Q5 distance, then earliest server completion time.
+- Daily standings sort by total score, correct answers, smallest Q5 distance, then fastest total answer time.
 - Equal closest-to-the-pin distances share the distinction; multiple exact answers are all exact-pin winners.
 
 ## State model

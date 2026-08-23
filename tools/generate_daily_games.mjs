@@ -103,63 +103,49 @@ const records = [...new Set(seasons.map((season) => season.record))];
 const coaches = [...new Set(seasons.map((season) => season.coach))];
 const endings = ["Missed the playoffs", "Lost in the Wild Card round", "Lost in the Divisional round", "Lost in the NFC Championship"];
 
+const ordinal = (place) => `${place}${place === 1 ? "st" : place === 2 ? "nd" : place === 3 ? "rd" : "th"}`;
+const yearChoices = (answer, seed) => rotateChoices(String(answer), seasons.map(({ year }) => String(year)), seed);
+
+function choiceQuestion({ eyebrow, prompt, answer, choices, explanation, source }) {
+  return { eyebrow, prompt, type: "choice", choices, answer: String(answer), explanation, source };
+}
+
 function buildQuestions(dayIndex, testLabel = "") {
-  const selected = [0, 7, 13, 19, 23].map((step) => seasons[(dayIndex + step) % seasons.length]);
-  const [coachSeason, recordSeason, divisionSeason, playoffSeason, pointsSeason] = selected;
-  const divisionName = divisionSeason.division.includes("Central") ? "NFC Central" : "NFC North";
   const prefix = testLabel ? `${testLabel} — ` : "";
-  return [
-    {
-      eyebrow: `${decade(coachSeason.year)} · Warm-up`,
-      prompt: `${prefix}Who was Minnesota's head coach for the ${coachSeason.year} season?`,
-      type: "choice",
-      choices: rotateChoices(coachSeason.coach, coaches, dayIndex),
-      answer: coachSeason.coach,
-      points: 100,
-      explanation: `${coachSeason.coach} led Minnesota during the ${coachSeason.year} season.`,
-      source: coachSeason.source,
-    },
-    {
-      eyebrow: `${decade(recordSeason.year)} · Getting warmer`,
-      prompt: `${prefix}What was the Vikings' regular-season record in ${recordSeason.year}?`,
-      type: "choice",
-      choices: rotateChoices(recordSeason.record, records, dayIndex + 3),
-      answer: recordSeason.record,
-      points: 200,
-      explanation: `Minnesota finished the ${recordSeason.year} regular season ${recordSeason.record}.`,
-      source: recordSeason.source,
-    },
-    {
-      eyebrow: `${decade(divisionSeason.year)} · Deep cut`,
-      prompt: `${prefix}Where did Minnesota finish in the ${divisionName} in ${divisionSeason.year}?`,
-      type: "choice",
-      choices: [1, 2, 3, 4].map((place) => `${place}${place === 1 ? "st" : place === 2 ? "nd" : place === 3 ? "rd" : "th"} ${divisionName}`),
-      answer: divisionSeason.division,
-      points: 300,
-      explanation: `The Vikings placed ${divisionSeason.division} in ${divisionSeason.year}.`,
-      source: divisionSeason.source,
-    },
-    {
-      eyebrow: `${decade(playoffSeason.year)} · Expert`,
-      prompt: `${prefix}How did Minnesota's ${playoffSeason.year} season end?`,
-      type: "choice",
-      choices: rotateChoices(ending(playoffSeason.playoffs), endings, dayIndex + 9),
-      answer: ending(playoffSeason.playoffs),
-      points: 400,
-      explanation: `Minnesota's postseason result: ${playoffSeason.playoffs}.`,
-      source: playoffSeason.source,
-    },
-    {
-      eyebrow: "Closest to the pin · 500 pts",
-      prompt: `${prefix}Exactly how many regular-season points did the Vikings score in ${pointsSeason.year}?`,
-      type: "number",
-      choices: null,
-      answer: String(pointsSeason.pointsFor),
-      points: 500,
-      explanation: `Minnesota scored ${pointsSeason.pointsFor} points during the ${pointsSeason.year} regular season.`,
-      source: pointsSeason.source,
-    },
+  const at = (step) => seasons[(dayIndex + step) % seasons.length];
+  const a = at(0), b = at(7), c = at(13), d = at(19), e = at(23), f = at(27);
+  const divisionName = (season) => season.division.includes("Central") ? "NFC Central" : "NFC North";
+  const rounds = [
+    [
+      () => choiceQuestion({ eyebrow: `${decade(a.year)} · Sideline`, prompt: `${prefix}Who coached the Vikings in ${a.year}?`, answer: a.coach, choices: rotateChoices(a.coach, coaches, dayIndex), explanation: `${a.coach} led Minnesota during the ${a.year} season.`, source: a.source }),
+      () => choiceQuestion({ eyebrow: `${decade(a.year)} · Name the year`, prompt: `${prefix}${a.coach} coached Minnesota to a ${a.record} record in which season?`, answer: a.year, choices: yearChoices(a.year, dayIndex), explanation: `That combination belongs to the ${a.year} Vikings.`, source: a.source }),
+      () => choiceQuestion({ eyebrow: `${decade(a.year)} · Season snapshot`, prompt: `${prefix}Which record belongs to ${a.coach}'s ${a.year} Vikings?`, answer: a.record, choices: rotateChoices(a.record, records, dayIndex), explanation: `Minnesota went ${a.record} in ${a.year}.`, source: a.source }),
+    ],
+    [
+      () => choiceQuestion({ eyebrow: `${decade(b.year)} · The standings`, prompt: `${prefix}Where did the ${b.year} Vikings finish in the ${divisionName(b)}?`, answer: b.division, choices: [1, 2, 3, 4].map((place) => `${ordinal(place)} ${divisionName(b)}`), explanation: `Minnesota placed ${b.division} in ${b.year}.`, source: b.source }),
+      () => choiceQuestion({ eyebrow: `${decade(b.year)} · Pick the season`, prompt: `${prefix}In which season did Minnesota go ${b.record} and finish ${b.division}?`, answer: b.year, choices: yearChoices(b.year, dayIndex + 3), explanation: `Both clues point to the ${b.year} season.`, source: b.source }),
+      () => choiceQuestion({ eyebrow: `${decade(b.year)} · Coach & club`, prompt: `${prefix}What was Minnesota's record in ${b.year}, with ${b.coach} as head coach?`, answer: b.record, choices: rotateChoices(b.record, records, dayIndex + 3), explanation: `${b.coach}'s ${b.year} Vikings finished ${b.record}.`, source: b.source }),
+    ],
+    [
+      () => choiceQuestion({ eyebrow: `${decade(c.year)} · Postseason path`, prompt: `${prefix}How did Minnesota's ${c.year} season end?`, answer: ending(c.playoffs), choices: rotateChoices(ending(c.playoffs), endings, dayIndex + 6), explanation: `Minnesota's postseason result: ${c.playoffs}.`, source: c.source }),
+      () => choiceQuestion({ eyebrow: `${decade(c.year)} · Connect the clues`, prompt: `${prefix}Which season paired a ${c.record} record with this finish: ${ending(c.playoffs).toLowerCase()}?`, answer: c.year, choices: yearChoices(c.year, dayIndex + 6), explanation: `Those clues describe Minnesota's ${c.year} season.`, source: c.source }),
+      () => choiceQuestion({ eyebrow: `${decade(c.year)} · Higher or lower`, prompt: `${prefix}Which Vikings season scored more regular-season points?`, answer: c.pointsFor >= d.pointsFor ? c.year : d.year, choices: [String(c.year), String(d.year)], explanation: `${c.year}: ${c.pointsFor} points; ${d.year}: ${d.pointsFor} points.`, source: c.source }),
+    ],
+    [
+      () => choiceQuestion({ eyebrow: `${decade(d.year)} · Who was in charge?`, prompt: `${prefix}Minnesota finished ${d.division} in ${d.year}. Who was the head coach?`, answer: d.coach, choices: rotateChoices(d.coach, coaches, dayIndex + 9), explanation: `${d.coach} coached the ${d.year} Vikings.`, source: d.source }),
+      () => choiceQuestion({ eyebrow: `${decade(d.year)} · Stat line`, prompt: `${prefix}Which season produced ${d.pointsFor} Vikings points and a ${d.record} record?`, answer: d.year, choices: yearChoices(d.year, dayIndex + 9), explanation: `That stat line came from the ${d.year} team.`, source: d.source }),
+      () => choiceQuestion({ eyebrow: `${decade(d.year)} · Division race`, prompt: `${prefix}Which finish completed Minnesota's ${d.year} season at ${d.record}?`, answer: d.division, choices: [1, 2, 3, 4].map((place) => `${ordinal(place)} ${divisionName(d)}`), explanation: `The Vikings finished ${d.division} in ${d.year}.`, source: d.source }),
+    ],
   ];
+  const questions = rounds.map((variants, slot) => variants[(dayIndex + slot) % variants.length]());
+  const pinVariants = [
+    { prompt: `Exactly how many regular-season points did the Vikings score in ${e.year}?`, answer: e.pointsFor, explanation: `Minnesota scored ${e.pointsFor} points in ${e.year}.`, source: e.source },
+    { prompt: `What was the difference in regular-season points between the ${e.year} and ${f.year} Vikings?`, answer: Math.abs(e.pointsFor - f.pointsFor), explanation: `The difference between ${e.pointsFor} and ${f.pointsFor} is ${Math.abs(e.pointsFor - f.pointsFor)} points.`, source: e.source },
+    { prompt: `What was the combined regular-season points total for the ${e.year} and ${f.year} Vikings?`, answer: e.pointsFor + f.pointsFor, explanation: `${e.pointsFor} plus ${f.pointsFor} equals ${e.pointsFor + f.pointsFor} points.`, source: e.source },
+  ];
+  const pin = pinVariants[dayIndex % pinVariants.length];
+  questions.push({ eyebrow: "Closest to the pin · 500 pts", prompt: `${prefix}${pin.prompt}`, type: "number", choices: null, answer: String(pin.answer), explanation: pin.explanation, source: pin.source });
+  return questions.map((question, index) => ({ ...question, points: (index + 1) * 100 }));
 }
 
 const games = Array.from({ length: 30 }, (_, index) => ({
