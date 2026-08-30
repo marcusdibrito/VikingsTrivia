@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import { currentGame, supabase } from "@/app/lib/supabase";
-import { paBonusQuestions } from "@/app/lib/pa-bonus";
+import { getPaBonusQuestions, PA_QUESTIONS_PER_GAME } from "@/app/lib/pa-bonus";
 
 type GameQuestion = {
   position: number;
@@ -141,7 +141,7 @@ export async function POST(request: Request) {
       answerTimes?: number[];
     };
     const displayName = payload.displayName?.trim().slice(0, 24);
-    const expectedAnswerCount = 5 + paBonusQuestions.length;
+    const expectedAnswerCount = 5 + PA_QUESTIONS_PER_GAME;
     if (!displayName || !payload.deviceId || !Array.isArray(payload.answers) || payload.answers.length !== expectedAnswerCount
       || !Array.isArray(payload.answerTimes) || payload.answerTimes.length !== expectedAnswerCount
       || !payload.answerTimes.every((time) => Number.isInteger(time) && time >= 0 && time <= 30_000)) {
@@ -150,6 +150,7 @@ export async function POST(request: Request) {
     const answerTimes = payload.answerTimes;
 
     const game = await currentGame();
+    const paBonusQuestions = getPaBonusQuestions(game.game_date);
     const questions = await supabase<GameQuestion[]>(
       `game_questions?select=position,answer_type,canonical_answer,points&game_id=eq.${game.id}&order=position.asc`,
     );

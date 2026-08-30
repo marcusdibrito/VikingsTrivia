@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { currentGame, supabase } from "@/app/lib/supabase";
 import { publishDailyGame } from "@/app/lib/publish-daily";
-import { paBonusQuestions } from "@/app/lib/pa-bonus";
+import { getPaBonusQuestions } from "@/app/lib/pa-bonus";
 import scheduledGames from "@/data/daily-games.json";
 
 type GameQuestion = {
@@ -17,7 +17,7 @@ type GameQuestion = {
   source_url: string;
 };
 
-const TODAY_REFRESH_DATE = "2026-08-23";
+const TODAY_REFRESH_DATE = "2026-08-30";
 
 async function refreshTodayOnce(gameId: string, gameDate: string, rows: GameQuestion[]) {
   if (gameDate !== TODAY_REFRESH_DATE) return rows;
@@ -36,13 +36,8 @@ async function refreshTodayOnce(gameId: string, gameDate: string, rows: GameQues
     return rows;
   }
 
-  // Today's question set changed after players had already started. Clear only
-  // this game's attempts, then replace its five snapshots. Once the prompts
-  // match, later requests skip this block and new attempts remain intact.
-  await supabase<unknown>(`attempts?game_id=eq.${gameId}`, {
-    method: "DELETE",
-    headers: { Prefer: "return=minimal" },
-  });
+  // Refresh only today's published snapshot. Completed attempts retain their
+  // recorded scores and leaderboard positions.
   await supabase<unknown>("game_questions?on_conflict=game_id,position", {
     method: "POST",
     headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
@@ -102,7 +97,7 @@ export async function GET() {
         explanation: question.explanation,
         source: question.source_url,
       })),
-      paBonusQuestions,
+      paBonusQuestions: getPaBonusQuestions(game.game_date),
     });
   } catch (error) {
     console.error("Daily game unavailable", error);

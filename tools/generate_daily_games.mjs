@@ -114,6 +114,40 @@ const deepCuts = [
   { prompts: ["What jersey number did Erasmus James wear for Minnesota?", "Erasmus James wore which Vikings number?", "Which jersey number belonged to Vikings defensive end Erasmus James?"], answer: "99", explanation: "James wore No. 99 for the Vikings from 2005 through 2007.", source: "https://www.pro-football-reference.com/players/uniform.cgi?number=99&team=min" },
 ];
 
+// Franchise history, records, people, and places keep the daily game from
+// becoming five variations on a season-stat lookup.
+const franchiseQuestions = [
+  ["Origins · First season", "In what year did the Minnesota Vikings play their first season?", "1961", ["1961", "1958", "1964", "1967"], "Minnesota's inaugural NFL season was 1961."],
+  ["Origins · Opening day", "Which team did the Vikings defeat in the first regular-season game in franchise history?", "Chicago Bears", ["Chicago Bears", "Green Bay Packers", "Detroit Lions", "Los Angeles Rams"], "Minnesota opened franchise play with a 37–13 victory over Chicago."],
+  ["Origins · First draft pick", "Who was the first draft choice in Vikings history?", "Tommy Mason", ["Tommy Mason", "Fran Tarkenton", "Jim Marshall", "Mick Tingelhoff"], "Minnesota selected Tulane halfback Tommy Mason with its first draft choice in 1961."],
+  ["Origins · First winner", "Which season was the first winning season in Vikings history?", "1964", ["1964", "1961", "1967", "1969"], "The 1964 Vikings finished 8–5–1 for the franchise's first winning season."],
+  ["Championship history", "In which season did Minnesota win the NFL Championship before the AFL-NFL merger?", "1969", ["1969", "1973", "1974", "1976"], "The Vikings won the 1969 NFL Championship before playing in Super Bowl IV."],
+  ["Super Bowl history", "Which opponent faced Minnesota in the Vikings' first Super Bowl appearance?", "Kansas City Chiefs", ["Kansas City Chiefs", "Miami Dolphins", "Pittsburgh Steelers", "Oakland Raiders"], "Minnesota's first appearance was against Kansas City in Super Bowl IV."],
+  ["Hall of Fame · First Viking", "Who was the first Viking elected to the Pro Football Hall of Fame?", "Fran Tarkenton", ["Fran Tarkenton", "Alan Page", "Bud Grant", "Carl Eller"], "Fran Tarkenton became the first Viking elected to the Hall of Fame in 1986."],
+  ["Rushing history", "Who became the first player to rush for 1,000 yards in a Vikings season?", "Chuck Foreman", ["Chuck Foreman", "Bill Brown", "Robert Smith", "Adrian Peterson"], "Chuck Foreman rushed for 1,070 yards in 1975."],
+  ["Franchise records · Rushing", "Who holds the Vikings career rushing-yards record?", "Adrian Peterson", ["Adrian Peterson", "Robert Smith", "Chuck Foreman", "Dalvin Cook"], "Adrian Peterson rushed for a franchise-record 11,747 yards for Minnesota."],
+  ["Franchise records · Passing", "Who holds the Vikings career passing-yards record?", "Fran Tarkenton", ["Fran Tarkenton", "Tommy Kramer", "Kirk Cousins", "Daunte Culpepper"], "Fran Tarkenton passed for 33,098 yards as a Viking."],
+  ["Franchise records · Receiving", "Who holds the Vikings career receptions record?", "Cris Carter", ["Cris Carter", "Randy Moss", "Adam Thielen", "Anthony Carter"], "Cris Carter made 1,004 receptions for Minnesota."],
+  ["Franchise records · Scoring", "Who is the Vikings' all-time leading scorer?", "Fred Cox", ["Fred Cox", "Gary Anderson", "Ryan Longwell", "Blair Walsh"], "Kicker Fred Cox scored a franchise-record 1,365 points."],
+  ["Sideline legends", "Who is the winningest head coach in Vikings history, including playoffs?", "Bud Grant", ["Bud Grant", "Dennis Green", "Mike Zimmer", "Jerry Burns"], "Bud Grant earned 168 wins including postseason games."],
+  ["Retired numbers", "Whose No. 53 is retired by the Vikings?", "Mick Tingelhoff", ["Mick Tingelhoff", "Scott Studwell", "Matt Blair", "Jeff Siemon"], "Minnesota retired Hall of Fame center Mick Tingelhoff's No. 53."],
+  ["NFL honors · MVP", "Which Vikings defensive tackle was named NFL MVP in 1971?", "Alan Page", ["Alan Page", "John Randle", "Carl Eller", "Jim Marshall"], "Alan Page became the first defensive player to receive NFL MVP honors."],
+  ["Draft history · Randy Moss", "With which overall pick did Minnesota select Randy Moss in 1998?", "21st", ["21st", "7th", "12th", "28th"], "The Vikings selected Randy Moss 21st overall in the 1998 NFL Draft.", "https://www.vikings.com/team/legends/ring-of-honor"],
+  ["U.S. Bank Stadium", "Which team did Minnesota beat in the first regular-season game at U.S. Bank Stadium?", "Green Bay Packers", ["Green Bay Packers", "Chicago Bears", "San Diego Chargers", "New Orleans Saints"], "Minnesota defeated Green Bay on September 18, 2016, in the stadium's first regular-season game.", "https://www.vikings.com/history/franchise-timeline"],
+  ["Minneapolis Miracle", "Who threw the Minneapolis Miracle touchdown pass?", "Case Keenum", ["Case Keenum", "Kirk Cousins", "Sam Bradford", "Teddy Bridgewater"], "Case Keenum connected with Stefon Diggs for the 61-yard winning touchdown.", "https://www.vikings.com/history/franchise-timeline"],
+  ["Minneapolis Miracle", "Who caught the Minneapolis Miracle touchdown pass?", "Stefon Diggs", ["Stefon Diggs", "Adam Thielen", "Kyle Rudolph", "Jarius Wright"], "Stefon Diggs caught Case Keenum's 61-yard touchdown on the final play.", "https://www.vikings.com/history/franchise-timeline"],
+  ["Purple People Eaters", "Which of these players was a member of the Purple People Eaters defensive line?", "Jim Marshall", ["Jim Marshall", "Paul Krause", "Matt Blair", "Joey Browner"], "Jim Marshall joined Carl Eller, Gary Larsen, and Alan Page on the famed defensive front.", "https://www.vikings.com/team/legends/ring-of-honor"],
+  ["Draft history · Ron Yary", "Which Vikings offensive lineman was selected first overall in the 1968 NFL Draft?", "Ron Yary", ["Ron Yary", "Randall McDaniel", "Steve Hutchinson", "Mick Tingelhoff"], "Minnesota chose Ron Yary first overall in 1968.", "https://www.vikings.com/team/legends/ring-of-honor"],
+  ["Ironman · Mick Tingelhoff", "How many consecutive games did Mick Tingelhoff start at center?", "240", ["240", "202", "270", "180"], "Tingelhoff started 240 consecutive games and never missed a start in his 17-season career.", "https://www.vikings.com/team/legends/ring-of-honor"],
+].map(([eyebrow, prompt, answer, choices, explanation, source]) => ({
+  eyebrow,
+  prompt,
+  answer,
+  choices,
+  explanation,
+  source: source ?? "https://www.profootballhof.com/teams/minnesota-vikings/team-facts",
+}));
+
 const sqlString = (value) => `'${String(value).replaceAll("'", "''")}'`;
 const jsonString = (value) => sqlString(JSON.stringify(value));
 const decade = (year) => `${Math.floor(year / 10) * 10}s`;
@@ -202,6 +236,11 @@ function deepCutQuestion(dayIndex, prefix) {
   });
 }
 
+function franchiseQuestion(dayIndex, offset, prefix) {
+  const fact = franchiseQuestions[(dayIndex + offset) % franchiseQuestions.length];
+  return choiceQuestion({ ...fact, prompt: `${prefix}${fact.prompt}` });
+}
+
 function buildQuestions(dayIndex, testLabel = "") {
   const prefix = testLabel ? `${testLabel} — ` : "";
   const at = (step) => seasons[(dayIndex + step) % seasons.length];
@@ -229,11 +268,14 @@ function buildQuestions(dayIndex, testLabel = "") {
       () => choiceQuestion({ eyebrow: `${decade(d.year)} · Division race`, prompt: `${prefix}Which finish completed Minnesota's ${d.year} season at ${d.record}?`, answer: d.division, choices: [1, 2, 3, 4].map((place) => `${ordinal(place)} ${divisionName(d)}`), explanation: `The Vikings finished ${d.division} in ${d.year}.`, source: d.source }),
     ],
   ];
-  const questions = rounds.map((variants, slot) => variants[(dayIndex + slot) % variants.length]());
+  const seasonQuestions = rounds.map((variants, slot) => variants[(dayIndex + slot) % variants.length]());
   const pfr = pfrQuestions(dayIndex, prefix);
-  questions[1] = pfr.choice;
-  questions[2] = pfr.typed;
-  questions[3] = deepCutQuestion(dayIndex, prefix);
+  const questions = [
+    dayIndex % 2 === 0 ? franchiseQuestion(dayIndex, 0, prefix) : seasonQuestions[0],
+    dayIndex % 3 === 0 ? seasonQuestions[1] : pfr.choice,
+    dayIndex % 3 === 1 ? franchiseQuestion(dayIndex, 7, prefix) : pfr.typed,
+    dayIndex % 2 === 0 ? franchiseQuestion(dayIndex, 13, prefix) : deepCutQuestion(dayIndex, prefix),
+  ];
   const pinVariants = [
     { prompt: `Exactly how many regular-season points did the Vikings score in ${e.year}?`, answer: e.pointsFor, explanation: `Minnesota scored ${e.pointsFor} points in ${e.year}.`, source: e.source },
     { prompt: `What was the difference in regular-season points between the ${e.year} and ${f.year} Vikings?`, answer: Math.abs(e.pointsFor - f.pointsFor), explanation: `The difference between ${e.pointsFor} and ${f.pointsFor} is ${Math.abs(e.pointsFor - f.pointsFor)} points.`, source: e.source },
@@ -244,10 +286,10 @@ function buildQuestions(dayIndex, testLabel = "") {
   return questions.map((question, index) => ({ ...question, points: (index + 1) * 100 }));
 }
 
-const games = Array.from({ length: 30 }, (_, index) => ({
+const games = Array.from({ length: 120 }, (_, index) => ({
   date: isoDate(index),
   status: index === 0 ? "published" : "draft",
-  host: hosts[index],
+  host: hosts[index % hosts.length],
   questions: buildQuestions(index),
 }));
 

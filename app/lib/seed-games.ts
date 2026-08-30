@@ -1,7 +1,7 @@
 import scheduledGames from "@/data/daily-games.json";
 import { supabase } from "@/app/lib/supabase";
 
-type StoredGame = { id: string; game_date: string };
+type StoredGame = { id: string; game_date: string; status: "draft" | "published" | "expired" };
 
 export async function ensureScheduledGames() {
   await supabase<unknown>("games?on_conflict=game_date", {
@@ -19,10 +19,11 @@ export async function ensureScheduledGames() {
 
   const dates = scheduledGames.map((game) => game.date).join(",");
   const storedGames = await supabase<StoredGame[]>(
-    `games?select=id,game_date&game_date=in.(${dates})`,
+    `games?select=id,game_date,status&game_date=in.(${dates})`,
   );
   const ids = new Map(storedGames.map((game) => [game.game_date, game.id]));
-  const questions = scheduledGames.flatMap((game) => {
+  const draftDates = new Set(storedGames.filter((game) => game.status === "draft").map((game) => game.game_date));
+  const questions = scheduledGames.filter((game) => draftDates.has(game.date)).flatMap((game) => {
     const gameId = ids.get(game.date);
     if (!gameId) throw new Error(`Seeded game ${game.date} could not be found.`);
     return game.questions.map((question, index) => ({
@@ -39,9 +40,13 @@ export async function ensureScheduledGames() {
     }));
   });
 
+  if (questions.length === 0) return;
+
   await supabase<unknown>("game_questions?on_conflict=game_id,position", {
     method: "POST",
-    headers: { Prefer: "resolution=ignore-duplicates,return=minimal" },
+    // Refresh prepared games when the generated schedule changes, but never
+    // rewrite a published or expired game's historical question snapshots.
+    headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
     body: JSON.stringify(questions),
   });
 }
